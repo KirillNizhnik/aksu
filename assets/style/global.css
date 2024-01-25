@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --orange: #EFAB44;
+    --dark-blue: #084184;
+    --white: #FDFEFF;
+    --white-light: #F6FAFE;
+    --black: #000000;
+    --blue: #D3E3F7;
+    --gray: #595D62;
+    --light-gray: #E2E2E2;
+}
+
+.body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--black);
+    background-color:  var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+
+::selection {
+    background-color: var(--gray);
+    color: var(--dark-blue);
+}
+
+
+img {
+    display: block;
+    height: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+    margin: 0;
+}
+
+ul,ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: var(--black);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+button{
+    cursor: pointer;
+    border: none;
+    display: block;
+}
+
+
+.container {
+    padding: 0 10px;
+    margin: auto;
+    width: 100%;
+    position: relative;
+}
+
+
+.title-section{
+    color: var(--dark-blue);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn-section{
+    display: flex;
+    padding: 12px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: var(--white-light);
+}
+
+/*::-webkit-scrollbar {*/
+/*    width: 10px;*/
+/*}*/
+
+/*::-webkit-scrollbar-thumb {*/
+/*    background-color: #4A4E61;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*::-webkit-scrollbar-track {*/
+/*    background-color: var(--translucent);*/
+/*}*/
+
+
+
