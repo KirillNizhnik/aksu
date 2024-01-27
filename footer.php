@@ -16,7 +16,7 @@
         <div class="footer-inner">
             <div class="footer-inner-logo">
                 <?php the_custom_logo(); ?>
-                <div class="footer-inner-logo-title">Кафедра аерокосмічних систем управління (АКСУ)</div>
+                <div class="footer-inner-logo-title"><?php bloginfo('description'); ?></div>
             </div>
             <div>
                 <!--                --><?php
@@ -116,7 +116,15 @@
         </div>
     </div>
 
-    <div class="copyright">© 2024 Кафедра АКСУ НАУ. All Rights Reserved.</div>
+    <div class="copyright" id="year"></div>
+
+    <script>
+        let currentYear = new Date().getFullYear();
+
+        let yearElement = document.getElementById('year');
+
+        yearElement.textContent = '© ' + currentYear + ' Кафедра АКСУ НАУ. All Rights Reserved.';
+    </script>
 </footer>
 
 <?php wp_footer(); ?>
