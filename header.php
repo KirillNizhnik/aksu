@@ -95,6 +95,8 @@
             );
             wp_nav_menu( $args );
             ?>
+
+
         </div>
         <div class="header-mob">
             <div class="header-mob-contacts-tablet">
@@ -126,6 +128,17 @@
                 <span></span>
                 <span></span>
             </buttons>
+<!--            <div class="header-desktop-dropdown">-->
+<!--                <div class="header-contacts-search header-contacts-search-mob">-->
+<!--                    <input class="header-contacts-search-input" type="text" placeholder="Search">-->
+<!--                    <button class="header-contacts-search-btn">-->
+<!--                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">-->
+<!--                            <path d="M18.75 18.75L15.4404 15.4464M15.4404 15.4464C16.5227 14.3656 17.1923 12.8716 17.1923 11.2212C17.1923 7.92338 14.5189 5.25 11.2212 5.25C7.92338 5.25 5.25 7.92338 5.25 11.2212C5.25 14.5189 7.92338 17.1923 11.2212 17.1923C12.8685 17.1923 14.36 16.5252 15.4404 15.4464Z"-->
+<!--                                  stroke="#595D62" stroke-width="0.75" stroke-linecap="round"/>-->
+<!--                        </svg>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     </div>
 </header>

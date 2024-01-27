@@ -277,6 +277,8 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
         $classes[] = 'custom-menu-item';
 
         $output .= '<li id="menu-item-' . $item->ID . '" class="menu-item-type-post_type ' . implode(' ', $classes) . '">';
-        $output .= '<a href="' . $item->url . '">' . $item->title . '</a>';
+        $output .= '<a href="' . $item->url . '">' . $item->title . '<svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 19 22" fill="none">
+<path d="M5 9.5L10.0008 14.08L15 9.5" stroke="#010E11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> </a>';
     }
 }

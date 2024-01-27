@@ -242,8 +242,12 @@ li#menu-item-31 {
         font-size: 16px;
         font-weight: 600;
         line-height: 140%;
+        display: flex;
+        flex-direction: row-reverse;
     }
-
+    .menu-item-type-post_type > a{
+        display: flex;
+    }
     #menu-header-menu {
         display: flex;
         justify-content: space-between;
@@ -261,7 +265,9 @@ li#menu-item-31 {
     .header-desktop {
         display: block;
     }
-
+    .footer-contacts {
+        padding: 0 0 48px 0;
+    }
     .footer-contacts {
         flex-direction: row-reverse;
         justify-content: center;
