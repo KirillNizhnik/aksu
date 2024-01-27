@@ -6,7 +6,11 @@
  *
  * @package aksu
  */
-
+function dd($variable) {
+    echo '<pre>';
+    var_dump($variable);
+    echo '</pre>';
+}
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
@@ -19,6 +23,9 @@ if ( ! defined( '_S_VERSION' ) ) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+
+
+
 function aksu_setup() {
 	/*
 		* Make theme available for translation.
@@ -47,11 +54,11 @@ function aksu_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'menu-1' => esc_html__( 'Primary', 'aksu' ),
-		)
-	);
+    register_nav_menus(
+        array(
+            'head_menu' => 'Header menu',
+        )
+    );
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -163,7 +170,9 @@ function aksu_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'aksu_scripts' );
-
+add_theme_support('custom-logo');
+add_theme_support('post-thumbnails');
+add_theme_support('menus');
 /**
  * Implement the Custom Header feature.
  */
@@ -191,3 +200,79 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+//class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
+//
+//    public function start_lvl(&$output, $depth = 0, $args = null) {
+//        $output .= '<ul class="header__nav">';
+//    }
+//
+//    // Override start_el to add custom classes to menu items
+//    public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
+////        dd($item);
+//        $classes = empty($item->classes) ? array() : (array) $item->classes;
+//        $classes[] = 'custom-menu-item';
+//
+//        $output .= '<li id="menu-item-' . $item->ID . '" class="menu-item-type-post_type' . implode(' ', $classes) . '">';
+//        $output .= '<a href="' . $item->url . '">' . $item->title . '</a>';
+//    }
+//}
+//
+//
+//
+//
+
+
+
+
+
+//class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
+//
+//    public function start_lvl(&$output, $depth = 0, $args = null) {
+//        $output .= '<ul class="header__nav">';
+//    }
+//
+//    // Override start_el to add custom classes to menu items
+//    public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
+////        dd($item);
+//        $classes = empty($item->classes) ? array() : (array) $item->classes;
+//        $classes[] = 'custom-menu-item';
+//
+//        $output .= '<li id="menu-item-' . $item->ID . '" class="menu-item-type-post_type' . implode(' ', $classes) . '">';
+//        $output .= '<a href="' . $item->url . '">' . $item->title . '</a>';
+//    }
+//}
+
+
+
+class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
+    private $counter = 0;
+
+    public function start_lvl(&$output, $depth = 0, $args = null) {
+        // Reset the counter for each new menu
+        $this->counter = 0;
+        $output .= '<ul class="header__nav">';
+    }
+
+
+    public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
+        $this->counter++;
+
+
+        $items_per_side = 3;
+
+
+        if ($this->counter === $items_per_side + 1) {
+            $output .= '<li class="menu-item-type-logo">';
+            $output .= '<a href="' . esc_url(home_url('/')) . '" class="custom-logo-link" rel="home">';
+            $output .= '<img src="' . esc_url(wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full')) . '" class="custom-logo" alt="' . get_bloginfo('name') . '">';
+            $output .= '</a>';
+            $output .= '</li>';
+        }
+
+        $classes = empty($item->classes) ? array() : (array) $item->classes;
+        $classes[] = 'custom-menu-item';
+
+        $output .= '<li id="menu-item-' . $item->ID . '" class="menu-item-type-post_type ' . implode(' ', $classes) . '">';
+        $output .= '<a href="' . $item->url . '">' . $item->title . '</a>';
+    }
+}

@@ -33,11 +33,15 @@ img {
     display: block;
     height: auto;
 }
-
+/*html {*/
+/*    margin: 0 !important;*/
+/*}*/
 html {
     scroll-behavior: smooth;
 }
-
+svg {
+    display: block;
+}
 .list {
     list-style: none;
     margin: 0;
