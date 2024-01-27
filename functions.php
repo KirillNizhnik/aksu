@@ -140,7 +140,11 @@ function aksu_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'aksu_widgets_init' );
+if( function_exists('acf_add_options_page') ) {
 
+    acf_add_options_page();
+
+}
 /**
  * Enqueue scripts and styles.
  */

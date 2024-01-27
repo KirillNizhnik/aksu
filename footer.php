@@ -11,22 +11,113 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'aksu' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'aksu' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'aksu' ), 'aksu', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-inner-logo">
+                <?php the_custom_logo(); ?>
+                <div class="footer-inner-logo-title">Кафедра аерокосмічних систем управління (АКСУ)</div>
+            </div>
+            <div>
+                <!--                --><?php
+                //
+                //                $args = array(
+                //                    'theme_location' => 'head_menu',
+                //                    'walker' => new Custom_Walker_Nav_Menu()
+                //
+                //                );
+                //                wp_nav_menu($args);
+                //                ?>
+            </div>
+            <div class="footer-contacts">
+                <div class="footer-maps">
+                    <?php the_field("maps_link", 'option'); ?>
+                </div>
+                <div class="footer-contacts footer-contacts-wrap">
+                    <div class="footer-contacts__list-tel">
+                        <div class="footer-contacts-link-wrap footer-contacts-link-wrap-icon">
+                            <div>
+                                <svg width="24px" height="24px">
+                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-phone"></use>
+                                </svg>
+                            </div>
+                            <a href="tel:<?php the_field("phone_number_1_link", 'option'); ?>" class="footer-contacts-link"><?php the_field("phone_number_1", 'option'); ?></a>
+                        </div>
+                        <div class="footer-contacts-link-wrap">
+                            <div class="footer-contacts-line"></div>
+                            <a href="tel:<?php the_field("phone_number_2_link", 'option'); ?>" class="footer-contacts-link"><?php the_field("phone_number_2", 'option'); ?></a>
+                        </div>
+                        <div class="footer-contacts-link-wrap">
+                            <div class="footer-contacts-line"></div>
+                            <a href="tel:<?php the_field("phone_number_3_link", 'option'); ?>" class="footer-contacts-link"><?php the_field("phone_number_3", 'option'); ?></a>
+                        </div>
+                        <div class="footer-contacts-link-wrap">
+                            <div class="footer-contacts-line"></div>
+                            <a href="tel:<?php the_field("phone_number_4_link", 'option'); ?>" class="footer-contacts-link"><?php the_field("phone_number_4", 'option'); ?></a>
+                        </div>
+
+                    </div>
+                    <div class="footer-contacts__list">
+                        <a href="mailto: <?php the_field("mail", 'option'); ?>" class="footer-contacts-link">
+                            <div>
+                                <svg width="24px" height="24px">
+                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-mail"></use>
+                                </svg>
+                            </div>
+                            <span><?php the_field("mail", 'option'); ?></span></a>
+                        <a href="tel:<?php the_field("phone_number_6_link", 'option'); ?>" class="footer-contacts-link">
+                            <div>
+                                <svg width="24px" height="24px">
+                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-phone"></use>
+                                </svg>
+                            </div>
+                            <span><?php the_field("phone_number_5", 'option'); ?></span></a>
+                        <a href="<?php the_field("address_link", 'option'); ?>" class="footer-contacts-link">
+                            <div>
+                                <svg width="24px" height="24px">
+                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-geo"></use>
+                                </svg>
+                            </div>
+                            <span><?php the_field("address", 'option'); ?></span></a>
+                        <div class="footer-contacts__list-icons">
+                            <?php
+                            if ( have_rows( 'social_link_list','option' ) ):
+                                while ( have_rows( 'social_link_list','option' ) ) : the_row();
+                                    $social_link  = get_sub_field( 'social_link', 'option' );
+                                    $social_icon  = get_sub_field( 'social_link_list_icon', 'option' );
+                                    if ( $social_icon ) {
+                                        $image_alt = $social_icon['alt'];
+                                        $image_url = $social_icon['url'];
+                                    }
+                                    ?>
+
+                                        <a href="<?php echo "$social_link" ?>">
+                                            <img src="<?php echo $image_url ?>" alt="<?php echo $image_alt ?>">
+                                        </a>
+
+                                <?php endwhile; else : endif; ?>
+
+<!--                            <a href="">-->
+<!--                                <img src="--><?php //= bloginfo('template_url'); ?><!--/assets/images/icons/youtube.svg" alt="">-->
+<!--                            </a>-->
+<!--                            <a href="">-->
+<!--                                <img src="--><?php //= bloginfo('template_url'); ?><!--/assets/images/icons/telegram.svg" alt="">-->
+<!--                            </a>-->
+<!--                            <a href="">-->
+<!--                                <img src="--><?php //= bloginfo('template_url'); ?><!--/assets/images/icons/viber.svg" alt="">-->
+<!--                            </a>-->
+<!--                            <a href="">-->
+<!--                                <img src="--><?php //= bloginfo('template_url'); ?><!--/assets/images/icons/instagram.svg" alt="">-->
+<!--                            </a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">© 2024 Кафедра АКСУ НАУ. All Rights Reserved.</div>
+</footer>
 
 <?php wp_footer(); ?>
 

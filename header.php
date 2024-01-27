@@ -41,13 +41,13 @@
                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-phone"></use>
                     </svg>
                 </div>
-                <a href="" class="header-contacts-link">(044) 497-81-86</a>
+                <a href="tel:<?php the_field("phone_number_1_link", 'option'); ?>" class="header-contacts-link"><?php the_field("phone_number_1", 'option'); ?></a>
                 <div class="header-contacts-line"></div>
-                <a href="" class="header-contacts-link">(044) 497-81-86</a>
+                <a href="tel:<?php the_field("phone_number_2_link", 'option'); ?>" class="header-contacts-link"><?php the_field("phone_number_2", 'option'); ?></a>
                 <div class="header-contacts-line"></div>
-                <a href="" class="header-contacts-link">(044) 497-81-86</a>
+                <a href="tel:<?php the_field("phone_number_3_link", 'option'); ?>" class="header-contacts-link"><?php the_field("phone_number_3", 'option'); ?></a>
                 <div class="header-contacts-line"></div>
-                <a href="" class="header-contacts-link">(044) 497-81-86</a>
+                <a href="tel:<?php the_field("phone_number_4_link", 'option'); ?>" class="header-contacts-link"><?php the_field("phone_number_4", 'option'); ?></a>
             </div>
             <div class="header-contacts__list">
                 <div>
@@ -55,23 +55,27 @@
                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-mail"></use>
                     </svg>
                 </div>
-                <a href="" class="header-contacts-link">sula513@ukr.net</a>
+                <a href="mailto: <?php the_field("mail", 'option'); ?>" class="header-contacts-link"><?php the_field("mail", 'option'); ?></a>
                 <div class="header-contacts-line"></div>
-                <a href="" class="header-contacts-link">Завідувач кафедри (044) 406-79-07</a>
+                <a href="tel:<?php the_field("phone_number_6_link", 'option'); ?>" class="header-contacts-link"><?php the_field("phone_number_5", 'option'); ?></a>
             </div>
             <div class="header-contacts__list-icons">
-                <a href="">
-                    <img src="<?= bloginfo('template_url'); ?>/assets/images/icons/youtube.svg" alt="">
-                </a>
-                <a href="">
-                    <img src="<?= bloginfo('template_url'); ?>/assets/images/icons/telegram.svg" alt="">
-                </a>
-                <a href="">
-                    <img src="<?= bloginfo('template_url'); ?>/assets/images/icons/viber.svg" alt="">
-                </a>
-                <a href="">
-                    <img src="<?= bloginfo('template_url'); ?>/assets/images/icons/instagram.svg" alt="">
-                </a>
+                <?php
+                if ( have_rows( 'social_link_list','option' ) ):
+                    while ( have_rows( 'social_link_list','option' ) ) : the_row();
+                        $social_link  = get_sub_field( 'social_link', 'option' );
+                        $social_icon  = get_sub_field( 'social_link_list_icon', 'option' );
+                        if ( $social_icon ) {
+                            $image_alt = $social_icon['alt'];
+                            $image_url = $social_icon['url'];
+                        }
+                        ?>
+
+                        <a href="<?php echo "$social_link" ?>">
+                            <img src="<?php echo $image_url ?>" alt="<?php echo $image_alt ?>">
+                        </a>
+
+                    <?php endwhile; else : endif; ?>
             </div>
             <a href="" class="header-contacts__lang">Eng</a>
             <div class="header-contacts-search">
