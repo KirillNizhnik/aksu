@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
           integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <!--        <link rel="stylesheet" href="style/main.css">-->
     <?php wp_head(); ?>
 </head>
 
@@ -90,11 +89,9 @@
         </div>
         <div class="header-desktop">
             <?php
-
             $args = array(
                 'theme_location' => 'head_menu',
                 'walker'=> new Custom_Walker_Nav_Menu()
-
             );
             wp_nav_menu( $args );
             ?>
