@@ -410,7 +410,7 @@ strong {
     font-size: 16px;
     font-weight: 600;
     line-height: 140%;
-    width: 180px;
+    width: fit-content;
 }
 
 .home-news-wrap {
@@ -632,9 +632,7 @@ strong {
     .home-news-wrap {
         margin: 0 0 48px 0;
     }
-    .home-news__link {
-        width: 168px;
-    }
+
 }
 
 
@@ -856,7 +854,7 @@ strong {
     }
 
     .home-history__link {
-        width: 186px;
+        width: fit-content;
         align-items: center;
     }
 
