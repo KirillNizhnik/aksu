@@ -632,6 +632,9 @@ strong {
     .home-news-wrap {
         margin: 0 0 48px 0;
     }
+    .home-news__link {
+        width: 168px;
+    }
 }
 
 
