@@ -35,7 +35,7 @@ get_header();
                 <?php
                 if (have_rows('privilege_list')):
                     while (have_rows('privilege_list')) : the_row();
-                        $privilege_title = get_sub_field('privilege_list-tite');
+                        $privilege_title = get_sub_field('privilege_list-title');
                         $privilege_text = get_sub_field('privilege_list-text');
                         $privilege_img = get_sub_field('privilege_list-img');
                         if ($privilege_img) {
@@ -55,7 +55,7 @@ get_header();
         </div>
     </section>
 
-    <div class="home-history">
+    <section class="home-history">
         <div class="container">
             <div class="home-history__title"><?php the_field("home-history_title"); ?></div>
 
@@ -85,7 +85,93 @@ get_header();
                      alt="<?php echo $home_history_image_alt; ?>">
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="home-video">
+        <div class="container">
+            <h5 class="home-video__title"><?php the_field("home_video__title"); ?></h5>
+            <div class="home-video-inner">
+                <div class="home-video-wrap">
+                    <?php
+                    $video_img = get_field('video_list_img');
+                    if ($video_img) {
+                        $video_image_alt = $video_img['alt'];
+                        $video_image_url = $video_img['url'];
+                    }
+                    ?>
+                    <img src="<?php echo $video_image_url ?>" alt="<?php echo $video_image_alt ?>"
+                         class="home-video__img">
+                    <a href="<?php the_field("home_video_play"); ?>" class="home-video-play">
+                        <svg width="30px" height="30px" class="home-video-play-icon">
+                            <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-tringle"></use>
+                        </svg>
+                    </a>
+                </div>
+                <ul class="home-video__list">
+                    <?php
+                    if (have_rows('home_video_list')):
+                        while (have_rows('home_video_list')) : the_row();
+                            $home_video_list_num = get_sub_field('home-video__list_item_num');
+                            $home_video_list_text = get_sub_field('home_video_list_item_text');
+
+                            ?>
+                            <li class="home-video__list-item">
+                                <div class="home-video__list-item-num"><?php echo $home_video_list_num ?></div>
+                                <div class="home-video__list-item-text"><?php echo $home_video_list_text ?></div>
+                            </li>
+                        <?php endwhile; else : endif; ?>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-news">
+        <div class="container">
+            <div class="home-news-wrap">
+                <h3 class="home-news-title"><?php the_field("home_news_title"); ?></h3>
+                <a href="" class="home-news__link">
+                    <span><?php the_field("home_news_btn"); ?></span>
+                    <svg width="24px" height="24px" class="home-news__btn-svg">
+                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="home-news-slider__list">
+                <div class="home-news-slider__list-item">
+                    <img src="" alt="" class="home-news-slider__list-item-img">
+                    <div class="home-news-slider__list-item-wrap">
+                        <h3 class="home-news-slider__list-item-title">Профорієнтаційна робота кафедри АКСУ</h3>
+                        <div class="home-news-slider__list-item-date">12.02.2023</div>
+                        <div class="home-news-slider__list-item-text">Продовжується розвиток партнерських зв'язків з провідними навчальними закладами
+                            Вкрай важливим напрямком роботи в теперішні непрості часи є проведення профорієнтаційної роботи серед школярів з метою допомоги їм визначитись з напрямком подальшого здобуття вищої освіти.
+                        </div>
+                        <a href="" class="home-news-slider__list-item-link">
+                            <span>Читати більше</span>
+                            <svg width="24px" height="24px" class="home-news-slider__list-item-link-svg">
+                                <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-news-slider__list-item">
+                    <img src="" alt="" class="home-news-slider__list-item-img">
+                    <div class="home-news-slider__list-item-wrap">
+                        <h3 class="home-news-slider__list-item-title">Профорієнтаційна робота кафедри АКСУ</h3>
+                        <div class="home-news-slider__list-item-date">12.02.2023</div>
+                        <div class="home-news-slider__list-item-text">Продовжується розвиток партнерських зв'язків з провідними навчальними закладами
+                            Вкрай важливим напрямком роботи в теперішні непрості часи є проведення профорієнтаційної роботи серед школярів з метою допомоги їм визначитись з напрямком подальшого здобуття вищої освіти.
+                        </div>
+                        <a href="" class="home-news-slider__list-item-link">
+                            <span>Читати більше</span>
+                            <svg width="24px" height="24px" class="home-news-slider__list-item-link-svg">
+                                <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <?php
 get_footer();
