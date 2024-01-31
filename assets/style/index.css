@@ -394,10 +394,15 @@ strong {
 }
 
 .home-news-title {
-    color: var(--dark-blue);
+    color: var(--orange);
     font-size: 20px;
     font-weight: 700;
     line-height: 150%;
+}
+
+.home-news-title > p > strong{
+    color: var(--dark-blue);
+    font-weight: 700;
 }
 
 .home-news__link {
@@ -410,7 +415,7 @@ strong {
     font-size: 16px;
     font-weight: 600;
     line-height: 140%;
-    width: 180px;
+    width: 173px;
 }
 
 .home-news-wrap {
@@ -471,8 +476,29 @@ strong {
     padding: 12px 20px;
     border-radius: 10px;
     background-color: #F6FAFE;
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+.home-news-slider__list-item-link-svg {
+    fill: var(--dark-blue);
 }
 
+.home-news-slider__list-item-link:hover .home-news-slider__list-item-link-svg{
+    rotate: 45deg;
+}
+
+.home-news-slider__list-item-link:hover {
+    background-color: #D3E3F7;
+}
+
+.home-news-slider__list-item-link:focus {
+    fill: var(--gray);
+    color: var(--gray);
+    background-color: #F6FAFE;
+}
+.home-news-slider__list-item-link:focus .home-news-slider__list-item-link-svg{
+    fill: var(--gray);
+}
 .home-news-slider__list-item-img {
     width: 100%;
     height: 192px;
@@ -514,6 +540,26 @@ strong {
     color: var(--gray);
     background-color:  #F6FAFE;
     border-radius: 10px;
+}
+
+.swiper-pagination-home-news {
+    display: flex;
+    gap: 8px;
+    margin: 50px 0 0 0;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #595D62;
+
+}
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-home-news{
+    width: 100%;
 }
 
 @media screen and (min-width: 375px) {
@@ -632,9 +678,7 @@ strong {
     .home-news-wrap {
         margin: 0 0 48px 0;
     }
-    .home-news__link {
-        width: 168px;
-    }
+
 }
 
 
@@ -856,7 +900,7 @@ strong {
     }
 
     .home-history__link {
-        width: 186px;
+        width: fit-content;
         align-items: center;
     }
 
@@ -914,5 +958,9 @@ strong {
 
     .home-news-slider__list-item {
         width: 462px;
+    }
+    .home-news-slider__list{
+        display: flex;
+        justify-content: space-between;
     }
 }
