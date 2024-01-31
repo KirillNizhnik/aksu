@@ -14,9 +14,9 @@ const swiperCategory = new Swiper('.swiper-home-news', {
             slidesPerView: 2,
         },
         1440: {
-            slidesPerView: false,
+            slidesPerView: 'auto',
             pagination: false,
-            spaceBetween: false,
+            // spaceBetween: false,
         },
     },
 });

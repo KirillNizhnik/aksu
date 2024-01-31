@@ -394,10 +394,15 @@ strong {
 }
 
 .home-news-title {
-    color: var(--dark-blue);
+    color: var(--orange);
     font-size: 20px;
     font-weight: 700;
     line-height: 150%;
+}
+
+.home-news-title > p > strong{
+    color: var(--dark-blue);
+    font-weight: 700;
 }
 
 .home-news__link {
@@ -410,7 +415,7 @@ strong {
     font-size: 16px;
     font-weight: 600;
     line-height: 140%;
-    width: fit-content;
+    width: 173px;
 }
 
 .home-news-wrap {
@@ -953,5 +958,9 @@ strong {
 
     .home-news-slider__list-item {
         width: 462px;
+    }
+    .home-news-slider__list{
+        display: flex;
+        justify-content: space-between;
     }
 }
