@@ -1,0 +1,256 @@
+.disciplines_hero {
+
+}
+
+.disciplines_hero__title {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(255, 255, 255, 0.40);
+}
+
+.disciplines_hero__title {
+    color: var(--dark-blue);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 150%;
+    text-align: center;
+    padding: 8px 24px;
+    text-transform: inherit;
+}
+
+.disciplines_hero_title-age {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    margin: 16px 0 4px 0;
+}
+
+.disciplines_hero_title-spec {
+    color: var(--orange);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.disciplines-name {
+    border-radius: 10px;
+    background: var(--white);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.20), 0 0 32px -8px rgba(0, 0, 0, 0.12), 0 32px 32px -8px rgba(0, 0, 0, 0.08);
+    padding: 16px 8px;
+    text-align: center;
+    margin: -40px 0 0 0;
+}
+
+.disciplines-name-inner-num {
+    color: var(--dark-blue);
+    font-size: 78px;
+    font-weight: 800;
+}
+
+.disciplines-name-inner-name {
+    color: var(--orange);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    margin: 8px auto 16px auto;
+}
+
+.disciplines-name-inner-send {
+    color: var(--dark-blue);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    display: flex;
+    gap: 14px;
+    border-radius: 10px;
+    background-color: #F6FAFE;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.disciplines-name-inner-descr {
+    margin: 8px 0 0 0;
+    color: var(--orange);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+
+.disciplines-descr-text-1 {
+    color: var(--dark-blue);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    margin: 0 0 16px 0;
+}
+
+.disciplines-descr-text-2 {
+    color: var(--orange);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.disciplines-descr {
+    margin: 40px 0;
+}
+
+.disciplines-list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    border-bottom: 1px solid #E2E2E2;
+}
+
+.disciplines-list-item-title {
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    height: 66px;
+}
+
+.disciplines-list-item-author {
+    font-size: 14px;
+    height: 48px;
+}
+
+.disciplines-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.disciplines-inner {
+    margin: 0 0 150px 0;
+}
+
+.disciplines-list-item-send {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    color: var(--dark-blue);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #F6FAFE;
+}
+
+@media screen and (min-width: 375px) {
+    .disciplines_hero_title-age {
+        width: 193px;
+        margin: 16px auto 4px auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .disciplines_hero__title {
+        padding: 16px;
+        font-size: 26px;
+        width: 535px;
+        margin: auto;
+    }
+
+    .disciplines_hero_title-age {
+        font-size: 20px;
+        margin: 32px auto 8px auto;
+        width: 100%;
+    }
+
+    .disciplines_hero_title-spec {
+        font-size: 20px;
+    }
+
+    .disciplines-name-inner {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .disciplines-name {
+        padding: 16px;
+        width: 534px;
+        margin: -40px auto 0 auto;
+    }
+
+    .disciplines-name-inner-name {
+        font-size: 20px;
+    }
+
+    .disciplines-name-inner-descr {
+        font-size: 20px;
+    }
+
+    .disciplines-name-inner-send {
+        width: fit-content;
+        margin: auto;
+    }
+
+    .disciplines-descr {
+        margin: 50px 0;
+    }
+
+    .disciplines-descr-text-1, .disciplines-descr-text-2 {
+        font-size: 20px;
+    }
+
+    .disciplines-list {
+        gap: 24px;
+    }
+    .disciplines-list-item-send {
+        width: fit-content;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    .disciplines_hero__title {
+        padding: 24px;
+        font-size: 36px;
+        width: 550px;
+        margin: 300px auto 0 auto;
+    }
+
+    .disciplines_hero_title-age {
+        font-size: 20px;
+        margin: 64px 0 16px 0;
+    }
+
+    .disciplines-name {
+        padding: 24px;
+        width: 615px;
+        margin: -100px auto 0 auto;
+    }
+
+    .disciplines-name-inner {
+        gap: 30px;
+    }
+
+    .disciplines-descr {
+        margin: 64px 0;
+    }
+
+    .disciplines-list-item {
+        width: 463px;
+    }
+
+    .disciplines-list {
+        display: flex;
+        flex-direction: row;
+        gap: 64px 25px;
+        flex-wrap: wrap;
+    }
+
+    .disciplines-inner {
+        margin: 0 0 270px 0;
+    }
+}
