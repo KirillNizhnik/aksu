@@ -71,10 +71,10 @@ get_header();
 
                     ?>
 
-<!--                    <div class="disciplines-descr">-->
-<!--                        <div class="disciplines-descr-text-1">--><?php //echo $disciplines_category_file_name_1; ?><!--</div>-->
-<!--                        <div class="disciplines-descr-text-2">--><?php //echo $disciplines_category_file_name_2; ?><!--</div>-->
-<!--                    </div>-->
+                    <div class="disciplines-descr">
+                        <div class="disciplines-descr-text-1"><?php echo $disciplines_category_file_name_1; ?></div>
+                        <div class="disciplines-descr-text-2"><?php echo $disciplines_category_file_name_2; ?></div>
+                    </div>
 
 
                         <li class="disciplines-list-item">
