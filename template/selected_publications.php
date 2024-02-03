@@ -22,14 +22,14 @@ get_header();
                     ?>
                     <div class="publications-inner">
                     <h2 class="publications-inner__title"><?php if ($publications_age): echo $publications_age; endif; ?></h2>
-                    <h4 class="publications-inner__text"><?php if($publications_text) : echo $publications_text; endif; ?></h4>
+                    <h4 class="publications-inner__text"><?php if ($publications_text) : echo $publications_text; endif; ?></h4>
                     <ul class="publications-list">
                         <?php
                         if (have_rows('publications_list_list')):
                             while (have_rows('publications_list_list')) : the_row();
                                 $publications_title = get_sub_field('publications_list_list_title');
-                                $checkedUaFile =get_sub_field('publications_on_off_ua');
-                                $checkedEnFile =get_sub_field('publications_on_off_en');
+                                $checkedUaFile = get_sub_field('publications_on_off_ua');
+                                $checkedEnFile = get_sub_field('publications_on_off_en');
 
                                 ?>
 
@@ -37,31 +37,47 @@ get_header();
                                     <div class="publications-list__item-title"><?php if ($publications_title) : echo $publications_title; endif; ?></div>
 
                                     <?php
-                                        if ($checkedEnFile || $checkedUaFile):
+                                    if ($checkedEnFile || $checkedUaFile):
 
                                         ?>
                                         <div class="publications-list__item-files">
                                             <?php if ($checkedUaFile) : ?>
                                                 <?php
-                                                $publications_files_ua = get_field('publications_ukrainian_file');
+                                                $doc_file_ua = get_sub_field('publications_ukrainian_file');
+                                                $doc_file_url_ua = $doc_file_ua['url'];
+                                                $doc_file_name_ua = basename($doc_file_url_ua);
+
                                                 ?>
-                                            <div data-src="<?php echo $publications_files_ua['url']; ?>" class="publications-list__item__file btn-section" >
-                                                <span><?php echo basename($publications_files_ua); ?></span>
-                                                <svg width="24px" height="24px" class="home-history__btn-svg">
-                                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
-                                                </svg>
-                                            </div>
+                                                <div>
+                                                    <a href="<?php echo $doc_file_url_ua; ?>"
+                                                       class="publications-list__item__file btn-section"
+                                                       target="_blank">
+                                                        <span><?php echo $doc_file_name_ua; ?></span>
+                                                        <svg width="24px" height="24px" class="home-history__btn-svg">
+                                                            <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
+                                                        </svg>
+                                                    </a></div>
                                             <?php endif;
                                             if ($checkedEnFile) :?>
-                                            <div class="publications-list__item__file btn-section">
-                                                <span>Save2</span>
-                                                <svg width="24px" height="24px" class="home-history__btn-svg">
-                                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
-                                                </svg>
-                                            </div>
+                                                <?php
+                                                $doc_file_en = get_sub_field('publications_english_file');
+                                                $doc_file_url_en = $doc_file_en['url'];
+                                                $doc_file_name_en = basename($doc_file_url_en);
+
+                                                ?>
+                                                <div>
+                                                    <a href="<?php echo $doc_file_url_en; ?>"
+                                                       class="publications-list__item__file btn-section"
+                                                       target="_blank">
+                                                        <span><?php echo $doc_file_name_en; ?></span>
+                                                        <svg width="24px" height="24px" class="home-history__btn-svg">
+                                                            <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
+                                                        </svg>
+                                                    </a>
+                                                </div>
                                             <?php endif; ?>
                                         </div>
-                                        <?php
+                                    <?php
                                     endif;
                                     ?>
 
