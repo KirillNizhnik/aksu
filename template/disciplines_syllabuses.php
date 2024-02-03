@@ -42,7 +42,7 @@ get_header();
                                 <?php echo $disciplines_syllabuses_name ?>
                             </div>
                             <a class="disciplines-name-inner-send"
-                                 href="<?php echo $disciplines_syllabuses_file_url; ?>" target="_blank">
+                               href="<?php echo $disciplines_syllabuses_file_url; ?>" target="_blank">
                                 <span><?php echo $disciplines_syllabuses_file_name; ?></span>
                                 <svg width="24px" height="24px" class="">
                                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
@@ -52,46 +52,53 @@ get_header();
                         </div>
                     </div>
                 </div>
+
                 <div>
-                    <ul class="disciplines-list">
                     <?php
-                    if (have_rows('disciplines_syllabuses_category_file_list')):
-                    while (have_rows('disciplines_syllabuses_category_file_list')) :
-                    the_row();
-                    $disciplines_category_file_name_1 = get_sub_field('disciplines_syllabuses_category_file_list_name_1');
-                    $disciplines_category_file_name_2 = get_sub_field('disciplines_syllabuses_category_file_list_name_2');
+                    if (have_rows('disciplines_syllabuses_category_file_list_list')):
+                        while (have_rows('disciplines_syllabuses_category_file_list_list')) :
+                            the_row();
+                            $disciplines_category_file_name_title = get_sub_field('disciplines_syllabuses_category_file_list_list_title');
+                            $disciplines_category_file_name_subtitle = get_sub_field('disciplines_syllabuses_category_file_list_list_subtitle');
 
-
-                    $name_file = get_sub_field('disciplines_syllabuses_category_file_list_name');
-                    $author_file = get_sub_field('disciplines_syllabuses_category_file_list_author');
-                    $doc_file = get_sub_field('disciplines_syllabuses_category_file_list_file');
-
-                    $doc_file_url = $doc_file['url'];
-                    $doc_file_name = basename($doc_file_url);
-
-                    ?>
-
-                    <div class="disciplines-descr">
-                        <div class="disciplines-descr-text-1"><?php echo $disciplines_category_file_name_1; ?></div>
-                        <div class="disciplines-descr-text-2"><?php echo $disciplines_category_file_name_2; ?></div>
-                    </div>
-
-
-                        <li class="disciplines-list-item">
-                            <div class="disciplines-list-item-title"><?php echo $name_file; ?>
+                            ?>
+                            <div class="disciplines-descr">
+                                <div class="disciplines-descr-text-1"><?php echo $disciplines_category_file_name_title; ?></div>
+                                <div class="disciplines-descr-text-2"><?php echo $disciplines_category_file_name_subtitle; ?></div>
                             </div>
-                            <div class="disciplines-list-item-author"><?php echo $author_file; ?>
-                            </div>
-                            <a class="disciplines-list-item-send" href="<?php echo $doc_file_url; ?>" target="_blank">
-                                <span><?php echo $doc_file_name; ?></span>
-                                <svg width="24px" height="24px" class="">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <?php endwhile; else :
-                        endif; ?>
-                    </ul>
+
+
+                            <ul class="disciplines-list">
+                                <?php
+                                if (have_rows('disciplines_syllabuses_category_file_list')):
+                                    while (have_rows('disciplines_syllabuses_category_file_list')) :
+                                        the_row();
+                                        $name_file = get_sub_field('disciplines_syllabuses_category_file_list_name');
+                                        $author_file = get_sub_field('disciplines_syllabuses_category_file_list_author');
+                                        $doc_file = get_sub_field('disciplines_syllabuses_category_file_list_file');
+
+                                        $doc_file_url = $doc_file['url'];
+                                        $doc_file_name = basename($doc_file_url);
+                                        ?>
+
+                                        <li class="disciplines-list-item">
+                                            <div class="disciplines-list-item-title"><?php echo $name_file; ?>
+                                            </div>
+                                            <div class="disciplines-list-item-author"><?php echo $author_file; ?>
+                                            </div>
+                                            <a class="disciplines-list-item-send" href="<?php echo $doc_file_url; ?>"
+                                               target="_blank">
+                                                <span><?php echo $doc_file_name; ?></span>
+                                                <svg width="24px" height="24px" class="">
+                                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    <?php endwhile; else : endif; ?>
+                            </ul>
+
+                        <?php endwhile; else : endif; ?>
+
                 </div>
 
             </div>
@@ -114,7 +121,8 @@ get_header();
             <!--                                <span>Завантажити</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                            <div class="disciplines-name-inner-descr">Перелік дисциплін та силабусів 1-8 семестрів</div>-->
@@ -135,7 +143,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -147,7 +156,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -159,7 +169,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -171,7 +182,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -183,7 +195,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -205,7 +218,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -217,7 +231,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -229,7 +244,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -241,7 +257,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -253,7 +270,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -278,7 +296,8 @@ get_header();
             <!--                                <span>Завантажити</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                            <div class="disciplines-name-inner-descr">Перелік дисциплін та силабусів 1-8 семестрів</div>-->
@@ -299,7 +318,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -311,7 +331,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -323,7 +344,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -335,7 +357,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -347,7 +370,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -369,7 +393,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -381,7 +406,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -393,7 +419,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -405,7 +432,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
@@ -417,7 +445,8 @@ get_header();
             <!--                                <span>Silabus до дисципліни (pdf)</span>-->
             <!--                                <svg width="24px" height="24px" class="">-->
             <!--                                    <use href="-->
-            <?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+            <?php //echo bloginfo('template_url');
+            ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
             <!--                                </svg>-->
             <!--                            </a>-->
             <!--                        </li>-->
