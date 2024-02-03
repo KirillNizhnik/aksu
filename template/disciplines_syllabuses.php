@@ -41,13 +41,13 @@ get_header();
                             <div class="disciplines-name-inner-name">
                                 <?php echo $disciplines_syllabuses_name ?>
                             </div>
-                            <div class="disciplines-name-inner-send"
-                                 data-src="<?php echo $disciplines_syllabuses_file_url; ?>">
+                            <a class="disciplines-name-inner-send"
+                                 href="<?php echo $disciplines_syllabuses_file_url; ?>" target="_blank">
                                 <span><?php echo $disciplines_syllabuses_file_name; ?></span>
                                 <svg width="24px" height="24px" class="">
                                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
                                 </svg>
-                            </div>
+                            </a>
                             <div class="disciplines-name-inner-descr"><?php echo $disciplines_syllabuses_text ?></div>
                         </div>
                     </div>
@@ -82,12 +82,12 @@ get_header();
                             </div>
                             <div class="disciplines-list-item-author"><?php echo $author_file; ?>
                             </div>
-                            <div class="disciplines-list-item-send" data-src="<?php echo $doc_file_url; ?>">
+                            <a class="disciplines-list-item-send" href="<?php echo $doc_file_url; ?>" target="_blank">
                                 <span><?php echo $doc_file_name; ?></span>
                                 <svg width="24px" height="24px" class="">
                                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
                                 </svg>
-                            </div>
+                            </a>
                         </li>
                         <?php endwhile; else :
                         endif; ?>

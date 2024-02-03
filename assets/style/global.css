@@ -100,7 +100,7 @@ button{
 .btn-section{
     display: flex;
     padding: 12px 20px;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
