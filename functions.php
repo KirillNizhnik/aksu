@@ -206,6 +206,29 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// news-post-type.php
+require_once(get_template_directory() . '/news-post-type.php');
+
+$args = array(
+    'post_type' => 'news',
+    'posts_per_page' => -1,
+);
+
+$query = new WP_Query($args);
+
+if ($query->have_posts()) :
+    while ($query->have_posts()) : $query->the_post();
+        the_title();
+        the_content();
+    endwhile;
+    wp_reset_postdata();
+else :
+    echo 'Посты не найдены.';
+endif;
+
+
+
+
 //class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 //
 //    public function start_lvl(&$output, $depth = 0, $args = null) {
