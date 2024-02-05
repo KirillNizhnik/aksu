@@ -92,9 +92,9 @@ get_header();
                                 <?php
 								endwhile;
 							endif;
-							?>
+							?> </div>
                         <div class="news-sidebar__swiper-pagination swiper-pagination"></div>
-                    </div>
+
                 </div>
             </div>
         </section>
