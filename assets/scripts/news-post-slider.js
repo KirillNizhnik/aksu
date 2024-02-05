@@ -21,9 +21,8 @@ const newsSidebarSwiper = new Swiper('.news-sidebar__swiper', {
 
 
 const newsSwiper = new Swiper('.news-page__swiper', {
-    loop: true,
-    spaceBetween: 16,
-    slidesPerView: "auto",
+    slidesPerView: 'auto',
+    spaceBetween: 10,
     pagination: {
         el: '.news-sidebar__swiper-pagination',
         clickable: true,
