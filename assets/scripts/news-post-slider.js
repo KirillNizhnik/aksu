@@ -26,6 +26,7 @@ const newsSwiper = new Swiper('.news-page__swiper', {
     slidesPerView: "auto",
     pagination: {
         el: '.news-sidebar__swiper-pagination',
+        clickable: true,
     },
     navigation: {
         nextEl: '.news-page__button-prev',
