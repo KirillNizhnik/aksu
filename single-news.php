@@ -5,7 +5,7 @@ get_header();
     <main>
         <section class="home-hero" style="background-image: url(<?php echo get_the_post_thumbnail_url() ?>);">
             <div class="container">
-                <h2 class="home-hero__title"><?php the_title() ?></h2>
+                <h2 class="news-page__title title-section"><?php the_title() ?></h2>
             </div>
         </section>
 <!--        <div class="news-page__photo">-->
