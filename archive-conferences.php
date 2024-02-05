@@ -14,141 +14,83 @@ get_header();
 
     <section class="conferences">
         <div class="container">
-            <ul class="conferences-list">
-                <li class="conferences-list__item">
-                    <img src="" alt="" class="conferences-list__item-img">
-                    <div class="conferences-list__item-wrapp">
-                        <div>
-                            <h3 class="conferences-list__item-title">Науково-технічна конференція «Сучасні технології
-                                розробки комп’ютеризованих систем керування рухом» Київ / НАУ / листопад 2023</h3>
-                            <p class="conferences-list__item-descr">Кафедра аерокосмічних систем управління, Факультету
-                                аеронавігації, електроніки та телекомунікацій запрошують студентів та молодих учених
-                                взяти
-                                участь у щорічній науково-технічній конференції«Сучасні технології розвитку
-                                комп’ютеризованих систем керування рухом».Участь у Конференції безкоштовна. За
-                                результатами
-                                Конференції буде видано електронний збірник тез.</p>
-                        </div>
+            <?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-                        <div class="conferences-list__item-btns">
-                            <a href="" class="btn-section">
-                                <span>Вимоги до тез доповідей</span>
-                                <svg width="24px" height="24px"
-                                     class="home-history__btn-svg ">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
-                                </svg>
-                            </a>
-                            <a href="" class="btn-section">
-                                <span>Вимоги до тез доповідей</span>
-                                <svg width="24px" height="24px"
-                                     class="home-history__btn-svg ">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li class="conferences-list__item">
-                    <img src="" alt="" class="conferences-list__item-img">
-                    <div class="conferences-list__item-wrapp">
-                        <div>
-                            <h3 class="conferences-list__item-title">Науково-технічна конференція «Сучасні технології
-                                розробки комп’ютеризованих систем керування рухом» Київ / НАУ / листопад 2023</h3>
-                            <p class="conferences-list__item-descr">Кафедра аерокосмічних систем управління, Факультету
-                                аеронавігації, електроніки та телекомунікацій запрошують студентів та молодих учених
-                                взяти
-                                участь у щорічній науково-технічній конференції«Сучасні технології розвитку
-                                комп’ютеризованих систем керування рухом».Участь у Конференції безкоштовна. За
-                                результатами
-                                Конференції буде видано електронний збірник тез.</p>
-                        </div>
+            $args = array(
+                'post_type' => 'conferences',
+                'paged' => $paged,
+                'orderby' => 'date',
+                'order' => 'DESC',
+                'posts_per_page' => 4,
+            );
 
-                        <div class="conferences-list__item-btns">
-                            <a href="" class="btn-section">
-                                <span>Вимоги до тез доповідей</span>
-                                <svg width="24px" height="24px"
-                                     class="home-history__btn-svg">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
-                                </svg>
-                            </a>
-                            <a href="" class="btn-section">
-                                <span>Вимоги до тез доповідей</span>
-                                <svg width="24px" height="24px"
-                                     class="home-history__btn-svg">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li class="conferences-list__item">
-                    <img src="" alt="" class="conferences-list__item-img">
-                    <div class="conferences-list__item-wrapp">
-                        <div>
-                            <h3 class="conferences-list__item-title">Науково-технічна конференція «Сучасні технології
-                                розробки комп’ютеризованих систем керування рухом» Київ / НАУ / листопад 2023</h3>
-                            <p class="conferences-list__item-descr">Кафедра аерокосмічних систем управління, Факультету
-                                аеронавігації, електроніки та телекомунікацій запрошують студентів та молодих учених
-                                взяти
-                                участь у щорічній науково-технічній конференції«Сучасні технології розвитку
-                                комп’ютеризованих систем керування рухом».Участь у Конференції безкоштовна. За
-                                результатами
-                                Конференції буде видано електронний збірник тез.</p>
-                        </div>
+            $query = new WP_Query($args);
 
-                        <div class="conferences-list__item-btns">
-                            <a href="" class="btn-section">
-                                <span>Вимоги до тез доповідей</span>
-                                <svg width="24px" height="24px"
-                                     class="home-history__btn-svg">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
-                                </svg>
-                            </a>
-                            <a href="" class="btn-section">
-                                <span>Вимоги до тез доповідей</span>
-                                <svg width="24px" height="24px"
-                                     class="home-history__btn-svg">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li class="conferences-list__item">
-                    <img src="" alt="" class="conferences-list__item-img">
-                    <div class="conferences-list__item-wrapp">
-                        <div>
-                            <h3 class="conferences-list__item-title">Науково-технічна конференція «Сучасні технології
-                                розробки комп’ютеризованих систем керування рухом» Київ / НАУ / листопад 2023</h3>
-                            <p class="conferences-list__item-descr">Кафедра аерокосмічних систем управління, Факультету
-                                аеронавігації, електроніки та телекомунікацій запрошують студентів та молодих учених
-                                взяти
-                                участь у щорічній науково-технічній конференції«Сучасні технології розвитку
-                                комп’ютеризованих систем керування рухом».Участь у Конференції безкоштовна. За
-                                результатами
-                                Конференції буде видано електронний збірник тез.</p>
-                        </div>
+            if ($query->have_posts()) :
+                ?>
+                <ul class="conferences-list">
+                    <?php
+                    while ($query->have_posts()) :
+                        $query->the_post();
+                        ?>
+                        <li class="conferences-list__item">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <img src="<?php the_post_thumbnail_url(); ?>"
+                                     alt="<?php the_title_attribute(); ?>" class="conferences-list__item-img">
+                            <?php endif; ?>
+                            <div class="conferences-list__item-wrapp">
+                                <div>
+                                    <h3 class="conferences-list__item-title"><?php the_title(); ?></h3>
+                                    <p class="conferences-list__item-descr"> <?php echo get_the_excerpt(); ?></p>
+                                </div>
+                                <a href="<?php the_permalink(); ?>" class="btn-section ">
+                                    Читати більше
+                                    <svg width="32px" height="32px">
+                                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
+                                    </svg>
+                                </a>
+                                <!--                        <div class="conferences-list__item-btns">-->
+                                <!--                            <a href="" class="btn-section">-->
+                                <!--                                <span>Вимоги до тез доповідей</span>-->
+                                <!--                                <svg width="24px" height="24px"-->
+                                <!--                                     class="home-history__btn-svg ">-->
+                                <!--                                    <use href="-->
+                                <?php //echo bloginfo('template_url');
+                                ?><!--/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>-->
+                                <!--                                </svg>-->
+                                <!--                            </a>-->
+                                <!--                            <a href="" class="btn-section">-->
+                                <!--                                <span>Вимоги до тез доповідей</span>-->
+                                <!--                                <svg width="24px" height="24px"-->
+                                <!--                                     class="home-history__btn-svg ">-->
+                                <!--                                    <use href="-->
+                                <?php //echo bloginfo('template_url');
+                                ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
+                                <!--                                </svg>-->
+                                <!--                            </a>-->
+                                <!--                        </div>-->
+                            </div>
+                        </li>
+                    <?php
+                    endwhile;
+                    ?>
+                </ul>
+                <?php
+                echo paginate_links(array(
+                    'total' => $query->max_num_pages,
+                    'current' => max(1, $paged),
+                    'prev_text' => '&laquo; Назад',
+                    'next_text' => 'Вперед &raquo;',
+                ));
 
-                        <div class="conferences-list__item-btns">
-                            <a href="" class="btn-section">
-                                <span>Вимоги до тез доповідей</span>
-                                <svg width="24px" height="24px"
-                                     class="home-history__btn-svg">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
-                                </svg>
-                            </a>
-                            <a href="" class="btn-section">
-                                <span>Вимоги до тез доповідей</span>
-                                <svg width="24px" height="24px"
-                                     class="home-history__btn-svg">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <div class="conferences-pagination"></div>
+
+            else :
+                echo 'Немає конференцій';
+
+            endif;
+            wp_reset_postdata();
+            ?>
         </div>
     </section>
 
