@@ -21,9 +21,10 @@ get_header();
 			                        <?php while( have_rows('news_gellery_images') ): the_row();
 				                        $image = get_sub_field('news_image');
 				                        ?>
+                                <div class="swiper-slide">
                                         <img src="<?php echo $image['url']; ?>"
                                              alt="<?php echo $image['alt']; ?>"
-                                             class="news-page__swiper-slide swiper-slide">
+                                             class="news-page__swiper-slide swiper-slide"></div>
 			                        <?php endwhile; ?>
 
 	                        <?php endif; ?>
