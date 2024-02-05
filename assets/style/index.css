@@ -962,5 +962,6 @@ strong {
     .home-news-slider__list{
         display: flex;
         justify-content: space-between;
+        height: 600px;
     }
 }
