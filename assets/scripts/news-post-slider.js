@@ -20,6 +20,21 @@ const newsSidebarSwiper = new Swiper('.news-sidebar__swiper', {
 });
 
 
+const newsSwiper = new Swiper('.news-page__swiper', {
+    loop: true,
+    spaceBetween: 16,
+    slidesPerView: "auto",
+    pagination: {
+        el: '.news-sidebar__swiper-pagination',
+    },
+    navigation: {
+        nextEl: '.news-page__button-prev',
+        prevEl: '.news-page__button-next',
+    },
+});
+
+
+
 
 
 

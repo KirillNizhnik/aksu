@@ -26,18 +26,18 @@ get_header();
                                              alt="<?php echo $image['alt']; ?>"
                                              class="news-page__swiper-slide swiper-slide"></div>
 			                        <?php endwhile; ?>
-                        </div>
+
 	                        <?php endif; ?>
 
-
+                        </div>
                         <div class="news-page__swiper-pagination swiper-pagination"></div>
                         <div class="news-page__buttons">
-                            <div class="news-page__button-prev">
+                            <div class="news-page__button-prev swiper-button-prev">
                                 <svg width="80px" height="80px">
                                     <use href="<?php echo bloginfo( 'template_url' ); ?>/assets/images/icons/icons.svg#icon-arrow-left"></use>
                                 </svg>
                             </div>
-                            <div class="news-page__button-next">
+                            <div class="news-page__button-next swiper-button-next">
                                 <svg width="80px" height="80px">
                                     <use href="<?php echo bloginfo( 'template_url' ); ?>/assets/images/icons/icons.svg#icon-arrow-right"></use>
                                 </svg>
