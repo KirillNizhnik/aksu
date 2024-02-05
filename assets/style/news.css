@@ -165,6 +165,9 @@
     .news-item__btn {
         width: fit-content;
     }
+    .news-item__text {
+        height: 50px;
+    }
 }
 
 
