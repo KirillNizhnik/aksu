@@ -36,7 +36,7 @@ get_header();
                                     <p class="news-item__text">
 									    <?php echo get_the_excerpt(); ?>
                                     </p>
-                                    <a href="<?php the_permalink(); ?>" class="btn-section news-item__btn">
+                                    <a href="<?php the_permalink(); ?>" class="btn-section news-item__btn btn-section">
                                         Читати більше
                                         <svg width="32px" height="32px">
                                             <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
