@@ -148,7 +148,8 @@ if( function_exists('acf_add_options_page') ) {
 /**
  * Enqueue scripts and styles.
  */
-function aksu_scripts(): void {
+function aksu_scripts()
+{
 	wp_enqueue_style( 'aksu-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'aksu-style', 'rtl', 'replace' );
 
