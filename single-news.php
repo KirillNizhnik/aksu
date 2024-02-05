@@ -11,7 +11,7 @@ get_header();
         <section class="news-page">
             <div class="container news-page__container">
                 <div class="news-page__main-content">
-                    <div class="news-page__date"><?php echo get_the_date( 'Y.d.m' ); ?></div>
+                    <div class="news-page__date"><?php echo get_the_date( 'd.m.Y' ); ?></div>
                     <div class="news-page__text">
 						<?php echo get_the_content(); ?>
                     </div>
@@ -80,7 +80,7 @@ get_header();
                                             <div class="news-sidebar__swiper-title title-section"><?php the_title(); ?>
                                             </div>
                                             <div class="news-sidebar__swiper-inner">
-                                                <div class="news-sidebar__swiper-data"><?php echo get_the_date('Y.m.d')?></div>
+                                                <div class="news-sidebar__swiper-data"><?php echo get_the_date('d.m.Y')?></div>
                                                 <div class="news-sidebar__swiper-text"><?php echo get_the_excerpt(); ?>
                                                 </div>
                                                 <a href="<?php the_permalink(); ?>" class="news-sidebar__swiper-link btn-section">Читати більше
