@@ -32,7 +32,7 @@ get_header();
 							    <?php endif; ?>
                                 <div class="news-item__content">
                                     <div class="news-item__title title-section"><?php the_title(); ?></div>
-                                    <div class="news-item__date"><?php echo get_the_date('Y.d.m'); ?></div>
+                                    <div class="news-item__date"><?php echo get_the_date('d.m.Y'); ?></div>
                                     <p class="news-item__text">
 									    <?php echo get_the_excerpt(); ?>
                                     </p>
