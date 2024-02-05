@@ -117,3 +117,8 @@ button{
     background-color: var(--light-gray);
     color: #595D62;
 }
+
+
+.btn-section > svg{
+    fill: var(--dark-blue);
+}
