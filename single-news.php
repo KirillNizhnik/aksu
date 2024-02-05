@@ -17,9 +17,9 @@ get_header();
             <div class="container news-page__container">
                 <div class="news-page__main-content">
                     <div class="news-page__date"><?php echo get_the_date( 'Y.d.m' ); ?></div>
-                    <p class="news-page__text">
+                    <div class="news-page__text">
 						<?php echo get_the_content(); ?>
-                    </p>
+                    </div>
                     <div class="swiper news-page__swiper">
                         <div class="news-page__swiper-wrapper swiper-wrapper">
 	                        <?php if( have_rows('news_gellery_images') ): ?>
