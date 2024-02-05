@@ -20,8 +20,8 @@ const newsSwiper = new Swiper('.news-page__swiper', {
         1440: {
             pagination: false,
             navigation: {
-                nextEl: '.news-page__button-prev',
-                prevEl: '.news-page__button-next',
+                nextEl: '.news-page__button-next',
+                prevEl: '.news-page__button-prev',
             },
         },
     },
