@@ -302,7 +302,7 @@
     }
 
     .news-sidebar__swiper-photo {
-        width: 462px;
+        width: 100%;
         height: 258px;
     }
 
@@ -323,6 +323,13 @@
 
     .news-sidebar__swiper-text, .news-sidebar__swiper-pagination {
         display: none;
+    }
+    .news-sidebar__swiper {
+        width: 100%;
+        overflow: hidden !important ;
+    }
+    .news-sidebar__swiper-slide {
+        margin: 0 !important;
     }
 }
 
