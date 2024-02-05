@@ -7,8 +7,7 @@ get_header();
 <main>
     <section class="conferences-post">
         <div class="container">
-            <h1 class="conferences-post-title">Mатеріали другої міжнародної конференції "MATLAB та комп'ютерні
-                обчислення в освіті, науці та інженерії", Квітень 24 – 28, 2021 р., Київ
+            <h1 class="conferences-post-title"><?php the_title() ?>
             </h1>
 
             <div class="conferences-post-wrap">
