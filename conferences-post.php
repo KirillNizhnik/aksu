@@ -54,76 +54,76 @@ get_header();
                                 супутникових систем,Remote research of global navigation satellite systems
                             </div>
                             <div class="conferences-post-btns">
-                            <a href="" class="btn-section">
-                                <span>Вимоги до тез доповідей</span>
-                                <svg width="24px" height="24px"
-                                     class="home-history__btn-svg ">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
-                                </svg>
-                            </a>
-                            <a href="" class="btn-section">
-                                <span>Вимоги до тез доповідей</span>
-                                <svg width="24px" height="24px"
-                                     class="home-history__btn-svg ">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
-                                </svg>
-                            </a>
+                                <a href="" class="btn-section">
+                                    <span>Вимоги до тез доповідей</span>
+                                    <svg width="24px" height="24px"
+                                         class="home-history__btn-svg ">
+                                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
+                                    </svg>
+                                </a>
+                                <a href="" class="btn-section">
+                                    <span>Вимоги до тез доповідей</span>
+                                    <svg width="24px" height="24px"
+                                         class="home-history__btn-svg ">
+                                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
+                                    </svg>
+                                </a>
+                            </div>
+
+
                         </div>
+                        <div class="conferences-post-inner-list-item">
+                            <div>
+                                Конін В.В., Погурельський О.С., Малютенко Т.Л., Приходько І.А., Сушич О.П. (Київ,
+                                Національний авіаційний університет)Дистанційне дослідження глобальних навігаційних
+                                супутникових систем,Remote research of global navigation satellite systems
+                            </div>
+                            <div class="conferences-post-btns">
+                                <a href="" class="btn-section">
+                                    <span>Вимоги до тез доповідей</span>
+                                    <svg width="24px" height="24px"
+                                         class="home-history__btn-svg ">
+                                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
+                                    </svg>
+                                </a>
+                                <a href="" class="btn-section">
+                                    <span>Вимоги до тез доповідей</span>
+                                    <svg width="24px" height="24px"
+                                         class="home-history__btn-svg ">
+                                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
+                                    </svg>
+                                </a>
+                            </div>
 
 
+                        </div>
+                        <div class="conferences-post-inner-list-item">
+                            <div>
+                                Конін В.В., Погурельський О.С., Малютенко Т.Л., Приходько І.А., Сушич О.П. (Київ,
+                                Національний авіаційний університет)Дистанційне дослідження глобальних навігаційних
+                                супутникових систем,Remote research of global navigation satellite systems
+                            </div>
+                            <div class="conferences-post-btns">
+                                <a href="" class="btn-section">
+                                    <span>Вимоги до тез доповідей</span>
+                                    <svg width="24px" height="24px"
+                                         class="home-history__btn-svg ">
+                                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
+                                    </svg>
+                                </a>
+                                <a href="" class="btn-section">
+                                    <span>Вимоги до тез доповідей</span>
+                                    <svg width="24px" height="24px"
+                                         class="home-history__btn-svg ">
+                                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
+                                    </svg>
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
                 </div>
-                        <div class="conferences-post-inner-list-item">
-                            <div>
-                                Конін В.В., Погурельський О.С., Малютенко Т.Л., Приходько І.А., Сушич О.П. (Київ,
-                                Національний авіаційний університет)Дистанційне дослідження глобальних навігаційних
-                                супутникових систем,Remote research of global navigation satellite systems
-                            </div>
-                            <div class="conferences-post-btns">
-                                <a href="" class="btn-section">
-                                    <span>Вимоги до тез доповідей</span>
-                                    <svg width="24px" height="24px"
-                                         class="home-history__btn-svg ">
-                                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
-                                    </svg>
-                                </a>
-                                <a href="" class="btn-section">
-                                    <span>Вимоги до тез доповідей</span>
-                                    <svg width="24px" height="24px"
-                                         class="home-history__btn-svg ">
-                                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
-                                    </svg>
-                                </a>
-                            </div>
-
-
-                        </div>
-                        <div class="conferences-post-inner-list-item">
-                            <div>
-                                Конін В.В., Погурельський О.С., Малютенко Т.Л., Приходько І.А., Сушич О.П. (Київ,
-                                Національний авіаційний університет)Дистанційне дослідження глобальних навігаційних
-                                супутникових систем,Remote research of global navigation satellite systems
-                            </div>
-                            <div class="conferences-post-btns">
-                                <a href="" class="btn-section">
-                                    <span>Вимоги до тез доповідей</span>
-                                    <svg width="24px" height="24px"
-                                         class="home-history__btn-svg ">
-                                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
-                                    </svg>
-                                </a>
-                                <a href="" class="btn-section">
-                                    <span>Вимоги до тез доповідей</span>
-                                    <svg width="24px" height="24px"
-                                         class="home-history__btn-svg ">
-                                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
-                                    </svg>
-                                </a>
-                            </div>
-
-
-                        </div>
-            </div>
-        </div>
     </section>
 
 </main>
