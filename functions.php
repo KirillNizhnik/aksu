@@ -173,7 +173,9 @@ function aksu_scripts()
 	wp_enqueue_script('aksu-swiper-home-news', get_template_directory_uri() . '/assets/scripts/main-news-slider.js', array('jquery'), null, true);
 	if (is_singular('news')){
 		wp_enqueue_script('second-news-slider', get_template_directory_uri() . '/assets/scripts/news-post-slider.js' , array('jquery'), null, true);
-	}
+        wp_enqueue_script('first-news-slider', get_template_directory_uri() . '/assets/scripts/news-post-slider-img.js' , array('jquery'), null, true);
+
+    }
 
 
 }
