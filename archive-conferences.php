@@ -44,7 +44,7 @@ get_header();
                                     <h3 class="conferences-list__item-title"><?php the_title(); ?></h3>
                                     <p class="conferences-list__item-descr"> <?php echo get_the_excerpt(); ?></p>
                                 </div>
-                                <a href="<?php the_permalink(); ?>" class="btn-section ">
+                                <a href="<?php the_permalink(); ?>" class="btn-section conferences-list__item-btn">
                                     Читати більше
                                     <svg width="32px" height="32px">
                                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
