@@ -1,7 +1,4 @@
 <?php
-/*
- * Template Name: Conferences-post
-*/
 get_header();
 ?>
 <main>
@@ -11,19 +8,14 @@ get_header();
             </h1>
 
             <div class="conferences-post-wrap">
-                <div>24-27 квітня 2021 року на кафедрі аерокосмічних систем управління Факультету аеронавігації,
-                    електроніки
-                    та телекомунікацій Національного авіаційного університету відбулась ІІ Міжнародна наукова
-                    конференція
-                    «MATLAB та комп'ютерні обчислення в освіті, науці та інженерії». Співорганізаторами конференції
-                    виступили: Херсонський державний університет, IT-компанія GlobalLogic Ukraine, Education та компанія
-                    MathWorks Inc. (Netherland branch). У роботі конференції взяли участь науковці, викладачі та
-                    студенти з
-                    України та Китаю.
-
-                    Матеріали конференції публікуються лише з дозволу авторів
+                <div>
+                    <?php the_field("conferences_post_descr"); ?>
                 </div>
-                <img src="" alt="" class="conferences-post-img">
+
+                <?php if (has_post_thumbnail()) : ?>
+                    <img src="<?php the_post_thumbnail_url(); ?>"
+                         alt="<?php the_title_attribute(); ?>" class="conferences-post-img">
+                <?php endif; ?>
             </div>
             <div class="conferences-post-swiper swiper">
                 <div class="swiper-wrap">

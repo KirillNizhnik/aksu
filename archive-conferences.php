@@ -22,7 +22,7 @@ get_header();
                 'paged' => $paged,
                 'orderby' => 'date',
                 'order' => 'DESC',
-                'posts_per_page' => 4,
+                'posts_per_page' => 5,
             );
 
             $query = new WP_Query($args);
