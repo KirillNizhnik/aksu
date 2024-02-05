@@ -326,7 +326,7 @@
     }
     .news-sidebar__swiper {
         width: 100%;
-        overflow: hidden !important ;
+        overflow: visible !important ;
     }
     .news-sidebar__swiper-slide {
         margin: 0 !important;
