@@ -8,7 +8,7 @@ get_header();
     <section class="home-hero"
              style="background-image: url(<?php echo the_field('conferences_img'); ?>); background-color: #084184">
         <div class="container">
-            <h2 class="home-hero__title"><?php the_field("conferences_title"); ?></h2>
+            <h2 class="home-hero__title">Конференції</h2>
         </div>
     </section>
 

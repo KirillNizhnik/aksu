@@ -4,6 +4,7 @@ const newsSidebarSwiper = new Swiper('.news-sidebar__swiper', {
     slidesPerView: "auto",
     pagination: {
         el: '.news-sidebar__swiper-pagination',
+        clickable: true,
     },
     breakpoints: {
         320: {
