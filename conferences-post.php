@@ -119,8 +119,6 @@ get_header();
                                     </svg>
                                 </a>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
