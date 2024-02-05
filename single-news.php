@@ -8,12 +8,7 @@ get_header();
                 <h2 class="home-hero__title"><?php the_title() ?></h2>
             </div>
         </section>
-<!--        <div class="news-page__photo">-->
-<!--            <img src="--><?php //echo get_the_post_thumbnail_url() ?><!--" alt="" class="news-page__img">-->
-<!--            <div class="news-page__title title-section">--><?php //the_title() ?><!--</div>-->
-<!--        </div>-->
         <section class="news-page">
-
             <div class="container news-page__container">
                 <div class="news-page__main-content">
                     <div class="news-page__date"><?php echo get_the_date( 'Y.d.m' ); ?></div>
@@ -99,7 +94,10 @@ get_header();
                                 <?php
 								endwhile;
 							endif;
-							?> </div>
+							?>
+                        </div>
+
+
                         <div class="news-sidebar__swiper-pagination swiper-pagination"></div>
 
                 </div>

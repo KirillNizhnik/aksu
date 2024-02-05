@@ -70,8 +70,8 @@ get_header();
                     </a>
                 </div>
                 <?php
-                $home_history_image_url = ''; // Initialize the variable to an empty string
-                $home_history_image_alt = ''; // Initialize the variable to an empty string
+                $home_history_image_url = '';
+                $home_history_image_alt = '';
 
                 $home_history_img = get_field("home-history_img");
 
