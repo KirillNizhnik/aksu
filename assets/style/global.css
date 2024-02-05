@@ -24,7 +24,7 @@
 
 
 ::selection {
-    background-color: var(--gray);
+    background-color: var(--light-gray);
     color: var(--dark-blue);
 }
 
