@@ -6,11 +6,13 @@
     line-height: 30px;
     text-align: center;
 }
+
 .conferences-post-inner-list {
     display: flex;
     gap: 40px;
     flex-direction: column;
 }
+
 .conferences-post-img {
     width: 100%;
     height: 178px;
@@ -52,6 +54,55 @@
     margin: 112px 0 80px 0;
 }
 
+.conferences-post-swiper-btns {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin: auto;
+    z-index: 11;
+}
+
+.conferences-post-swiper-next, .conferences-post-swiper-prev > svg {
+    fill: var(--dark-blue);
+}
+
+.conferences-post-swiper-next, .conferences-post-swiper-prev {
+    cursor: pointer;
+
+}
+
+.conferences-post-swiper-img {
+    width: 100%;
+    height: 181px;
+    margin: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.conferences-post-swiper-btns {
+    display: none;
+}
+
+.swiper-pagination.swiper-pagination-conferences.swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: relative;
+    bottom: 0;
+    margin: 16px 0 0 0;
+}
+
+.conferences-post-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.conferences-post-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
 @media screen and (min-width: 768px) {
     .conferences-post-title {
         font-size: 26px;
@@ -67,6 +118,10 @@
     .conferences-post-inner-title {
         font-size: 20px;
         margin: 0 0 33px 0;
+    }
+
+    .conferences-post-swiper-img {
+        height: 370px;
     }
 }
 
@@ -96,12 +151,29 @@
         width: 468px;
         height: 232px;
     }
+
     .conferences-post-inner-list {
         padding: 24px 192px;
-    }.conferences-post-inner-list {
-         display: flex;
-         gap: 64px 119px;
-         flex-direction: row;
-         flex-wrap: wrap;
-     }
+    }
+
+    .conferences-post-inner-list {
+        display: flex;
+        gap: 64px 119px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .conferences-post-swiper-img {
+        width: 1188px;
+        height: 628px;
+    }
+
+    .conferences-post-swiper-btns {
+        display: flex;
+    }
+
+    .conferences-post-inner {
+        gap: 115px;
+        margin: 150px 0 0 0;
+    }
 }

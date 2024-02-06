@@ -6,9 +6,10 @@ get_header();
 ?>
 <main>
     <section class="home-hero"
-             style="background-image: url(<?php echo the_field('conferences_img','option'); ?>); background-color: #084184">
-        <div class="container">
-            <h2 class="home-hero__title">Конференції</h2>
+             style="background-image: url(<?php echo the_field('conferences_img', 'option'); ?>); background-color: #084184">
+        <div class="container">.home-hero__title {
+            <h2 class="home-hero__title" style="background: linear-gradient(181deg, rgba(255, 255, 255, 0.20) -27.39%, rgb(255 255 255 / 18%) 52.04%), rgba(255, 255, 255, 0.15);
+">Конференції</h2>
         </div>
     </section>
 
@@ -50,41 +51,25 @@ get_header();
                                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
                                     </svg>
                                 </a>
-                                <!--                        <div class="conferences-list__item-btns">-->
-                                <!--                            <a href="" class="btn-section">-->
-                                <!--                                <span>Вимоги до тез доповідей</span>-->
-                                <!--                                <svg width="24px" height="24px"-->
-                                <!--                                     class="home-history__btn-svg ">-->
-                                <!--                                    <use href="-->
-                                <?php //echo bloginfo('template_url');
-                                ?><!--/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>-->
-                                <!--                                </svg>-->
-                                <!--                            </a>-->
-                                <!--                            <a href="" class="btn-section">-->
-                                <!--                                <span>Вимоги до тез доповідей</span>-->
-                                <!--                                <svg width="24px" height="24px"-->
-                                <!--                                     class="home-history__btn-svg ">-->
-                                <!--                                    <use href="-->
-                                <?php //echo bloginfo('template_url');
-                                ?><!--/assets/images/icons/icons.svg#icon-send"></use>-->
-                                <!--                                </svg>-->
-                                <!--                            </a>-->
-                                <!--                        </div>-->
                             </div>
                         </li>
                     <?php
                     endwhile;
                     ?>
                 </ul>
-                <?php
-                echo paginate_links(array(
-                    'total' => $query->max_num_pages,
-                    'current' => max(1, $paged),
-                    'prev_text' => '&laquo; Назад',
-                    'next_text' => 'Вперед &raquo;',
-                ));
+                <div class="pagination">
+                    <?php
+                    echo paginate_links(array(
+                        'total' => $query->max_num_pages,
+                        'current' => max(1, $paged),
+                        'prev_text' => '<div ><svg class="pagination-svg" width="80px" height="80px"><use href="' . get_bloginfo('template_url') . '/assets/images/icons/icons.svg#icon-arrow-left"></use></svg></div>',
+                        'next_text' => '<div ><svg class="pagination-svg" width="80px" height="80px"><use href="' . get_bloginfo('template_url') . '/assets/images/icons/icons.svg#icon-arrow-right"></use></svg></div>',
+                    ));
+                    ?>
 
 
+                </div>
+            <?php
             else :
                 echo 'Немає конференцій';
 
