@@ -441,6 +441,12 @@ strong {
     font-size: 20px;
     font-weight: 700;
     line-height: 150%;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
 }
 
 .home-news-slider__list-item-date {
