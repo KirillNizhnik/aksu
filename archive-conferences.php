@@ -6,7 +6,7 @@ get_header();
 ?>
 <main>
     <section class="home-hero"
-             style="background-image: url(<?php echo the_field('conferences_img'); ?>); background-color: #084184">
+             style="background-image: url(<?php echo the_field('conferences_img','option'); ?>); background-color: #084184">
         <div class="container">
             <h2 class="home-hero__title">Конференції</h2>
         </div>
