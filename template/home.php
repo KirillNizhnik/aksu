@@ -129,7 +129,7 @@ get_header();
         <div class="container">
             <div class="home-news-wrap">
                 <h3 class="home-news-title"><?php the_field("home_news_title"); ?></h3>
-                <a href="" class="home-news__link">
+                <a href="<?php  echo get_post_type_archive_link('news'); ?>" class="home-news__link">
                     <span><?php the_field("home_news_btn"); ?></span>
                     <svg width="24px" height="24px" class="home-news__btn-svg">
                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
@@ -169,7 +169,7 @@ get_header();
 		                endwhile;
 		                wp_reset_postdata();
 	                else :
-		                echo 'Нет доступных постов.';
+		                echo 'Немає новин';
 	                endif;
 	                ?>
                 <div class="swiper-pagination-home-news"></div>
