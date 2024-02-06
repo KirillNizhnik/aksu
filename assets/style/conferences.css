@@ -2,7 +2,7 @@
 
 }
 .conferences-list__item-btn{
-    width: fit-content;
+    width: 100%;
 }
 
 .conferences-list {
@@ -97,5 +97,8 @@
 
     .conferences-list {
         gap: 64px;
+    }
+    .conferences-list__item-btn{
+        width: fit-content;
     }
 }

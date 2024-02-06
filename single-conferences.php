@@ -17,15 +17,14 @@ get_header();
                          alt="<?php the_title_attribute(); ?>" class="conferences-post-img">
                 <?php endif; ?>
             </div>
+
+
             <div class="conferences-post-swiper swiper">
                 <div class="swiper-wrap">
-                    <div>
+                    <div class="swiper-slide">
                         <img src="" alt="" class="">
                     </div>
-                    <div>
-                        <img src="" alt="" class="">
-                    </div>
-                    <div>
+                    <div class="swiper-slide">
                         <img src="" alt="" class="">
                     </div>
 
