@@ -172,9 +172,9 @@ get_header();
                     else :
                         echo 'Немає новин';
                     endif;
-                    ?></div>
+                    ?>
+                </div>
                 <div class="swiper-pagination-home-news"></div>
-
             </div>
     </section>
 </main>
