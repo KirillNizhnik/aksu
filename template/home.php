@@ -138,64 +138,40 @@ get_header();
             </div>
             <div class="swiper-home-news swiper ">
                 <div class="home-news-slider__list swiper-wrapper">
-                    <div class="home-news-slider__list-item swiper-slide">
-                        <img src="" alt="" class="home-news-slider__list-item-img">
-                        <div class="home-news-slider__list-item-wrap">
-                            <h3 class="home-news-slider__list-item-title">Профорієнтаційна робота кафедри АКСУ</h3>
-                            <div class="home-news-slider__list-item-date">12.02.2023</div>
-                            <div class="home-news-slider__list-item-text">Продовжується розвиток партнерських зв'язків з
-                                провідними навчальними закладами
-                                Вкрай важливим напрямком роботи в теперішні непрості часи є проведення профорієнтаційної
-                                роботи серед школярів з метою допомоги їм визначитись з напрямком подальшого здобуття
-                                вищої освіти.
+	                <?php
+	                $args = array(
+		                'post_type'      => 'news',
+		                'posts_per_page' => 3,
+		                'order'          => 'DESC',
+		                'orderby'        => 'date',
+	                );
+
+	                $recent_posts = new WP_Query($args);
+
+	                if ($recent_posts->have_posts()) :
+		                while ($recent_posts->have_posts()) : $recent_posts->the_post();
+			                ?>
+                            <div class="home-news-slider__list-item swiper-slide">
+                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="home-news-slider__list-item-img">
+                                <div class="home-news-slider__list-item-wrap">
+                                    <h3 class="home-news-slider__list-item-title"><?php the_title(); ?></h3>
+                                    <div class="home-news-slider__list-item-date"><?php echo get_the_date('d.m.Y'); ?></div>
+                                    <div class="home-news-slider__list-item-text"><?php echo get_the_excerpt()?></div>
+                                    <a href="<?php the_permalink(); ?>" class="home-news-slider__list-item-link">
+                                        <span>Читати більше</span>
+                                        <svg width="24px" height="24px" class="home-news-slider__list-item-link-svg">
+                                            <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
-                            <a href="" class="home-news-slider__list-item-link">
-                                <span>Читати більше</span>
-                                <svg width="24px" height="24px" class="home-news-slider__list-item-link-svg">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="home-news-slider__list-item swiper-slide">
-                        <img src="" alt="" class="home-news-slider__list-item-img">
-                        <div class="home-news-slider__list-item-wrap">
-                            <h3 class="home-news-slider__list-item-title">Профорієнтаційна робота кафедри АКСУ</h3>
-                            <div class="home-news-slider__list-item-date">12.02.2023</div>
-                            <div class="home-news-slider__list-item-text">Продовжується розвиток партнерських зв'язків з
-                                провідними навчальними закладами
-                                Вкрай важливим напрямком роботи в теперішні непрості часи є проведення профорієнтаційної
-                                роботи серед школярів з метою допомоги їм визначитись з напрямком подальшого здобуття
-                                вищої освіти.
-                            </div>
-                            <a href="" class="home-news-slider__list-item-link">
-                                <span>Читати більше</span>
-                                <svg width="24px" height="24px" class="home-news-slider__list-item-link-svg">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="home-news-slider__list-item swiper-slide">
-                        <img src="" alt="" class="home-news-slider__list-item-img">
-                        <div class="home-news-slider__list-item-wrap">
-                            <h3 class="home-news-slider__list-item-title">Профорієнтаційна робота кафедри АКСУ</h3>
-                            <div class="home-news-slider__list-item-date">12.02.2023</div>
-                            <div class="home-news-slider__list-item-text">Продовжується розвиток партнерських зв'язків з
-                                провідними навчальними закладами
-                                Вкрай важливим напрямком роботи в теперішні непрості часи є проведення профорієнтаційної
-                                роботи серед школярів з метою допомоги їм визначитись з напрямком подальшого здобуття
-                                вищої освіти.
-                            </div>
-                            <a href="" class="home-news-slider__list-item-link">
-                                <span>Читати більше</span>
-                                <svg width="24px" height="24px" class="home-news-slider__list-item-link-svg">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+		                <?php
+		                endwhile;
+		                wp_reset_postdata();
+	                else :
+		                echo 'Нет доступных постов.';
+	                endif;
+	                ?>
                 <div class="swiper-pagination-home-news"></div>
             </div>
         </div>
