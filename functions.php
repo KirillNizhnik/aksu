@@ -182,6 +182,8 @@ function aksu_scripts()
         wp_enqueue_script('img-slider', get_template_directory_uri() . '/assets/scripts/conferences-img-slider.js' , array('jquery'), null, true);
     }
 
+        wp_enqueue_script('slider-teacher', get_template_directory_uri() . '/assets/scripts/archive-teacher.js' , array('jquery'), null, true);
+
 }
 
 add_action( 'wp_enqueue_scripts', 'aksu_scripts' );
@@ -224,7 +226,7 @@ require_once(get_template_directory() . '/news-post-type.php');
 
 require_once(get_template_directory() . '/conferences-post-type.php');
 
-
+require_once(get_template_directory() . '/teachers-post-type.php');
 
 //class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 //

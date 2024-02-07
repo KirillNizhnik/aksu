@@ -1,0 +1,112 @@
+.teacher-list__item-img {
+    width: 246px;
+    height: 280px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0 auto 24px auto;
+    object-position: top;
+
+}
+
+.teacher-list__item-name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+    color: var(--dark-blue);
+    margin: 0 0 8px 0;
+    padding: 0 70px;
+}
+
+.teacher-list__item-descr {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    color: var(--orange);
+    margin: 0 0 32px 0;
+}
+
+.teacher-list__item {
+    padding: 40px 20px;
+    background-color: var(--white);
+    box-shadow: 0 0 1px 0 #00000066, 0 8px 24px -6px #00000029;
+    border-radius: 10px;
+}
+
+.swiper-pagination.swiper-pagination-teacher.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: relative;
+    bottom: 0;
+    margin: 40px 0 0 0;
+}
+
+.teacher-positions-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    color: var(--orange);
+    margin: 0 0 40px 0;
+}
+
+.teacher-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.teacher-list {
+    margin: 0 0 20px 0;
+}
+
+.teacher-list__item {
+    border: 0.5px solid #00000029;
+}
+
+.teacher-inner {
+    margin: 0 0 20px 0;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .teacher-list__item {
+        width: 344px;
+    }
+
+    .teacher-list__item-name {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+        padding: 0 25px;
+    }
+
+    .teacher-list__item-descr {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    .teacher-list__item-img {
+        width: 303px;
+        height: 345px;
+    }
+
+    .teacher-list__item {
+        width: 465px;
+        padding: 40px 80px;
+    }
+
+    .teacher-list {
+        display: flex;
+        gap: 64px 22px;
+        flex-wrap: wrap;
+    }
+
+    .teacher-positions-title {
+        margin: 0 0 64px 0;
+    }
+
+}

@@ -184,7 +184,10 @@ div#swiper-wrapper-13dac9e74a339591 {
     fill: var(--gray);
 }
 
-
+.news-sidebar__swiper-title.title-section {
+    overflow: hidden;
+    height: 48px;
+}
 @media screen and (min-width: 768px) {
 
     .news-page {
@@ -228,7 +231,7 @@ div#swiper-wrapper-13dac9e74a339591 {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 48px;
+        margin-top: 38px;
     }
 
     .news-sidebar__top {
@@ -300,7 +303,7 @@ div#swiper-wrapper-13dac9e74a339591 {
     }
 
     .news-page__buttons {
-        margin-top: 83px;
+        margin-top: 33px;
     }
 
     .news-sidebar__swiper-wrapper {

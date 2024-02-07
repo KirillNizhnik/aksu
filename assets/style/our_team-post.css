@@ -1,0 +1,117 @@
+.teacher-post-person {
+    background-color: #F6FAFE;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.teacher-post-person-img {
+    width: 240px;
+    height: 273px;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 0 #00000066, 0 8px 24px -6px #00000029;
+    margin: 0 auto 40px auto;
+    object-fit: cover;
+    object-position: top;
+}
+
+.teacher-post-person-name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    color: var(--dark-blue);
+    padding: 0 25px;
+    margin: 0 0 12px 0;
+}
+
+.teacher-post-person-position {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+    color: var(--orange);
+    margin: 0 0 40px 0;
+}
+
+.teacher-post-person-list-dist {
+    text-align: center;
+}
+
+.teacher-post-bio {
+    padding: 24px;
+    box-shadow: 0 0 1px 0 #00000066, 0 8px 24px -6px #00000029;
+    border-radius: 10px;
+}
+
+.teacher-post-lit-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    color: var(--dark-blue);
+    margin: 0 0 40px 0;
+}
+
+.teacher-post-lit-list > ul, ol > li {
+    margin: 10px 0;
+}
+.teacher-post-inf{
+    margin: 0 0 80px 0;
+}
+.teacher-post-lit-list{
+    box-shadow: 0 0 1px 0 #00000066,0 8px 24px -6px #00000029;
+    background-color: #F6FAFE;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .teacher-post-person {
+        display: flex;
+        gap: 100px;
+    }
+
+    .teacher-post-person-img {
+        margin: 0;
+    }
+
+    .teacher-post-bio > p > strong {
+        font-size: 20px;
+    }
+
+}
+
+
+@media screen and (min-width: 1440px) {
+    .teacher-post-person-img {
+        width: 464px;
+        height: 528px;
+    }
+
+    .teacher-post-person {
+        padding: 0;
+        gap: 122px;
+        align-items: center;
+    }
+
+    .teacher-post-person-name {
+        font-size: 36px;
+        text-align: left;
+        padding: 0;
+        margin: 0 0 16px 0;
+    }
+
+    .teacher-post-person-position {
+        font-size: 20px;
+        text-align: left;
+        margin: 0 0 64px 0;
+    }
+
+    .teacher-post-person-list-dist {
+        text-align: left;
+    }
+    .teacher-post-lit-list > ul, ol > li {
+        margin: 30px 0;
+    }
+}
