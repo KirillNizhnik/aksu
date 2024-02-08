@@ -20,29 +20,33 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="teacher-post-inf">
-                <div class="teacher-post-bio">
-                    <?php echo get_field("teacher-post-bio"); ?>
+            <?php if (get_field("teacher-post-bio")) : ?>
+                <div class="teacher-post-inf">
+                    <div class="teacher-post-bio">
+                        <?php echo get_field("teacher-post-bio"); ?>
+                    </div>
+                    <div class="teacher-post-bio-add">
+                        <?php if (have_rows('teacher_post-bio_add_list')) : ?>
+                            <?php while (have_rows('teacher_post-bio_add_list')) : the_row(); ?>
+                                <?php
+                                $teacher_post_add_item = get_sub_field('teacher_post_bio-add_list_item');
+                                ?>
+                                <div class="teacher-post-bio-add-item">
+                                    <?php echo $teacher_post_add_item ?>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
                 </div>
-                <div class="teacher-post-bio-add">
-                    <?php if (have_rows('teacher_post-bio_add_list')) : ?>
-                        <?php while (have_rows('teacher_post-bio_add_list')) : the_row(); ?>
-                            <?php
-                            $teacher_post_add_item = get_sub_field('teacher_post_bio-add_list_item');
-                            ?>
-                            <div class="teacher-post-bio-add-item">
-                                <?php echo $teacher_post_add_item ?>
-                            </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                </div>
-            </div>
+            <?php endif; ?>
+            <?php if (get_field("teacher-post-lit")) : ?>
             <div class="teacher-post-lit">
                 <h2 class="teacher-post-lit-title"><?php echo get_field("teacher-post-lit-title"); ?></h2>
                 <div class="teacher-post-lit-list">
                     <?php echo get_field("teacher-post-lit"); ?>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </section>
 
