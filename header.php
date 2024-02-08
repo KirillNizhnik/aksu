@@ -87,17 +87,17 @@
                 </button>
             </div>
         </div>
-        <div class="header-desktop">
-            <?php
-            $args = array(
-                'theme_location' => 'head_menu',
-                'walker'=> new Custom_Walker_Nav_Menu()
-            );
-            wp_nav_menu( $args );
-            ?>
-
-
-        </div>
+<!--        <div class="header-desktop">-->
+<!--            --><?php
+//            $args = array(
+//                'theme_location' => 'head_menu',
+//                'walker'=> new Custom_Walker_Nav_Menu()
+//            );
+//            wp_nav_menu( $args );
+//            ?>
+<!---->
+<!---->
+<!--        </div>-->
         <div class="header-mob">
             <div class="header-mob-contacts-tablet">
                 <?php
