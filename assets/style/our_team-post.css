@@ -55,16 +55,39 @@
 .teacher-post-lit-list > ul, ol > li {
     margin: 10px 0;
 }
-.teacher-post-inf{
+
+.teacher-post-inf {
     margin: 0 0 80px 0;
 }
-.teacher-post-lit-list{
-    box-shadow: 0 0 1px 0 #00000066,0 8px 24px -6px #00000029;
+
+.teacher-post-lit-list {
+    box-shadow: 0 0 1px 0 #00000066, 0 8px 24px -6px #00000029;
     background-color: #F6FAFE;
     padding: 20px;
     border-radius: 10px;
 }
 
+.teacher-post-bio-add-item {
+    padding: 24px;
+    box-shadow: 0 0 1px 0 #00000066, 0 8px 24px -6px #00000029;
+    border-radius: 10px;
+}
+
+.teacher-post-inf {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.teacher-post-bio-add {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.teacher-post-bio-add-item > p > strong {
+    color: var(--orange);
+}
 
 @media screen and (min-width: 768px) {
     .teacher-post-person {
@@ -80,6 +103,9 @@
         font-size: 20px;
     }
 
+    .teacher-post-bio-add-item {
+        width: 525px;
+    }
 }
 
 
@@ -93,6 +119,7 @@
         padding: 0;
         gap: 122px;
         align-items: center;
+        margin: 64px 0 158px 0;
     }
 
     .teacher-post-person-name {
@@ -111,7 +138,38 @@
     .teacher-post-person-list-dist {
         text-align: left;
     }
+
     .teacher-post-lit-list > ul, ol > li {
         margin: 30px 0;
+    }
+
+    .teacher-post-inf {
+        flex-direction: row;
+        gap: 122px;
+    }
+
+    .teacher-post-bio-add {
+        gap: 64px;
+    }
+
+    .teacher-post-bio-add-item {
+        width: 610px;
+    }
+
+    .teacher-post-inf {
+        margin: 0 0 120px 0;
+    }
+
+    /*.teacher-post-person-img-box{*/
+    /*    position: relative;*/
+    /*    width: 464px;*/
+    /*    height: 528px;*/
+    /*}*/
+    /*.teacher-post-person-img{*/
+    /*    position: absolute;*/
+    /*    bottom: -85px;*/
+    /*}*/
+    .teacher-post-person {
+        background-color: transparent;
     }
 }
