@@ -25,7 +25,7 @@
     width: 250px;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(255, 255, 255, 0.40);
 }
 
 .educational-materials__content {
