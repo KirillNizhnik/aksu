@@ -68,7 +68,12 @@
 }
 
 
-
+.teacher-title {
+    text-align: center;
+    font-size: 20px;
+    color: var(--dark-blue);
+    margin: 0 0 40px 0;
+}
 
 @media screen and (min-width: 768px) {
     .teacher-list__item {
@@ -84,6 +89,10 @@
 
     .teacher-list__item-descr {
         font-size: 16px;
+    }
+    .teacher-title {
+        font-size: 26px;
+        margin: 0 0 48px 0;
     }
 }
 
@@ -109,7 +118,12 @@
     .teacher-positions-title {
         margin: 0 0 64px 0;
     }
+
     .teacher-list__item.swiper-slide {
         margin: 0 !important;
+    }
+    .teacher-title {
+        font-size: 36px;
+        margin: 0 0 64px 0;
     }
 }

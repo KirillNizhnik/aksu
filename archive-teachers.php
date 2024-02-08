@@ -7,6 +7,8 @@ get_header();
 <main>
     <section class="teacher">
         <div class="container">
+            <h1 class="teacher-title">Склад кафедри</h1>
+
             <div class="teacher-container">
                 <?php
                 $post_type = get_post_type();
