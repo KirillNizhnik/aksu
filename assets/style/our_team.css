@@ -103,10 +103,13 @@
         display: flex;
         gap: 64px 22px;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .teacher-positions-title {
         margin: 0 0 64px 0;
     }
-
+    .teacher-list__item.swiper-slide {
+        margin: 0 !important;
+    }
 }
