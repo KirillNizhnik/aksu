@@ -1,24 +1,58 @@
 (() => {
+    const openMenuBtn = document.querySelector('.js-open-menu');
+    const closeMenuBtn = document.querySelector('.js-close-menu');
+    const modal = document.querySelector("[data-modal]");
+
+    const toggleMenu = () => {
+        const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+        openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+        modal.classList.toggle('is-hidden');
+
+        if (!isMenuOpen) {
+            disableScroll();
+        } else {
+            enableScroll();
+        }
+    };
+
+    openMenuBtn.addEventListener('click', toggleMenu);
+    closeMenuBtn.addEventListener('click', toggleMenu);
+
     const refs = {
-        openModalBtn: document.querySelector("[data-modal-open]"),
-        closeModalBtn: document.querySelector("[data-modal-close]"),
         modal: document.querySelector("[data-modal]"),
     };
-    const menuItems = document.querySelectorAll('.mobile-menu__item ');
 
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
-
-    function toggleModal() {
+    const toggleModal = () => {
         refs.modal.classList.toggle("is-hidden");
-        refs.closeModalBtn.classList.toggle("active-btn");
-        refs.openModalBtn.classList.toggle("inactive-btn")
-    }
-    menuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            toggleModal();
-        });
-    });
-})();
+        if (!refs.modal.classList.contains("is-hidden")) {
+            disableScroll();
+        } else {
+            enableScroll();
+        }
+    };
 
+    const toggleModalBtn = document.querySelector('.js-toggle-modal');
+    if (toggleModalBtn) {
+        toggleModalBtn.addEventListener('click', toggleModal);
+    }
+
+    function disableScroll() {
+        document.body.style.overflow = 'hidden';
+    }
+
+    function enableScroll() {
+        document.body.style.overflow = '';
+    }
+
+    $('.partners-mobile-menu').click(function (event) {
+        toggleMenu()
+    });
+
+
+    $('.mobile-search').click(function (event) {
+        event.preventDefault();
+        toggleModal();
+    });
+
+})();
 
