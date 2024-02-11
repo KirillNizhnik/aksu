@@ -175,9 +175,9 @@ function aksu_scripts()
     wp_enqueue_script('mobile-menu', get_template_directory_uri() . '/assets/scripts/header-menu.js', array('jquery'), null, true);
 
 
-    if(is_front_page()){
-        wp_enqueue_script('aksu-swiper-home-news', get_template_directory_uri() . '/assets/scripts/main-news-slider.js', array('jquery'), null, true);
-
+    if(is_front_page()) {
+	    wp_enqueue_script( 'aksu-swiper-home-news', get_template_directory_uri() . '/assets/scripts/main-news-slider.js', array( 'jquery' ), null, true );
+    }
 
     if (is_singular('news')) {
         wp_enqueue_script('second-news-slider', get_template_directory_uri() . '/assets/scripts/news-post-slider.js', array('jquery'), null, true);
@@ -276,39 +276,4 @@ require_once(get_template_directory() . '/teachers-post-type.php');
 //}
 
 
-
-class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
-    private $counter = 0;
-
-    public function start_lvl(&$output, $depth = 0, $args = null) {
-        // Reset the counter for each new menu
-        $this->counter = 0;
-        $output .= '<ul class="header__nav">';
-    }
-
-
-    public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
-        $this->counter++;
-
-
-        $items_per_side = 3;
-
-
-        if ($this->counter === $items_per_side + 1) {
-            $output .= '<li class="menu-item-type-logo">';
-            $output .= '<a href="' . esc_url(home_url('/')) . '" class="custom-logo-link" rel="home">';
-            $output .= '<img src="' . esc_url(wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full')) . '" class="custom-logo" alt="' . get_bloginfo('name') . '">';
-            $output .= '</a>';
-            $output .= '</li>';
-        }
-
-        $classes = empty($item->classes) ? array() : (array) $item->classes;
-        $classes[] = 'custom-menu-item';
-
-        $output .= '<li id="menu-item-' . $item->ID . '" class="menu-item-type-post_type ' . implode(' ', $classes) . '">';
-        $output .= '<a href="' . $item->url . '">' . $item->title . '<svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 19 22" fill="none">
-<path d="M5 9.5L10.0008 14.08L15 9.5" stroke="#010E11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg> </a>';
-    }
-}
 
