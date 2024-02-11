@@ -68,8 +68,6 @@ get_header();
                                 </a>
                             </div>
                         </div>
-
-
                         <div class="contacts__social-list">
                             <?php
                             if (have_rows('social_link_list', 'option')):
@@ -85,20 +83,19 @@ get_header();
                                 <img class="contacts__social-icon" src="<?php echo $image_url ?>" alt="<?php echo $image_alt ?>">
                             </a>
                                 <?php endwhile; else : endif; ?>
-
                         </div>
                     </div>
                     <div class="contacts__content-inner">
                         <div class="contacts__content-title"><?php the_field('department_head_title')?></div>
                         <div class="contacts__content-text1 title-section"><?php the_field('department_head_full_name')?></div>
-                        <div class="contacts__content-text2"><?php the_field('department_head_position')?></div>
+                        <div class="contacts__content-text2"><?php the_field('contacts_scientific_degree')?></div>
                         <div class="contacts__phone-link-wrap contacts__phone-link-wrap-icon">
                             <div>
                                 <svg width="24px" height="24px">
                                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-phone"></use>
                                 </svg>
                             </div>
-                            <a href="tel:<?php the_field("phone_number_5_link", 'option'); ?>" class="contacts-link"><?php the_field("phone_number_5", 'option'); ?></a>
+                            <a href="tel:<?php the_field("phone_number_5_link", 'option'); ?>"class="contacts-link"><?php the_field("phone_number_5", 'option'); ?></a>
                         </div>
                     </div>
                 </div>
@@ -109,5 +106,4 @@ get_header();
         </div>
     </section>
 </main>
-
 <?php get_footer();?>
