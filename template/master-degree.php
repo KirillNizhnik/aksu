@@ -16,7 +16,13 @@ get_header();
         <div class="container">
             <div class="home-its-box ">
                 <?php the_field("master_mini_descr"); ?>
+                <a href="#" class="home-its-box__link master-its-box__link">
+                    <svg width="48px" height="48px" class="home-its-box__link-icon">
+                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-down"></use>
+                    </svg>
+                </a>
             </div>
+
         </div>
     </section>
 

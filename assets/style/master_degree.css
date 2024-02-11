@@ -125,6 +125,9 @@
     .master-statements-item__title {
         line-height: 30px;
     }
+    .master-its-box__link{
+        margin: 32px auto 0 auto;
+    }
 }
 
 
