@@ -5,48 +5,41 @@
 get_header();
 ?>
 
-
-<main>
-    <section class="educational-materials">
-        <img src="images/educational-materials__background.jpg" alt="" class="educational-materials__photo">
-        <h2 class="educational-materials__title title-section">Навчальні матеріали</h2>
-        <div class="container educational-materials__container">
-            <div class="educational-materials__content">
-                <h2 class="educational-materials__content-title">Ресурси для моїх студентів</h2>
-                <p class="educational-materials__content-text">Сайт розроблений С.І. Вороновим за участю Т.А. Галагуз та
-                    Є.О. Гаєва . Основним призначенням сайту є надання наступних учбових матеріалів: <br>
-                    Сайт розроблений С.І. Вороновим за участю Т.А. Галагуз та
-                    Є.О. Гаєва . Основним призначенням сайту є надання наступних учбових матеріалів:
-                    <br> <br> <br>
-                    Сайт розроблений С.І. Вороновим за участю Т.А. Галагуз та
-                    Є.О. Гаєва . Основним призначенням сайту є надання наступних учбових матеріалів: <br>
-                    Сайт розроблений С.І. Вороновим за участю Т.А. Галагуз та
-                    Є.О. Гаєва . Основним призначенням сайту є надання наступних учбових матеріалів:
-                </p>
-                <a href="#" class="educational-materials__content-link btn-section">Перейти на сайт
-                    <svg width="32px" height="32px">
-                        <use href="images/icons/icons.svg#icon-arrow-mini-top"></use>
-                    </svg>
-                </a>
+    <main>
+        <section style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.00) 100%),
+                url('<?php $image = get_field("educational-materials_background-img");
+                if(!empty($image))
+                { echo $image["url"]; } ?>');" class="educational-materials-hero">
+            <div class="container">
+                <h2 class="educational-materials__title title-section"><?php the_field("educational-materials_title"); ?></h2>
             </div>
-            <div class="educational-materials__content">
-                <div class="educational-materials__content-title">Ресурси для моїх студентів</div>
-                <p class="educational-materials__content-text">Сайт розроблений С.І. Вороновим за участю Т.А. Галагуз та
-                    Є.О. Гаєва . Основним призначенням сайту є надання наступних учбових матеріалів: <br>
-                    Сайт розроблений С.І. Вороновим за участю Т.А. Галагуз та
-                    Є.О. Гаєва . Основним призначенням сайту є надання наступних учбових матеріалів:
-                </p>
-                <a href="#" class="educational-materials__content-link btn-section">Перейти на сайт
-                    <svg width="32px" height="32px">
-                        <use href="images/icons/icons.svg#icon-arrow-mini-top"></use>
-                    </svg>
-                </a>
+        </section>
+        <section class="educational-materials">
+                <?php if( have_rows('educational-materials_publications') ): ?>
+                    <ul class="container educational-materials__container">
+                        <?php while( have_rows('educational-materials_publications') ): the_row();
+                            $educational_materials_title_text = get_sub_field('educational-materials_title-text');
+                            $educational_materials_text = get_sub_field('educational-materials_text');
+                            $educational_materials_link = get_sub_field('educational-materials_link');
+                            $educational_materials_link_text = get_sub_field('educational-materials_link-text');
+                            ?>
+                            <li class="educational-materials__content">
+                                <h2 class="educational-materials__content-title"><?php echo $educational_materials_title_text ?></h2>
+                                <p class="educational-materials__content-text"><?php echo $educational_materials_text ?></p>
+                                <a href="<?php echo $educational_materials_link ?>"
+                                   class="educational-materials__content-link btn-section"><?php echo $educational_materials_link_text ?>
+                                    <svg width="32px" height="32px">
+                                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        <?php endwhile; ?>
+                    </ul>
+                <?php endif; ?>
             </div>
+        </section>
+    </main>
 
-
-        </div>
-    </section>
-</main>
 
 
 <?php get_footer();?>
