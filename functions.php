@@ -174,6 +174,7 @@ function aksu_scripts()
 
     wp_enqueue_script('mobile-menu', get_template_directory_uri() . '/assets/scripts/header-menu.js', array('jquery'), null, true);
 
+
     wp_enqueue_script('aksu-swiper-home-news', get_template_directory_uri() . '/assets/scripts/main-news-slider.js', array('jquery'), null, true);
 
 
@@ -185,8 +186,9 @@ function aksu_scripts()
     if (is_singular('conferences')) {
         wp_enqueue_script('img-slider', get_template_directory_uri() . '/assets/scripts/conferences-img-slider.js', array('jquery'), null, true);
     }
-
-    wp_enqueue_script('slider-teacher', get_template_directory_uri() . '/assets/scripts/archive-teacher.js', array('jquery'), null, true);
+	if (is_singular('teachers')) {
+		wp_enqueue_script( 'slider-teacher', get_template_directory_uri() . '/assets/scripts/archive-teacher.js', array( 'jquery' ), null, true );
+	}
 }
 
 add_action( 'wp_enqueue_scripts', 'aksu_scripts' );
