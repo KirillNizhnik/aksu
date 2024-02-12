@@ -227,11 +227,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // news-post-type.php
 require_once(get_template_directory() . '/news-post-type.php');
 
-
-
 require_once(get_template_directory() . '/conferences-post-type.php');
 
 require_once(get_template_directory() . '/teachers-post-type.php');
+
+require_once(get_template_directory() . '/laboratory-post-type.php');
+
 
 //class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 //
