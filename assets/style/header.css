@@ -2,6 +2,8 @@
     border-radius: 0 0 24px 24px;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.35) 100%), linear-gradient(180deg, #D3E3F7 21.37%, rgba(211, 227, 247, 0.00) 104.32%);
     backdrop-filter: blur(3px);
+    position: relative;
+    z-index: 999;
 }
 
 main {
@@ -282,6 +284,7 @@ li#menu-item-31 {
         display: flex;
         background-color: var(--white);
         flex-direction: column;
+        z-index: 9999;
     }
 
     .menu-item__dropdown-item-parent {

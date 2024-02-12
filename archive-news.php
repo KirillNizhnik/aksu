@@ -3,8 +3,9 @@ get_header();
 ?>
     <main>
         <section class="news">
-            <div class="news-title title-section">Новини</div>
             <div class="container">
+                <div class="news-title title-section">Новини</div>
+
                 <?php
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
