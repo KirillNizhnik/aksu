@@ -58,13 +58,14 @@ get_header();
                 <?php the_field("lab_single_text_add"); ?>
             </div>
             <div class="labs-single-content__list">
-                <div class="labs-single-content__list-box-fix">
+
                 <?php if (have_rows('lab_single_list')) : ?>
                     <?php while (have_rows('lab_single_list')) :
                         the_row(); ?>
                         <?php
                         $labs_single_title = get_sub_field('lab_single_list_title');
                         ?>
+                        <div class="labs-single-content__list-box-fix">
                         <h2 class="labs-single-content__list-title"><?php echo $labs_single_title; ?></h2>
                         <div class="labs-single-box">
                             <?php if (have_rows('lab_single_list_item')) : ?>
@@ -88,9 +89,9 @@ get_header();
 
                                 <?php endwhile; ?>
                             <?php endif; ?>
-                        </div>
+                        </div></div>
                     <?php endwhile; ?>
-                <?php endif; ?></div>
+                <?php endif; ?>
             </div>
             <div class="labs-single-call">
                 <div class="labs-single-call-text">
