@@ -255,4 +255,11 @@
     .lab-single-arrow > a > span {
         display: block;
     }
+    .labs-single-content__list-item-img {
+        border-radius: 10px;
+        max-width: 1020px;
+    }
+    .labs-single-content__list-box-fix{
+        margin: 40px 0;
+    }
 }

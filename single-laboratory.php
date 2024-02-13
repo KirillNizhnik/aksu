@@ -58,6 +58,7 @@ get_header();
                 <?php the_field("lab_single_text_add"); ?>
             </div>
             <div class="labs-single-content__list">
+                <div class="labs-single-content__list-box-fix">
                 <?php if (have_rows('lab_single_list')) : ?>
                     <?php while (have_rows('lab_single_list')) :
                         the_row(); ?>
@@ -89,7 +90,7 @@ get_header();
                             <?php endif; ?>
                         </div>
                     <?php endwhile; ?>
-                <?php endif; ?>
+                <?php endif; ?></div>
             </div>
             <div class="labs-single-call">
                 <div class="labs-single-call-text">
