@@ -32,7 +32,7 @@ function labs_post_type() {
         'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt'),
     );
 
-    register_post_type( 'labs', $args );
+    register_post_type( 'laboratory', $args );
 }
 
 add_action( 'init', 'labs_post_type' );

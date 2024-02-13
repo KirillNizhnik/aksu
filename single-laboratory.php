@@ -2,54 +2,113 @@
 get_header();
 ?>
 <main>
-    <section class="teacher-post">
+    <section class="lab-single">
         <div class="container">
-            <div class="teacher-post-person">
-                <div class="teacher-post-person-img-box">
-                    <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="" class="teacher-post-person-img">
-                </div>
-                <div>
-                    <h1 class="teacher-post-person-name"><?php the_title(); ?></h1>
-                    <div class="teacher-post-person-position">
-                        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                            <div class="teacher-post-person-position"><?php echo get_field("teacher_position"); ?></div>
-                        <?php endwhile; endif; ?>
-                    </div>
-                    <div class="teacher-post-person-list-dist">
-                        <?php echo get_field("teacher-post-person-list-dist"); ?>
-                    </div>
-                </div>
+            <div class="lab-single-arrow">
+                <a href="<?php get_post_type_archive_link('laboratory'); ?>">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M15.9993 29.3332C8.63555 29.3332 2.66602 23.3636 2.66602 15.9998C2.66602 8.63604 8.63555 2.6665 15.9993 2.6665C23.3631 2.6665 29.3327 8.63604 29.3327 15.9998C29.3327 23.3636 23.3631 29.3332 15.9993 29.3332ZM15.3731 11.2927C14.9826 10.9022 14.3494 10.9022 13.9589 11.2927L9.95891 15.2927C9.56839 15.6833 9.56839 16.3164 9.95891 16.7069L13.9589 20.7069C14.3494 21.0975 14.9826 21.0975 15.3731 20.7069C15.7636 20.3164 15.7636 19.6833 15.3731 19.2927L13.0802 16.9998H21.3327C21.885 16.9998 22.3327 16.5521 22.3327 15.9998C22.3327 15.4476 21.885 14.9998 21.3327 14.9998H13.0802L15.3731 12.7069C15.7636 12.3164 15.7636 11.6833 15.3731 11.2927Z"
+                              fill="#084184"/>
+                    </svg>
+                </a>
             </div>
-            <?php if (get_field("teacher-post-bio")) : ?>
-                <div class="teacher-post-inf">
-                    <div class="teacher-post-bio">
-                        <?php echo get_field("teacher-post-bio"); ?>
-                    </div>
-                    <div class="teacher-post-bio-add">
-                        <?php if (have_rows('teacher_post-bio_add_list')) : ?>
-                            <?php while (have_rows('teacher_post-bio_add_list')) : the_row(); ?>
-                                <?php
-                                $teacher_post_add_item = get_sub_field('teacher_post_bio-add_list_item');
-                                ?>
-                                <div class="teacher-post-bio-add-item">
-                                    <?php echo $teacher_post_add_item ?>
-                                </div>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
+            <h2 class="lab-single-title"><?php the_title(); ?></h2>
+            <div class="labs-single-inner">
+                <h3 class="labs-single-inner__title"><?php the_field("lab_single_title"); ?></h3>
+                <div class="labs-single-inner__content">
+                    <div class="labs-single-inner__text"><?php the_field("lab_single_text"); ?></div>
+                    <div class="labs-single-inner__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <?php if (have_rows('lab_single_images')) : ?>
+                                <?php while (have_rows('lab_single_images')) : the_row(); ?>
+                                    <?php
+                                    $labs_single_swiper_img = get_sub_field('lab_single_img');
+                                    if ($labs_single_swiper_img) {
+                                        $labs_single_image_alt = $labs_single_swiper_img ['alt'];
+                                        $labs_single_image_url = $labs_single_swiper_img ['url'];
+                                    }
+
+                                    ?>
+                                    <div class="swiper-slide">
+                                        <img class="labs-post-swiper-img"
+                                             src="<?php echo $labs_single_image_url; ?>"
+                                             alt="<?php echo $labs_single_image_alt; ?>">
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        </div>
+                        <div class="swiper-pagination labs-single-inner__swiper-pagination"></div>
+                        <div class="labs-single-inner-arrows">
+                            <div class="labs-single-swiper-button-prev">
+                                <svg width="80px" height="80px">
+                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-left"></use>
+                                </svg>
+                            </div>
+                            <div class="labs-single-swiper-button-next">
+                                <svg width="80px" height="80px">
+                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            <?php endif; ?>
-            <?php if (get_field("teacher-post-lit")) : ?>
-            <div class="teacher-post-lit">
-                <h2 class="teacher-post-lit-title"><?php echo get_field("teacher-post-lit-title"); ?></h2>
-                <div class="teacher-post-lit-list">
-                    <?php echo get_field("teacher-post-lit"); ?>
-                </div>
+
             </div>
-            <?php endif; ?>
+            <div class="labs-single-content-text">
+                <?php the_field("lab_single_text_add"); ?>
+            </div>
+            <div class="labs-single-content__list">
+                <?php if (have_rows('lab_single_list')) : ?>
+                    <?php while (have_rows('lab_single_list')) :
+                        the_row(); ?>
+                        <?php
+                        $labs_single_title = get_sub_field('lab_single_list_title');
+                        ?>
+                        <h2 class="labs-single-content__list-title"><?php echo $labs_single_title; ?></h2>
+                        <div class="labs-single-box">
+                            <?php if (have_rows('lab_single_list_item')) : ?>
+                                <?php while (have_rows('lab_single_list_item')) :
+                                    the_row(); ?>
+                                    <?php
+                                    $labs_single_img = get_sub_field('lab_single_list_item_img');
+                                    if ($labs_single_img) {
+                                        $labs_single_img_alt = $labs_single_img ['alt'];
+                                        $labs_single_img_url = $labs_single_img ['url'];
+                                    }
+                                    $labs_single_text = get_sub_field('lab_single_list_item_text');
+                                    ?>
+
+                                    <div class="labs-single-content__list-item">
+                                        <img src="<?php echo $labs_single_img_url; ?>"
+                                             class="labs-single-content__list-item-img"
+                                             alt="<?php echo $labs_single_img_alt; ?>">
+                                        <div class="labs-single-content__list-item-text"><?php echo $labs_single_text; ?></div>
+                                    </div>
+
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
+            <div class="labs-single-call">
+                <div class="labs-single-call-text">
+                    <?php the_field('lab_single_call'); ?>
+                </div>
+                <?php
+                $labs_call_img = get_field('lab_single_call_img');
+                if ($labs_call_img) {
+                    $labs_call_img_alt = $labs_call_img ['alt'];
+                    $labs_call_img_url = $labs_call_img ['url'];
+                }
+                ?>
+                <img src="<?php echo $labs_call_img_url; ?>"
+                     alt="<?php echo $labs_call_img_alt; ?>"
+                     class="labs-single-call-img">
+            </div>
         </div>
     </section>
-
 </main>
 <?php
 get_footer();
