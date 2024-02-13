@@ -112,6 +112,10 @@
     display: none;
 }
 
+.labs-single-content__list-box-fix {
+    margin: 60px 0;
+}
+
 @media screen and (min-width: 768px) {
     .lab-single-title {
         font-size: 26px;
@@ -255,11 +259,13 @@
     .lab-single-arrow > a > span {
         display: block;
     }
+
     .labs-single-content__list-item-img {
         border-radius: 10px;
         max-width: 1020px;
     }
-    .labs-single-content__list-box-fix{
-        margin: 40px 0;
+
+    .labs-single-content__list-box-fix {
+        margin: 80px 0;
     }
 }
