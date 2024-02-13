@@ -7,9 +7,9 @@ get_header();
 <main>
     <section class="labs">
         <div class="container">
-            <h2 class="labs-title"><?php the_field("labs_title"); ?></h2>
+            <h2 class="labs-title"><?php echo get_field("labs_title", "option"); ?></h2>
             <div class="labs-content">
-                <div class="labs-content__text"><?php the_field("labs_text"); ?></div>
+                <div class="labs-content__text"><?php echo get_field("labs_text", "option"); ?></div>
                 <a href="#" class="home-its-box__link labs-link">
                     <svg width="32px" height="32px" class="home-its-box__link-icon labs__link-icon">
                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-down"></use>
@@ -21,11 +21,11 @@ get_header();
 
     <section class="labs-task">
         <div class="container">
-            <h3 class="labs-task__title"><?php the_field("labs_title_task"); ?></h3>
+            <h3 class="labs-task__title"><?php echo get_field("labs_title_task",'option'); ?></h3>
             <ul class="labs-task__list">
                 <?php
-                if (have_rows('labs_explanation_list')):
-                    while (have_rows('labs_explanation_list')) : the_row();
+                if (have_rows('labs_explanation_list','option')):
+                    while (have_rows('labs_explanation_list','option')) : the_row();
                         $labs_explanation_num = get_sub_field('labs_explanation_list_num');
                         $labs_explanation_text = get_sub_field('labs_explanation_list_text');
                         ?>
@@ -40,11 +40,11 @@ get_header();
 
     <section class="labs-list">
         <div class="container">
-            <h3 class="labs-list__title labs-task__title"><?php the_field("labs_title_storage"); ?></h3>
+            <h3 class="labs-list__title labs-task__title"><?php echo get_field("labs_title_storage", 'option'); ?></h3>
             <div class="labs-list__inner">
                 <div>
                     <?php
-                    $labs_img_storage = get_field('labs_img_storage');
+                    $labs_img_storage = get_field('labs_img_storage', 'option');
 
                     if ($labs_img_storage) {
                         $labs_image_url = $labs_img_storage ['url'];
@@ -58,7 +58,7 @@ get_header();
                 <ul class="labs-list__inner-list">
                     <?php
                     $args = array(
-                        'post_type' => 'labs',
+                        'post_type' => 'laboratory',
                         'posts_per_page' => -1
                     );
                     $query = new WP_Query( $args );

@@ -5,12 +5,11 @@ get_header();
     <section class="lab-single">
         <div class="container">
             <div class="lab-single-arrow">
-                <a href="<?php get_post_type_archive_link('laboratory'); ?>">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M15.9993 29.3332C8.63555 29.3332 2.66602 23.3636 2.66602 15.9998C2.66602 8.63604 8.63555 2.6665 15.9993 2.6665C23.3631 2.6665 29.3327 8.63604 29.3327 15.9998C29.3327 23.3636 23.3631 29.3332 15.9993 29.3332ZM15.3731 11.2927C14.9826 10.9022 14.3494 10.9022 13.9589 11.2927L9.95891 15.2927C9.56839 15.6833 9.56839 16.3164 9.95891 16.7069L13.9589 20.7069C14.3494 21.0975 14.9826 21.0975 15.3731 20.7069C15.7636 20.3164 15.7636 19.6833 15.3731 19.2927L13.0802 16.9998H21.3327C21.885 16.9998 22.3327 16.5521 22.3327 15.9998C22.3327 15.4476 21.885 14.9998 21.3327 14.9998H13.0802L15.3731 12.7069C15.7636 12.3164 15.7636 11.6833 15.3731 11.2927Z"
-                              fill="#084184"/>
+                <a href="<?php echo get_post_type_archive_link('laboratory'); ?>">
+                    <svg width="32px" height="32px">
+                        <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-oval-left"></use>
                     </svg>
+                    <span>Повернутися</span>
                 </a>
             </div>
             <h2 class="lab-single-title"><?php the_title(); ?></h2>

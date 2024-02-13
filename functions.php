@@ -146,12 +146,32 @@ function aksu_widgets_init()
     );
 }
 
-add_action('widgets_init', 'aksu_widgets_init');
+//add_action('widgets_init', 'aksu_widgets_init');
+//if (function_exists('acf_add_options_page')) {
+//
+//    acf_add_options_page();
+//
+//}
+
 if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title' => 'Сторінка лабораторій',
+        'menu_title' => 'Налаштування сторінки лабораторії',
+        'menu_slug' => 'settings-1',
+        'capability' => 'edit_posts',
+        'redirect' => false
+    ));
 
-    acf_add_options_page();
-
+    acf_add_options_page(array(
+        'page_title' => 'Опції',
+        'menu_title' => 'Налаштування опцій',
+        'menu_slug' => 'settings-2',
+        'capability' => 'edit_posts',
+        'redirect' => false
+    ));
 }
+
+
 /**
  * Enqueue scripts and styles.
  */
