@@ -75,7 +75,7 @@
                                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-phone"></use>
                                 </svg>
                             </div>
-                            <span><?php the_field("phone_number_5", 'option'); ?></span></a>
+                            <span><?php the_field("phone_number_6", 'option'); ?></span></a>
                         <a href="<?php the_field("address_link", 'option'); ?>" class="footer-contacts-link">
                             <div>
                                 <svg width="24px" height="24px">
