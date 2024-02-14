@@ -43,6 +43,7 @@
 }
 
 .publications-list__item-files {
+
     display: flex;
     gap: 16px;
     flex-direction: column;

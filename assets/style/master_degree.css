@@ -1,0 +1,133 @@
+.master__title {
+    background: linear-gradient(181deg, rgba(255, 255, 255, 2.2) -27.39%, rgba(255, 255, 255, 0.09) 52.04%), rgba(255, 255, 255, 0.9);
+}
+
+.master-inf {
+    margin: 50px 0 0 0;
+}
+
+.master-its {
+    color: var(--orange);
+}
+
+.master-docs__title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+    margin: 0 auto 40px auto;
+    color: var(--orange);
+
+}
+
+.master-docs {
+    border-radius: 10px;
+    background-color: rgba(246, 250, 254, 1);
+    padding: 16px 0;
+    margin: 80px 0 64px 0;
+}
+
+.master-docs__list-item {
+    margin: 10px 0;
+}
+
+.master-statements {
+    padding: 16px 0;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.16);
+    background-color: rgba(253, 254, 255, 1);
+    margin: 0 0 80px 0;
+}
+
+.master-statements-item__title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+    margin: 0 0 16px 0;
+    color: var(--orange);
+}
+
+.master-statements-item__files-doc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: var(--dark-blue);
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin: 0 0 16px 0;
+}
+
+.master-statements__list-item {
+    margin: 0 0 40px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .master-docs__title {
+        font-size: 20px;
+        width: 600px;
+        margin: 0 auto 48px auto;
+    }
+
+    .master-statements-item__title {
+        font-size: 20px;
+        margin: 0 0 32px 0;
+
+    }
+
+    .master-statements__list-item {
+        margin: 0 0 60px 0;
+    }
+
+    .master-statements {
+        padding: 24px 0;
+        margin: 0 0 95px 0;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    .master-inf {
+        margin: 180px 0 0 0;
+    }
+
+    .master-docs__list {
+        gap: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .master-docs {
+        padding: 64px 0;
+        margin: 180px 0;
+    }
+
+    .master-docs__title {
+        margin: 0 auto 64px auto;
+    }
+
+    .master-statements {
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+        margin: 0 0 180px 0;
+    }
+
+    .master-statements__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 24px;
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.16);
+        background-color: rgba(253, 254, 255, 1);
+        gap: 59px;
+    }
+    .master-statements-item__title {
+        line-height: 30px;
+    }
+    .master-its-box__link{
+        margin: 32px auto 0 auto;
+    }
+}
+
+

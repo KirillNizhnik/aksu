@@ -1,0 +1,105 @@
+.conferences {
+    margin: 0 0 100px 0;
+}
+.conferences-list__item-btn{
+    width: 100%;
+}
+
+.conferences-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: -90px 0 60px 0;
+}
+
+.conferences-list__item-wrapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conferences-list__item {
+    box-shadow: 0 8px 24px -6px #00000029;
+    background-color: var(--white);
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.conferences-list__item-img {
+    width: 100%;
+    height: 162px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.conferences-list__item-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+    color: var(--orange);
+    margin: 24px 0 16px 0;
+}
+
+.conferences-list__item-descr {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    margin: 16px 0;
+}
+
+.conferences-list__item-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .conferences-list__item-img {
+        height: 335px;
+    }
+
+    .conferences-list__item-title {
+        font-size: 20px;
+        margin: 48px 0 16px 0;
+    }
+
+    .conferences-list__item-btns {
+        flex-direction: row;
+        gap: 22px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .conferences-list__item-img {
+        width: 360px;
+        height: 335px;
+    }
+
+    .conferences-list__item {
+        display: flex;
+        gap: 95px;
+    }
+
+    .conferences-list__item-title {
+        margin: 0 0 16px 0;
+    }
+
+    .conferences-list__item-descr {
+        margin: 16px 0;
+    }
+
+    .conferences-list__item {
+        padding: 24px 68px 24px 24px;
+    }
+
+    .conferences-list {
+        gap: 64px;
+    }
+    .conferences-list__item-btn{
+        width: fit-content;
+    }
+}

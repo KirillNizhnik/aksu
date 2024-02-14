@@ -1,5 +1,4 @@
 const swiperCategory = new Swiper('.swiper-home-news', {
-    // loop: true,
     pagination: {
         el: '.swiper-pagination-home-news',
         clickable: true,
@@ -16,7 +15,6 @@ const swiperCategory = new Swiper('.swiper-home-news', {
         1440: {
             slidesPerView: 'auto',
             pagination: false,
-            // spaceBetween: false,
         },
     },
 });
