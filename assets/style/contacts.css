@@ -1,5 +1,6 @@
-.contacts__container {
+.contacts {
     margin: 40px 0 80px 0;
+
 }
 
 .contacts__title {
@@ -89,7 +90,8 @@
 }
 
 @media screen and (min-width: 768px) {
-    .contacts__container {
+
+    .contacts {
         margin: 48px 0 96px 0;
     }
 
@@ -148,8 +150,8 @@
 
 @media screen and (min-width: 1440px) {
 
-    .contacts__container {
-        margin: 64px 0 180px 0;
+    .contacts {
+        margin: 262px 0 180px 0;
     }
 
     .contacts__title {
