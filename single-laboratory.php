@@ -18,7 +18,7 @@ get_header();
                 <div class="labs-single-inner__content">
                     <div class="labs-single-inner__text"><?php the_field("lab_single_text"); ?></div>
                     <div class="labs-single-inner__swiper swiper">
-                        <div class="swiper-wrapper">
+                        <div class="swiper-wrapper swiper-wrapper-lab">
                             <?php if (have_rows('lab_single_images')) : ?>
                                 <?php while (have_rows('lab_single_images')) : the_row(); ?>
                                     <?php
