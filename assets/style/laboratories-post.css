@@ -38,7 +38,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
-    height: 180px;
+    height: 320px;
 }
 
 .labs-single-content-text {
@@ -177,6 +177,9 @@
 
     .lab-single-arrow {
         margin: 48px 0;
+    }
+    .labs-post-swiper-img {
+        height: 520px;
     }
 }
 
