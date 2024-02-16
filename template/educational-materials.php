@@ -19,8 +19,9 @@ get_header();
             </div>
         </section>
         <section class="educational-materials">
-            <?php if (have_rows('educational_materials_publications')): ?>
-                <ul class="container educational-materials__container">
+            <div class="container">
+                <?php if (have_rows('educational_materials_publications')): ?>
+                    <ul class="educational-materials__container">
                     <?php while (have_rows('educational_materials_publications')): the_row();
                         $educational_materials_title_text = get_sub_field('educational_materials_title_text');
                         $educational_materials_text = get_sub_field('educational_materials_text');

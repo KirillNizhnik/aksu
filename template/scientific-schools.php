@@ -9,13 +9,13 @@ get_header();
             <div class="container">
                 <h2 class="scientific-schools__title title-section"><?php the_field("scientific_schools_title"); ?></h2>
                 <?php if (have_rows('scientific_schools_repeater')): ?>
-                    <ul class="scientific-schools__content-wrap">
+                    <ul class="scientific-schools__wrap">
                         <?php while (have_rows('scientific_schools_repeater')): the_row();
                             $scientific_schools_title = get_sub_field('scientific_schools_publications_title'); ?>
-                            <li class="scientific-schools__content-inner">
+                            <li class="scientific-schools__content-wrap">
                                 <h3 class="scientific-schools__title2"><?php echo $scientific_schools_title ?></h3>
                                 <?php if (have_rows('scientific_schools_item_repeater')): ?>
-                                    <ul class="scientific-schools__content-inner">
+                                    <ul class="scientific-schools__content-wrap   scientific-schools_retreat">
                                         <?php while (have_rows('scientific_schools_item_repeater')): the_row();
                                             $scientific_schools_content_title = get_sub_field('scientific_schools_content_title');
                                             $scientific_schools_content_text = get_sub_field('scientific_schools_content_text');

@@ -9,22 +9,22 @@
 }
 
 .scientific-schools__title2 {
-    margin: 80px 0 40px;
+    margin: 0 auto 0;
     color: var(--orange);
     font-size: 16px;
     line-height: 140%;
     text-align: center;
 }
 
-.scientific-schools__title2:first-of-type {
-    margin: 0 0 40px;
-}
-
-.scientific-schools__content-inner {
+.scientific-schools__content-wrap {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin: auto;
+    margin: 80px auto 0;
+}
+
+.scientific-schools_retreat {
+    margin-top: 0px;
 }
 
 .scientific-schools__content {
@@ -68,38 +68,42 @@
     }
 
     .scientific-schools__title2 {
-        margin-bottom: 48px;
+        margin: 0 auto 0;
         font-size: 20px;
         line-height: 150%;
     }
 
-    .scientific-schools__content-inner {
+    .scientific-schools__content-wrap {
         flex-direction: row;
         flex-wrap: wrap;
-        column-gap: 18px;
-        row-gap: 48px;
+        gap: 48px 18px;
+        margin-top: 96px;
         width: 705px;
+    }
+
+    .scientific-schools_retreat {
+        margin-top: 0px;
     }
 
     .scientific-schools__content {
         width: 343px;
-    }
-
-    .scientific-schools__title2 {
-        margin-top: 96px;
     }
 }
 
 @media screen and (min-width: 1440px) {
 
     .scientific-schools {
-        margin: 64px 0 180px;
+        margin: 262px 0 180px;
     }
 
-    .scientific-schools__content-inner {
-        column-gap: 24px;
-        row-gap: 64px;
+    .scientific-schools__content-wrap {
+        gap: 64px 24px;
+        margin-top: 180px;
         width: 950px;
+    }
+
+    .scientific-schools_retreat {
+        margin-top: 0px;
     }
 
     .scientific-schools__content {
@@ -113,7 +117,7 @@
     }
 
     .scientific-schools__title2 {
-        margin: 180px 0 64px;
+        margin: 0 auto 0;
     }
 
     .scientific-schools__content {
