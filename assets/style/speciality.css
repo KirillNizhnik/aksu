@@ -1,0 +1,318 @@
+.speciality-hero {
+    border-radius: 0 0 10px 10px;
+    padding: 40px 0;
+    height: 206px;
+    background: center/cover no-repeat;
+}
+
+.speciality-hero__title {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto 0;
+    text-align: center;
+    line-height: 150%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(255, 255, 255, 0.40);
+    backdrop-filter: blur(3px);
+}
+
+.speciality-sample-title,
+.speciality-sample-subtitle {
+    text-align: center;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.speciality-sample-subtitle {
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.speciality-sample-subtitle {
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.speciality-slide, .speciality-educational-degrees {
+    margin-bottom: 96px;
+}
+
+.speciality-slide-content {
+    padding: 16px;
+    border-radius: 10px;
+    margin-top: -30px;
+    text-align: center;
+    font-size: 16px;
+    background-color: var(--white);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.20), 0px 0px 32px -8px rgba(0, 0, 0, 0.12), 0px 32px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.speciality-slide-content_color {
+    color: var(--orange);
+}
+
+.speciality-wrap-content, .speciality-fund-spec {
+    border-radius: 10px;
+    margin-bottom: 80px;
+    background-color: var(--white-light);
+}
+
+.speciality-inner-content, .speciality-fund-spec__content {
+    padding: 16px 0;
+}
+
+.speciality-inner-content__text {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.speciality-publication, .speciality-stud-prep {
+    margin-bottom: 80px;
+}
+
+.speciality-publication-content__subtitle {
+    margin-bottom: 16px;
+}
+
+.publication-content__photo, .speciality-stud-prep__photo {
+    border-radius: 10px;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.speciality-stud-prep__photo {
+    margin: 0 0 40px 0;
+}
+
+.speciality-stud-prep__title {
+    margin-bottom: 40px;
+}
+
+
+.speciality-publication-content__text, .speciality-stud-prep__text, .speciality-fund-spec__text {
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.speciality-educational-degrees__text {
+    margin: 16px 0 40px;
+    text-align: center;
+    line-height: 150%;
+}
+
+.speciality-educational-degrees__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.speciality-educational-degrees__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.20), 0px 0px 32px -8px rgba(0, 0, 0, 0.12), 0px 32px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.speciality-educational-degrees__item-text {
+    text-align: center;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.speciality-fund-spec__title {
+    margin-bottom: 48px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .speciality-hero {
+        padding: 48px 0;
+        height: 338px;
+    }
+
+    .speciality-hero__title {
+        font-size: 26px;
+    }
+
+    .speciality-sample-title,
+    .speciality-sample-subtitle {
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    .speciality-slide {
+        margin-bottom: 112px;
+    }
+
+    .speciality-slide-content {
+        width: 655px;
+        margin: -200px auto 0;
+        font-size: 20px;
+    }
+
+    .speciality-wrap-content, .speciality-fund-spec, .speciality-stud-prep {
+        margin-bottom: 96px;
+    }
+
+    .speciality-inner-content__text {
+        margin-bottom: 48px;
+        font-size: 16px;
+    }
+
+    .speciality-publication {
+        margin-bottom: 203px;
+    }
+
+    .speciality-publication-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .speciality-publication-content__subtitle,
+    .speciality-publication-content__title {
+    }
+
+    .publication-content__photo {
+        width: 100%;
+        height: 308px;
+        object-fit: cover;
+        margin: 0;
+    }
+
+    .speciality-publication__text {
+        font-size: 16px;
+        line-height: 150%;
+        margin-top: 48px;
+    }
+
+    .speciality-educational-degrees {
+        margin-bottom: 112px;
+    }
+
+    .speciality-educational-degrees__text {
+        margin: 16px 0 48px;
+        font-size: 16px;
+    }
+
+    .speciality-educational-degrees__list {
+        align-items: center;
+        gap: 24px;
+        margin-top: 48px;
+    }
+
+    .speciality-educational-degrees__item {
+        gap: 27px;
+        width: 462px;
+    }
+
+    .speciality-fund-spec__text {
+        font-size: 16px;
+    }
+
+    .speciality-stud-prep__title {
+        margin-bottom: 48px;
+    }
+
+    .speciality-stud-prep__photo {
+        margin: 0 0 48px 0;
+    }
+
+    .speciality-stud-prep__text {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    .speciality-hero {
+        padding: 64px 0;
+        height: 857px;
+    }
+
+    .speciality-hero__title {
+        font-size: 36px;
+    }
+
+    .speciality-slide {
+        margin-bottom: 180px;
+    }
+
+    .speciality-slide-content {
+        width: 671px;
+        margin: -220px auto 0;
+    }
+
+    .speciality-wrap-content, .speciality-fund-spec,
+    .speciality-stud-prep, .speciality-publication,
+    .speciality-educational-degrees, .speciality-fund-spec {
+        margin-bottom: 180px;
+    }
+
+    .speciality-inner-content {
+        padding: 24px 0;
+    }
+
+    .speciality-inner-content__text {
+        margin-bottom: 32px;
+    }
+
+    .speciality-inner-content__title {
+        text-align: left;
+    }
+
+    .speciality-publication-content {
+        flex-direction: row;
+        gap: 100px;
+    }
+
+    .speciality-publication-content__title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .speciality-publication__text {
+        margin-top: 64px;
+    }
+
+    .publication-content__photo {
+        order: -1;
+        width: 488px;
+        height: 434px;
+        object-fit: cover;
+    }
+
+    .speciality-educational-degrees__content {
+        margin: auto;
+        width: 830px;
+    }
+
+    .speciality-educational-degrees__text {
+        margin: 16px 0 64px;
+    }
+
+    .speciality-educational-degrees__list {
+        flex-direction: row;
+        align-items: stretch;
+        margin-top: 64px;
+    }
+
+    .speciality-fund-spec__content {
+        padding: 64px 0;
+    }
+
+    .speciality-fund-spec__title {
+        margin-bottom: 64px;
+    }
+}
+
+
