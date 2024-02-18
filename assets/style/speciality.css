@@ -51,6 +51,10 @@
     color: var(--orange);
 }
 
+.speciality-slide-content__link {
+    display: none;
+}
+
 .speciality-wrap-content, .speciality-fund-spec {
     border-radius: 10px;
     margin-bottom: 80px;
@@ -177,7 +181,9 @@
     }
 
     .speciality-publication-content__subtitle,
-    .speciality-publication-content__title {
+    .speciality-publication-content__title,
+    .speciality-stud-prep__title{
+        text-align: start;
     }
 
     .publication-content__photo {
@@ -234,7 +240,7 @@
 @media screen and (min-width: 1440px) {
 
     .speciality-hero {
-        padding: 64px 0;
+        padding: 262px 0;
         height: 857px;
     }
 
@@ -242,18 +248,35 @@
         font-size: 36px;
     }
 
-    .speciality-slide {
-        margin-bottom: 180px;
-    }
-
     .speciality-slide-content {
         width: 671px;
         margin: -220px auto 0;
     }
 
-    .speciality-wrap-content, .speciality-fund-spec,
+    .speciality-slide-content__link {
+        display: inline-block;
+        padding: 10px;
+        margin-top: 12px;
+    }
+
+    .speciality-slide-content__icon {
+        margin: auto;
+        text-align: center;
+        fill: var(--dark-blue);
+    }
+
+    .speciality-slide-content__icon:hover {
+        fill: var(--orange);
+    }
+
+    .speciality-slide-content__icon:active {
+        fill: var(--light-gray);
+    }
+
+    .speciality-slide, .speciality-wrap-content, .speciality-fund-spec,
     .speciality-stud-prep, .speciality-publication,
-    .speciality-educational-degrees, .speciality-fund-spec {
+    .speciality-educational-degrees, .speciality-fund-spec
+     {
         margin-bottom: 180px;
     }
 
@@ -304,6 +327,19 @@
         flex-direction: row;
         align-items: stretch;
         margin-top: 64px;
+    }
+
+    .speciality-stud-prep__photo {
+        width: 491px;
+        height: 468px;
+        object-fit: cover;
+    }
+
+    .speciality-stud-prep__inner {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 119px;
     }
 
     .speciality-fund-spec__content {

@@ -6,25 +6,28 @@ get_header();
 ?>
 
 <section
-    style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.00) 100%),
-        url('https://img.freepik.com/free-photo/landscape-of-morning-fog-and-mountains-with-hot-air-balloons-at-sunrise_335224-794.jpg?size=626&ext=jpg&ga=GA1.1.1222169770.1708041600&semt=sph');"
-    class="speciality-hero">
+        style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.00) 100%),
+                url('<?php
+        $speciality_hero_photo = get_field("speciality_background");
+        if (!empty($speciality_hero_photo)) {
+            echo $speciality_hero_photo["url"];
+        } ?>');"
+        class="speciality-hero">
+
+
     <div class="container">
-        <h2 class="speciality-hero__title title-section">Спеціальності</h2>
+        <h2 class="speciality-hero__title title-section"><?php the_field('speciality_title'); ?></h2>
     </div>
 </section>
 <section class="speciality-slide">
     <div class="container">
         <div class="speciality-slide-content speciality-slide-content_color">
-            <strong> ipsum dolor sit amet, consectetur adipisicing elit. Fugit, veniam!</strong>
-            <br><br>
-            <strong> ipsum dolor sit amet, consectetur adipisicing elit. Fugit, veniam!</strong>
-            <br><br>
-            <strong> ipsum dolor sit amet, consectetur adipisicing elit. Fugit, veniam!</strong>
-            <br><br>
-            <strong> ipsum dolor sit amet, consectetur adipisicing elit. Fugit, veniam!</strong>
-            <br><br>
-            <strong> ipsum dolor sit amet, consectetur adipisicing elit. Fugit, veniam!</strong>
+            <?php the_field('speciality_slide_text'); ?>
+            <a href="<?php the_field('speciality_slide_text_link'); ?>" class="speciality-slide-content__link">
+                <svg width="32px" height="32px" class="speciality-slide-content__icon">
+                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-down"></use>
+                </svg>
+            </a>
         </div>
     </div>
 </section>
@@ -32,18 +35,10 @@ get_header();
     <div class="container">
         <div class="speciality-inner-content">
             <p class="speciality-inner-content__text">
-                Комп’ютеризовані системи управління та автоматики - напрям створення та
-                управління високотехнологічними системами на основі світових досягнень у науці і технологіях. Фахівці
-                цієї галузі мають високу підготовку в комп'ютерних та електротехнічних питаннях. Вони працюють з
-                автоматизацією виробництва та розробкою інформаційно-обчислювальних систем.
-                <br>
-                Комп’ютеризовані системи управління та автоматики - напрям створення та управління високотехнологічними
-                системами на основі світових досягнень у науці і технологіях. Фахівці цієї галузі мають високу
-                підготовку в комп'ютерних та електротехнічних питаннях. Вони працюють з автоматизацією виробництва та
-                розробкою інформаційно-обчислювальних систем.
+                <?php the_field('speciality_inner_content_text'); ?>
             </p>
-            <div class="speciality-inner-content__title speciality-sample-title title-section">Саме таких спеціалістів
-                ми і готуємо!
+            <div class="speciality-inner-content__title speciality-sample-title title-section">
+                <?php the_field('speciality_inner_content_title'); ?>
             </div>
         </div>
     </div>
@@ -52,73 +47,51 @@ get_header();
     <div class="container">
         <div class="speciality-publication-content">
             <div class="speciality-publication-content__title">
-                <div class="speciality-publication-content__subtitle speciality-sample-subtitle ">Інформаційні
-                    технології –
-                    це сфера молоді!
+                <div class="speciality-publication-content__subtitle speciality-sample-subtitle ">
+                    <?php the_field('speciality_publication_subtitle'); ?>
                 </div>
-                <div class="speciality-publication-content__title speciality-sample-title title-section"> Хто володіє
-                    інформаційними технологіями – той здатен
-                    змінити
-                    світ!
+                <div class="speciality-publication-content__title speciality-sample-title title-section">
+                    <?php the_field('speciality_publication_title'); ?>
                 </div>
-                <p class="speciality-publication__text">Інформаційні технології - престижний напрям з фокусом на
-                    високооплачуваній галузі, орієнтований на світові тенденції. Він відповідає потребам індустрії,
-                    бізнесу та наукових досліджень. Спеціалісти цього напряму займаються створенням та експлуатацією
-                    високоінтелектуальних систем, базуючись на останніх досягненнях світової науки і технологій. Їх
-                    використання розповсюджене у сферах авіації, ракетно-космічної техніки, роботизованих комплексах
-                    підприємств.
-                    <br>
-                    Спеціалісти цього напряму працюють з програмно-інтенсивними системами, розробляючи складні програмні
-                    продукти, комп’ютерні мережі, системи штучного інтелекту та рішень з використанням хмарних структур.
-                    Їхні навички важливі у сферах воєнного призначення, управління високоточною зброєю, стабілізації та
-                    управління літальними апаратами.
+                <p class="speciality-publication__text">
+                    <?php the_field('speciality_publication_text'); ?>
                 </p>
             </div>
-            <img src="https://img.freepik.com/free-photo/landscape-of-morning-fog-and-mountains-with-hot-air-balloons-at-sunrise_335224-794.jpg?size=626&ext=jpg&ga=GA1.1.1222169770.1708041600&semt=sph"
+            <img src="<?php
+            $publication_content_photo = get_field("speciality_publication_photo");
+            if (!empty($publication_content_photo)) {
+                echo $publication_content_photo["url"];
+            } ?>');"
                  alt="" class="publication-content__photo">
         </div>
-
     </div>
 </section>
 <section class="speciality-educational-degrees">
     <div class="container">
         <div class="speciality-educational-degrees__inner">
             <div class="speciality-educational-degrees__content">
-                <div class="speciality-sample-title title-section">Кафедра аерокосмічних систем управління здійснює
-                    підготовку
-                    бакалаврів, магістрів, докторів філософії
-                </div>
-                <p class="speciality-educational-degrees__text">Диплом фахівця нашого університету визнається в понад
-                    200 країнах
-                    світу, які входять до Міжнародної організації цивільної авіації – ICAO.
-                    Кафедра аерокосмічних систем управління здійснює підготовку бакалаврів, магістрів, докторів
-                    філософі</p>
-                <div class="speciality-sample-subtitle">При підготовці фахівців забезпечується:</div>
+                <div class="speciality-sample-title title-section"><?php the_field('speciality_educational_degrees_title'); ?></div>
+                <p class="speciality-educational-degrees__text">
+                    <?php the_field('speciality_educational_degrees_text'); ?></p>
+                <div class="speciality-sample-subtitle">
+                    <?php the_field('speciality_educational_degrees_subtitle'); ?></p></div>
             </div>
             <ul class="speciality-educational-degrees__list">
-                <li class="speciality-educational-degrees__item">
-                    <svg width="90px" height="90px" class="speciality-educational-degrees__icon">
-                        <use href="images/icons/icons.svg#icon-cpu"></use>
-                    </svg>
-                    <p class="speciality-educational-degrees__item-text">Спроможність у своїй практичній роботі
-                        застосовувати новітні наукоємні технології створення та експлуатації конкурентоспроможних
-                        бортових кібернетичних систем.</p>
-                </li>
-                <li class="speciality-educational-degrees__item">
-                    <svg width="90px" height="90px" class="speciality-educational-degrees__icon">
-                        <use href="images/icons/icons.svg#icon-notebook-bookmark"></use>
-                    </svg>
-                    <p class="speciality-educational-degrees__item-text">Глибокі теоретичні знання з сучасної теорії
-                        управління, електронної та комп’ютерної техніки.</p>
-                </li>
-                <li class="speciality-educational-degrees__item">
-                    <svg width="90px" height="90px" class="speciality-educational-degrees__icon">
-                        <use href="images/icons/icons.svg#icon-wireless-charge"></use>
-                    </svg>
-                    <p class="speciality-educational-degrees__item-text">Здатність розробляти та впроваджувати новітні
-                        механізми та науково обґрунтовані алгоритми і програми управління підприємствами і
-                        організаціями, роботизованими комплексами і підприємствами.</p>
-                </li>
+                <?php
+                if (have_rows('speciality_educational_degrees_list')):
+                    while (have_rows('speciality_educational_degrees_list')) : the_row();
+                        $speciality_text = get_sub_field('speciality_educational_degrees_item_text');
+                        $speciality_img = get_sub_field('speciality_educational_degrees_icon');
+                        if ($speciality_img) {
+                            $image_alt = $speciality_img['alt'];
+                            $image_url = $speciality_img['url'];
+                        }
+                        ?>
+                        <li class="speciality-educational-degrees__item">
+                            <img class="speciality-educational-degrees__icon" src="<?php echo $image_url ?>" alt="<?php echo $image_alt ?>">
+                            <p class="speciality-educational-degrees__item-text"><?php echo $speciality_text ?></p>
+                        </li>
+                    <?php endwhile; else : endif; ?>
             </ul>
         </div>
     </div>
@@ -126,29 +99,16 @@ get_header();
 <section class="speciality-fund-spec">
     <div class="container">
         <div class="speciality-fund-spec__content">
-            <div class="speciality-fund-spec__title speciality-sample-subtitle">Серед фундаментальних і спеціальних
-                дисциплін за обраним
-                фахом:
-            </div>
+            <div class="speciality-fund-spec__title speciality-sample-subtitle"><?php the_field('speciality_fund_spec_title'); ?></p></div>
             <ul class="speciality-fund-spec__list master-docs__list">
-                <li class="speciality-fund-spec__text">
-                    організація інформаційно-обчислювальних процесів та систем;
-                </li>
-                <li class="speciality-fund-spec__text">
-                    організація інформаційно-обчислювальних процесів та систем;
-                </li>
-                <li class="speciality-fund-spec__text">
-                    організація інформаційно-обчислювальних процесів та систем;
-                </li>
-                <li class="speciality-fund-spec__text">
-                    організація інформаційно-обчислювальних процесів та систем;
-                </li>
-                <li class="speciality-fund-spec__text">
-                    організація інформаційно-обчислювальних процесів та систем;
-                </li>
-                <li class="speciality-fund-spec__text">
-                    організація інформаційно-обчислювальних процесів та систем;
-                </li>
+                <?php
+                if (have_rows('speciality_fund_spec_list')):
+                    while (have_rows('speciality_fund_spec_list')) : the_row();
+                        $speciality_fund_spec_text = get_sub_field('speciality_fund_spec_text'); ?>
+                        <li class="speciality-fund-spec__text">
+                            <p><?php echo $speciality_fund_spec_text ?></p>
+                        </li>
+                    <?php endwhile; else : endif; ?>
             </ul>
         </div>
     </div>
@@ -156,22 +116,15 @@ get_header();
 <section class="speciality-stud-prep">
     <div class="container">
         <div class="speciality-stud-prep__inner">
-            <img src="https://img.freepik.com/free-photo/landscape-of-morning-fog-and-mountains-with-hot-air-balloons-at-sunrise_335224-794.jpg?size=626&ext=jpg&ga=GA1.1.1222169770.1708041600&semt=sph"
-                 alt="" class="speciality-stud-prep__photo">
+            <img src="<?php
+            $speciality_stud_prep_photo = get_field("speciality_stud_prep_photo");
+            if (!empty($speciality_stud_prep_photo)) {
+                echo $speciality_stud_prep_photo["url"];
+            } ?>');" alt="" class="speciality-stud-prep__photo">
             <div class="speciality-stud-prep__content">
-                <div class="speciality-stud-prep__title speciality-sample-title title-section">Особливості підготовки студентів</div>
-                <p class="speciality-stud-prep__text">
-                    Здатність до системного мислення - важлива у підготовці та діяльності сучасних фахівців. Напрям
-                    "Системна інженерія" виник для вирішення потреб індустрії, бізнесу та науки, з фокусом на створенні
-                    та експлуатації складних технічних систем. Це об'єднання дисциплін і спеціальностей, що надає
-                    навички системного аналізу та розробки різноманітних технічних систем.
-                    <br>
-                    Системна інженерія актуальна у галузях авіації, космічної техніки та роботизованих комплексів
-                    підприємств. Вона розглядається як програмно-інтенсивна система, заснована на комп'ютерних
-                    технологіях, і використовується у різних галузях, включаючи воєнну сферу та управління технікою.
-                    Студенти отримують фундаментальну підготовку, яка відкриває можливості для кар'єри в різних галузях,
-                    які вимагають системного підходу та інженерної експертизи.
-                </p>
+                <div class="speciality-stud-prep__title speciality-sample-title title-section">
+                    <?php the_field('speciality_stud_prep_title'); ?></p></div>
+                <p class="speciality-stud-prep__text"><?php the_field('speciality_stud_prep_text');?></p>
             </div>
         </div>
     </div>
