@@ -23,7 +23,7 @@ get_header();
     <div class="container">
         <div class="speciality-slide-content speciality-slide-content_color">
             <?php the_field('speciality_slide_text'); ?>
-            <a href="<?php the_field('speciality_slide_text_link'); ?>" class="speciality-slide-content__link">
+            <a href="#speciality-fund-spec" class="speciality-slide-content__link">
                 <svg width="48px" height="48px" class="speciality-slide-content__icon">
                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-down"></use>
                 </svg>
@@ -93,7 +93,7 @@ get_header();
         </div>
     </div>
 </section>
-<section class="speciality-fund-spec">
+<section class="speciality-fund-spec" id="speciality-fund-spec">
     <div class="container">
         <div class="speciality-fund-spec__content">
             <div class="speciality-fund-spec__title speciality-sample-subtitle"><?php the_field('speciality_fund_spec_title'); ?></p></div>
