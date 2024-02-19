@@ -1,0 +1,61 @@
+.postgraduate-course-sample-title, .postgraduate-course-sample-subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.postgraduate-course-sample-title {
+    text-align: center;
+}
+
+.postgraduate-course-sample-subtitle {
+    margin-bottom: 16px;
+    color: var(--orange);
+}
+
+.postgraduate-course-hero {
+    height: 206px;
+    border-radius: 0 0 10px 10px;
+    object-fit: cover;
+    padding: 40px 0 68px 0;
+    background: no-repeat center 90%/cover;
+}
+
+.postgraduate-course-hero__title {
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+    width: fit-content;
+    color: var(--dark-blue);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 126.166%;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(255, 255, 255, 0.40);
+    backdrop-filter: blur(3px);
+}
+
+.postgraduate-course-doctorates, .candidate-theses {
+    margin-bottom: 80px;
+}
+
+.postgraduate-course-doctorates__wrap, .candidate-theses__inner {
+    padding: 16px;
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.20), 0px 0px 32px -8px rgba(0, 0, 0, 0.12), 0px 32px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.postgraduate-course-doctorates__wrap {
+    margin: -30px 0 0;
+}
+
+.postgraduate-course-doctorates__inner {
+    margin-top: 40px;
+}
+
+.postgraduate-course-doctorates__text {
+    font-size: 14px;
+    line-height: 150%;
+}
