@@ -1,0 +1,194 @@
+.footer {
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(180deg, rgba(211, 227, 247, 0.10) 0%, #D3E3F7 100%);
+    padding: 16px 0 0 0;
+}
+
+.copyright {
+    color: var(--gray);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 130%;
+    margin: auto;
+    padding: 16px 10px;
+    text-align: center;
+    border-top: 1px solid var(--white);
+}
+
+.footer-maps {
+    border-radius: 10px;
+    background-color: var(--light-gray);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.20), 0 0 32px -8px rgba(0, 0, 0, 0.12), 0 32px 32px -8px rgba(0, 0, 0, 0.08);
+    height: 206px;
+}
+
+.footer-contacts {
+    padding: 0 0 16px 0;
+}
+
+.footer-contacts__list-icons {
+    display: flex;
+    gap: 32px;
+}
+
+.footer-contacts-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-contacts, .footer-contacts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-contacts__list-tel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-contacts-line {
+    width: 1px;
+    height: 20px;
+    background: var(--black);
+}
+
+.footer-contacts-link-wrap {
+    display: flex;
+    gap: 37px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-contacts-link-wrap-icon {
+    gap: 14px;
+}
+
+.footer-inner-logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    padding: 0 0 40px 0;
+}
+
+.footer-list__page-item-parent {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    padding: 0 0 6px 0;
+}
+
+.footer-list__page-item {
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.footer-list__page-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 9px;
+    margin: 0 0 40px 0;
+}
+
+.footer-list__page {
+    width: 155px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-inner-logo {
+        font-size: 16px;
+    }
+
+    .footer-maps {
+        height: 340px;
+    }
+
+    .footer-contacts__list-tel {
+        display: flex;
+        flex-direction: row;
+        gap: 18px;
+    }
+
+    .footer-contacts {
+        gap: 30px;
+    }
+
+    .footer-contacts-link-wrap {
+        gap: 18px;
+    }
+
+    .footer-list__page-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 85px 74px;
+        margin: 0 0 40px 0;
+    }
+
+    .footer-list__page {
+        width: 180px;
+    }
+
+
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    .footer-contacts {
+        padding: 0 0 48px 0;
+    }
+
+    .footer-contacts {
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .footer-contacts-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+        width: 540px;
+        font-size: 12px;
+    }
+
+    .footer-maps {
+        width: 708px;
+        height: 342px;
+    }
+
+    .footer-contacts-link-wrap {
+        gap: 18px;
+    }
+
+    .footer-list__page-menu {
+        gap: 71px;
+        margin: 0 0 64px 0;
+    }
+
+    .footer-list__page-item-parent {
+        padding: 0;
+        font-size: 16px;
+    }
+
+    .footer-list__page-item {
+        font-size: 16px;
+    }
+
+    .footer-list__page {
+        gap: 16px;
+    }
+}
+
+
