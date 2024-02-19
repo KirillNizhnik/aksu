@@ -160,15 +160,10 @@
         margin: 0 0 120px 0;
     }
 
-    /*.teacher-post-person-img-box{*/
-    /*    position: relative;*/
-    /*    width: 464px;*/
-    /*    height: 528px;*/
-    /*}*/
-    /*.teacher-post-person-img{*/
-    /*    position: absolute;*/
-    /*    bottom: -85px;*/
-    /*}*/
+    .teacher-post {
+        margin: 175px 0 180px 0;
+    }
+
     .teacher-post-person {
         background-color: transparent;
     }

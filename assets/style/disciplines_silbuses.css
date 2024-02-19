@@ -146,6 +146,39 @@
     background-color: #F6FAFE;
 }
 
+.disciplines-name-inner-send{
+    display: flex;
+    color: var(--dark-blue);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background-color: var(--white);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.disciplines-name-inner-send-svg{
+    fill: var(--dark-blue);
+}
+
+.disciplines-name-inner-send:hover {
+    background: var(--blue);
+}
+
+.disciplines-name-inner-send:active {
+    background: var(--light-gray);
+    color: var(--gray);
+}
+
+.disciplines-name-inner-send:active > svg {
+    fill: var(--gray);
+}
+
 @media screen and (min-width: 375px) {
     .disciplines_hero_title-age {
         width: 193px;
@@ -209,6 +242,9 @@
     }
     .disciplines-list-item-send {
         width: fit-content;
+    }
+    .disciplines-list-item-send.disciplines-name-inner-send {
+        margin: 0;
     }
 }
 

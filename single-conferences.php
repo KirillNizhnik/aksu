@@ -81,7 +81,7 @@ get_header();
                                                     <div class="conferences-post-btns">
                                                         <?php if ($checkedFile) : ?>
                                                             <a href="<?php echo esc_url($conferences_file_link) ?>"
-                                                               class="btn-section" target="_blank">
+                                                               class="btn-section btn-section-conferences-send" target="_blank">
                                                                 <span>Завантажити</span>
                                                                 <svg width="24px" height="24px"
                                                                      class="home-history__btn-svg">
@@ -91,7 +91,7 @@ get_header();
                                                         <?php endif; ?>
                                                         <?php if ($checkedLink) : ?>
                                                             <a href="<?php echo esc_url($conferences_inf_link) ?>"
-                                                               class="btn-section" target="_blank">
+                                                               class="btn-section btn-section-conferences" target="_blank">
                                                                 <span>Дізнатись більше</span>
                                                                 <svg width="24px" height="24px"
                                                                      class="home-history__btn-svg">

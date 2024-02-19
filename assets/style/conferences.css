@@ -1,7 +1,8 @@
 .conferences {
     margin: 0 0 100px 0;
 }
-.conferences-list__item-btn{
+
+.conferences-list__item-btn {
     width: 100%;
 }
 
@@ -55,6 +56,13 @@
     gap: 16px;
 }
 
+.btn-section.conferences-list__item-btn:hover > svg {
+    rotate: 45deg;
+}
+
+.btn-section.conferences-list__item-btn:active > svg {
+    fill: var(--gray);
+}
 
 @media screen and (min-width: 768px) {
 
@@ -99,7 +107,8 @@
     .conferences-list {
         gap: 64px;
     }
-    .conferences-list__item-btn{
+
+    .conferences-list__item-btn {
         width: fit-content;
     }
 }

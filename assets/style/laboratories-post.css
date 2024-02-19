@@ -122,6 +122,26 @@
     height: auto !important;
 }
 
+.labs-single-swiper-button-next:hover > svg {
+    fill: var(--orange);
+}
+
+.labs-single-swiper-button-next:active > svg {
+    fill: var(--light-gray);
+}
+
+.lab-single-arrow-svg {
+    fill: var(--dark-blue);
+}
+
+.lab-single-arrow-link:hover > .lab-single-arrow-svg {
+    fill: var(--orange);
+}
+
+.lab-single-arrow-link:hover {
+    color: var(--orange);
+}
+
 @media screen and (min-width: 768px) {
     .lab-single-title {
         font-size: 26px;
@@ -178,6 +198,7 @@
     .lab-single-arrow {
         margin: 48px 0;
     }
+
     .labs-post-swiper-img {
         height: 520px;
     }

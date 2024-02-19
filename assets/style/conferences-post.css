@@ -103,6 +103,26 @@
     gap: 64px;
 }
 
+.conferences-post-swiper-next:hover > svg {
+    fill: var(--orange);
+}
+
+.conferences-post-swiper-next:active > svg {
+    fill: var(--light-gray);
+}
+
+.btn-section-conferences:hover > svg {
+    rotate: 45deg;
+}
+
+.btn-section-conferences:active > svg {
+    fill: var(--gray);
+}
+
+.btn-section-conferences-send:active > svg {
+    fill: var(--gray);
+}
+
 @media screen and (min-width: 768px) {
     .conferences-post-title {
         font-size: 26px;
@@ -175,5 +195,9 @@
     .conferences-post-inner {
         gap: 115px;
         margin: 150px 0 0 0;
+    }
+
+    .conferences-post {
+        margin: 175px 0 80px 0;
     }
 }

@@ -27,7 +27,7 @@ get_header();
                             ?>
                             <?php if ($applicant_files) : ?>
                                 <a href="<?php echo $applicant_files_url; ?>"
-                                   class="home-history__link applicant-graduates__link ">
+                                   class=" applicant-graduates__link " target="_blank">
                                     <span><?php echo $applicant_files_name; ?></span>
                                     <svg width="24px" height="24px" class="home-history__btn-svg">
                                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
@@ -76,7 +76,7 @@ get_header();
                             <?php endif; ?>
                                 <?php if ($applicant_information_file ): ?>
                                 <a href="<?php echo $applicant_doc_file_url ?>"
-                                   class="home-history__link applicant-graduates__link" target="_blank">
+                                   class=" applicant-graduates__link" target="_blank">
                                     <span><?php echo $applicant_information_file_name ?></span>
                                     <svg width="24px" height="24px" class="home-history__btn-svg">
                                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>

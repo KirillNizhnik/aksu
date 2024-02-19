@@ -44,7 +44,7 @@ get_header();
                             <a class="disciplines-name-inner-send"
                                href="<?php echo $disciplines_syllabuses_file_url; ?>" target="_blank">
                                 <span><?php echo $disciplines_syllabuses_file_name; ?></span>
-                                <svg width="24px" height="24px" class="">
+                                <svg width="24px" height="24px" class="disciplines-name-inner-send-svg">
                                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
                                 </svg>
                             </a>
@@ -86,10 +86,10 @@ get_header();
                                             </div>
                                             <div class="disciplines-list-item-author"><?php echo $author_file; ?>
                                             </div>
-                                            <a class="disciplines-list-item-send" href="<?php echo $doc_file_url; ?>"
+                                            <a class="disciplines-list-item-send disciplines-name-inner-send" href="<?php echo $doc_file_url; ?>"
                                                target="_blank">
                                                 <span><?php echo $doc_file_name; ?></span>
-                                                <svg width="24px" height="24px" class="">
+                                                <svg width="24px" height="24px" class="disciplines-name-inner-send-svg">
                                                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
                                                 </svg>
                                             </a>

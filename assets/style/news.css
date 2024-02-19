@@ -103,7 +103,7 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 45px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: center;
     padding: 1px 20.5px;
 }
@@ -112,13 +112,15 @@
     margin: 0 10px;
     width: 42px;
 }
-
+.btn-section.news-item__btn:hover > svg{
+    rotate: 45deg;
+}
 @media screen and (min-width: 768px) {
     .page-numbers {
         font-size: 36px;
         font-weight: 700;
         line-height: 45px;
-        letter-spacing: 0em;
+        letter-spacing: 0;
         text-align: center;
         padding: 18px 32.5px;
     }
