@@ -105,6 +105,10 @@
     gap: 10px;
 }
 
+.footer-list__page-item:hover > a {
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 768px) {
     .footer-inner-logo {
         font-size: 16px;

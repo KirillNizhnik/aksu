@@ -83,6 +83,10 @@
     fill: var(--gray);
 }
 
+.teacher {
+    margin: 40px 0;
+}
+
 @media screen and (min-width: 768px) {
     .teacher-list__item {
         width: 344px;
@@ -135,5 +139,9 @@
     .teacher-title {
         font-size: 36px;
         margin: 0 0 64px 0;
+    }
+
+    .teacher {
+        margin: 180px 0;
     }
 }
