@@ -50,7 +50,6 @@ get_header();
                             <div class="home-why-list__item-text"><?php echo $privilege_text ?></div>
                         </li>
                     <?php endwhile; else : endif; ?>
-
             </ul>
         </div>
     </section>
