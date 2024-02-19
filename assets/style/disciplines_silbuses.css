@@ -170,12 +170,12 @@
     background: var(--blue);
 }
 
-.disciplines-name-inner-send:active {
+.disciplines-name-inner-send:focus {
     background: var(--light-gray);
     color: var(--gray);
 }
 
-.disciplines-name-inner-send:active > svg {
+.disciplines-name-inner-send:focus > svg {
     fill: var(--gray);
 }
 

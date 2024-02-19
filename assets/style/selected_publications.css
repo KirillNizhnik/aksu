@@ -53,7 +53,7 @@
 .publications-list__item {
     margin: 0 0 16px 0;
 }
-.publications-list__item__file:active > svg{
+.publications-list__item__file:focus > svg{
     fill: var(--gray);
 
 }

@@ -60,7 +60,7 @@
     rotate: 45deg;
 }
 
-.btn-section.conferences-list__item-btn:active > svg {
+.btn-section.conferences-list__item-btn:focus > svg {
     fill: var(--gray);
 }
 

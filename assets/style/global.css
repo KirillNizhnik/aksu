@@ -132,6 +132,6 @@ button {
     fill: var(--orange);
 }
 
-.pagination-svg:active {
+.pagination-svg:focus {
     fill: var(--light-gray);
 }

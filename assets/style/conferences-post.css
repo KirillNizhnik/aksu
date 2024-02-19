@@ -107,7 +107,7 @@
     fill: var(--orange);
 }
 
-.conferences-post-swiper-next:active > svg {
+.conferences-post-swiper-next:focus > svg {
     fill: var(--light-gray);
 }
 
@@ -115,11 +115,11 @@
     rotate: 45deg;
 }
 
-.btn-section-conferences:active > svg {
+.btn-section-conferences:focus > svg {
     fill: var(--gray);
 }
 
-.btn-section-conferences-send:active > svg {
+.btn-section-conferences-send:focus > svg {
     fill: var(--gray);
 }
 

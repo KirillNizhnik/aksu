@@ -126,7 +126,7 @@
     fill: var(--orange);
 }
 
-.labs-single-swiper-button-next:active > svg {
+.labs-single-swiper-button-next:focus > svg {
     fill: var(--light-gray);
 }
 

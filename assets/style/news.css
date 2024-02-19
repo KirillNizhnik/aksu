@@ -71,12 +71,12 @@
     background-color: var(--blue);
 }
 
-.news-item__btn:active {
+.news-item__btn:focus{
     color: var(--gray);
     background-color: var(--white-light);
 }
 
-.news-item__btn:active svg use,
+.news-item__btn:focus svg use,
 .news__btn:active svg use {
     fill: var(--gray);
 }

@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-.error-btn:active {
+.error-btn:focus {
     color: var(--gray);
 }
 
@@ -11,6 +11,6 @@
     rotate: 45deg;
 }
 
-.error-btn:active > svg {
+.error-btn:focus > svg {
     fill: var(--gray);
 }

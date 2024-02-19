@@ -156,12 +156,12 @@
     background: var(--blue);
 }
 
-.applicant-graduates__link:active {
+.applicant-graduates__link:focus {
     background: var(--light-gray);
     color: var(--gray);
 }
 
-.applicant-graduates__link:active > svg {
+.applicant-graduates__link:focus > svg {
     fill: var(--gray);
 }
 

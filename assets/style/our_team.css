@@ -79,7 +79,7 @@
     rotate: 45deg;
 }
 
-.teacher-list__item-link:active > .home-news__btn-svg {
+.teacher-list__item-link:focus > .home-news__btn-svg {
     fill: var(--gray);
 }
 
