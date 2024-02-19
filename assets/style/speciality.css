@@ -28,11 +28,6 @@
     color: var(--orange);
 }
 
-.speciality-sample-subtitle {
-    font-weight: 600;
-    color: var(--orange);
-}
-
 .speciality-slide, .speciality-educational-degrees {
     margin-bottom: 96px;
 }
@@ -44,7 +39,7 @@
     text-align: center;
     font-size: 16px;
     background-color: var(--white);
-    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.20), 0px 0px 32px -8px rgba(0, 0, 0, 0.12), 0px 32px 32px -8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.20), 0 0 32px -8px rgba(0, 0, 0, 0.12), 0 32px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
 .speciality-slide-content_color {
@@ -132,12 +127,11 @@
     margin-bottom: 48px;
 }
 
-
 @media screen and (min-width: 768px) {
 
     .speciality-hero {
         padding: 48px 0;
-        height: 338px;
+        height: 423px;
     }
 
     .speciality-hero__title {
@@ -236,12 +230,11 @@
     }
 }
 
-
 @media screen and (min-width: 1440px) {
 
     .speciality-hero {
         padding: 262px 0;
-        height: 857px;
+        height: 1055px;
     }
 
     .speciality-hero__title {
@@ -250,6 +243,7 @@
 
     .speciality-slide-content {
         width: 671px;
+        padding: 24px;
         margin: -220px auto 0;
     }
 
@@ -273,19 +267,24 @@
         fill: var(--light-gray);
     }
 
-    .speciality-slide, .speciality-wrap-content, .speciality-fund-spec,
+    .speciality-slide, .speciality-fund-spec,
     .speciality-stud-prep, .speciality-publication,
-    .speciality-educational-degrees, .speciality-fund-spec
+    .speciality-educational-degrees
      {
         margin-bottom: 180px;
     }
 
-    .speciality-inner-content {
-        padding: 24px 0;
+    .speciality-wrap-content {
+        width: 1192px;
     }
 
-    .speciality-inner-content__text {
-        margin-bottom: 32px;
+    .speciality-inner-content {
+        width: 873px;
+    }
+
+
+    .speciality-inner-content {
+        margin: 24px 0 24px 241px;
     }
 
     .speciality-inner-content__title {

@@ -24,7 +24,7 @@ get_header();
         <div class="speciality-slide-content speciality-slide-content_color">
             <?php the_field('speciality_slide_text'); ?>
             <a href="<?php the_field('speciality_slide_text_link'); ?>" class="speciality-slide-content__link">
-                <svg width="32px" height="32px" class="speciality-slide-content__icon">
+                <svg width="48px" height="48px" class="speciality-slide-content__icon">
                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-down"></use>
                 </svg>
             </a>
@@ -37,9 +37,6 @@ get_header();
             <p class="speciality-inner-content__text">
                 <?php the_field('speciality_inner_content_text'); ?>
             </p>
-            <div class="speciality-inner-content__title speciality-sample-title title-section">
-                <?php the_field('speciality_inner_content_title'); ?>
-            </div>
         </div>
     </div>
 </section>
@@ -47,7 +44,7 @@ get_header();
     <div class="container">
         <div class="speciality-publication-content">
             <div class="speciality-publication-content__title">
-                <div class="speciality-publication-content__subtitle speciality-sample-subtitle ">
+                <div class="speciality-publication-content__subtitle speciality-sample-subtitle">
                     <?php the_field('speciality_publication_subtitle'); ?>
                 </div>
                 <div class="speciality-publication-content__title speciality-sample-title title-section">
