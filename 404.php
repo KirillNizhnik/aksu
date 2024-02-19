@@ -15,7 +15,7 @@ get_header();
         <div class="container">
             <h2 class="home-hero__title error-title"> ПОМИЛКА 404 </h2>
             <h2 class="home-its-box__title error-descr">Вибачте, але сторінка, яку ви шукаєте, тимчасово недоступна</h2>
-            <a href="<?php echo get_home_url(); ?>" class="btn-section ">
+            <a href="<?php echo get_home_url(); ?>" class="btn-section error-btn">
                 <span>Повернутись на головну</span>
                 <svg width="24px" height="24px" class="home-history__btn-svg">
                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>

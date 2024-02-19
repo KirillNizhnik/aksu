@@ -2,3 +2,15 @@
     margin: 0 0 50px 0;
     text-align: center;
 }
+
+.error-btn:active {
+    color: var(--gray);
+}
+
+.error-btn:hover > svg {
+    rotate: 45deg;
+}
+
+.error-btn:active > svg {
+    fill: var(--gray);
+}
