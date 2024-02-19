@@ -19,15 +19,26 @@
                 <div class="footer-inner-logo-title"><?php bloginfo('description'); ?></div>
             </div>
             <div>
-                <!--                --><?php
-                //
-                //                $args = array(
-                //                    'theme_location' => 'head_menu',
-                //                    'walker' => new Custom_Walker_Nav_Menu()
-                //
-                //                );
-                //                wp_nav_menu($args);
-                //                ?>
+           <ul class="footer-list__page">
+               <div>
+                   <li class="footer-list__page-item-parent">
+                       <a href="">Про нас</a>
+                   </li>
+                   <li class="footer-list__page-item">
+                       <a href="">Головна</a>
+                   </li>
+                   <li class="footer-list__page-item">
+                       <a href="">Новини</a>
+                   </li>
+                   <li class="footer-list__page-item">
+                       <a href="">Історія кафедри</a>
+                   </li>
+                   <li class="footer-list__page-item">
+                       <a href="">Склад кафедри</a>
+                   </li>
+               </div>
+
+           </ul>
             </div>
             <div class="footer-contacts">
                 <div class="footer-maps">
