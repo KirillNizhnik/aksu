@@ -9,6 +9,13 @@ function my_custom_strings() {
         'address_link' => 'Адреса(link)',
         'maps_link' => 'Карта(link)',
         'copyright' => 'Copyright',
+        'news_title' => 'News title',
+        'all_news_title' => 'All news title',
+        'send_btn' => 'Завантажити',
+        'learn_more_btn' => 'Дізнатись більше',
+        'other_news_title' => 'Other news title',
+        'read_more' => 'Читати більше',
+        'conferences_title' => 'Conferences title',
     );
 
     foreach ($strings as $name => $original_text) {

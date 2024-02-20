@@ -48,9 +48,9 @@ get_header();
                 </div>
                 <div class="news-sidebar">
                     <div class="news-sidebar__top">
-                        <div class="news-sidebar__title">Інші новини</div>
+                        <div class="news-sidebar__title"><?php echo pll__('Other news title', 'aksu'); ?></div>
                         <a href="<?php echo get_post_type_archive_link('news');
-                        ?>" class="news-sidebar__link btn-section">Всі новини
+                        ?>" class="news-sidebar__link btn-section"><span><?php echo pll__('All news title', 'aksu'); ?></span>
                             <svg width="32px" height="32px">
                                 <use href="<?php echo bloginfo( 'template_url' ); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
                             </svg>
@@ -83,7 +83,7 @@ get_header();
                                                 <div class="news-sidebar__swiper-data"><?php echo get_the_date('d.m.Y')?></div>
                                                 <div class="news-sidebar__swiper-text"><?php echo get_the_excerpt(); ?>
                                                 </div>
-                                                <a href="<?php the_permalink(); ?>" class="news-sidebar__swiper-link btn-section">Читати більше
+                                                <a href="<?php the_permalink(); ?>" class="news-sidebar__swiper-link btn-section"><span> <?php echo pll__('Читати більше', 'aksu'); ?></span>
                                                     <svg width="32px" height="32px">
                                                         <use href="<?php echo bloginfo( 'template_url' ); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
                                                     </svg>

@@ -4,7 +4,7 @@ get_header();
     <main>
         <section class="news">
             <div class="container">
-                <div class="news-title title-section">Новини</div>
+                <div class="news-title title-section"><?php echo pll__('Conferences title', 'aksu'); ?></div>
 
                 <?php
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -38,7 +38,7 @@ get_header();
                                         <?php echo get_the_excerpt(); ?>
                                     </p>
                                     <a href="<?php the_permalink(); ?>" class="btn-section news-item__btn btn-section">
-                                        Читати більше
+                                        <?php echo pll__('Читати більше', 'aksu'); ?>
                                         <svg width="32px" height="32px">
                                             <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
                                         </svg>

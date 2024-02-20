@@ -82,7 +82,7 @@ get_header();
                                                         <?php if ($checkedFile) : ?>
                                                             <a href="<?php echo esc_url($conferences_file_link) ?>"
                                                                class="btn-section btn-section-conferences-send" target="_blank">
-                                                                <span>Завантажити</span>
+                                                                <span><?php echo pll__('Завантажити', 'aksu'); ?></span>
                                                                 <svg width="24px" height="24px"
                                                                      class="home-history__btn-svg">
                                                                     <use href="<?php echo esc_url(bloginfo('template_url')); ?>/assets/images/icons/icons.svg#icon-send"></use>
@@ -92,7 +92,7 @@ get_header();
                                                         <?php if ($checkedLink) : ?>
                                                             <a href="<?php echo esc_url($conferences_inf_link) ?>"
                                                                class="btn-section btn-section-conferences" target="_blank">
-                                                                <span>Дізнатись більше</span>
+                                                                <span><?php echo pll__('Дізнатись більше', 'aksu'); ?></span>
                                                                 <svg width="24px" height="24px"
                                                                      class="home-history__btn-svg">
                                                                     <use href="<?php echo esc_url(bloginfo('template_url')); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
