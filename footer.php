@@ -178,7 +178,7 @@
 
         let yearElement = document.getElementById('year');
 
-        yearElement.textContent = '© ' + currentYear + ' Кафедра АКСУ НАУ. All Rights Reserved.';
+        yearElement.textContent = '© ' + currentYear + ' <?php echo pll__('Copyright', 'aksu'); ?>. All Rights Reserved.';
     </script>
 </footer>
 

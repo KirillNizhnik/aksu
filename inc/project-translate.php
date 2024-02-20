@@ -8,6 +8,7 @@ function my_custom_strings() {
         'address' => 'Адреса',
         'address_link' => 'Адреса(link)',
         'maps_link' => 'Карта(link)',
+        'copyright' => 'Copyright',
     );
 
     foreach ($strings as $name => $original_text) {
