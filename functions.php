@@ -229,9 +229,6 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_archive_page');
 
 add_action('wp_enqueue_scripts', 'aksu_scripts');
 
-require get_template_directory() . '/inc/project-translate.php';
-//add_action('wp_enqueue_scripts', 'my_custom_strings');
-
 add_theme_support('custom-logo');
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
@@ -271,6 +268,7 @@ require_once(get_template_directory() . '/teachers-post-type.php');
 
 require_once(get_template_directory() . '/laboratory-post-type.php');
 
+require get_template_directory() . '/inc/project-translate.php';
 
 //class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 //

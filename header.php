@@ -65,7 +65,7 @@
                    class="header-contacts-link"><?php the_field("mail", 'option'); ?></a>
                 <div class="header-contacts-line"></div>
                 <a href="tel:<?php the_field("phone_number_6_link", 'option'); ?>"
-                   class="header-contacts-link"><?php the_field("phone_number_5", 'option'); ?></a>
+                   class="header-contacts-link"><?php echo pll__('Номер телефону завідувача кафедри', 'aksu'); ?></a>
             </div>
             <div class="header-contacts__list-icons">
                 <?php

@@ -95,7 +95,7 @@
             </div>
             <div class="footer-contacts">
                 <div class="footer-maps">
-                    <?php the_field("maps_link", 'option'); ?>
+                    <?php echo pll__('Карта(link)', 'aksu'); ?>
                 </div>
                 <div class="footer-contacts footer-contacts-wrap">
                     <div class="footer-contacts__list-tel">
@@ -140,13 +140,13 @@
                                 </svg>
                             </div>
                             <span><?php the_field("phone_number_6", 'option'); ?></span></a>
-                        <a href="<?php the_field("address_link", 'option'); ?>" class="footer-contacts-link">
+                        <a href="<?php echo pll__('Адреса(link)', 'aksu'); ?>" class="footer-contacts-link">
                             <div>
                                 <svg width="24px" height="24px">
                                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-geo"></use>
                                 </svg>
                             </div>
-                            <span><?php the_field("address", 'option'); ?></span></a>
+                            <span><?php echo pll__('Адреса', 'aksu'); ?></span></a>
                         <div class="footer-contacts__list-icons">
                             <?php
                             if (have_rows('social_link_list', 'option')):
