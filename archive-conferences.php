@@ -9,7 +9,7 @@ get_header();
              style="background-image: url(<?php echo the_field('conferences_img', 'option'); ?>); background-color: #084184">
         <div class="container">
             <h2 class="home-hero__title" style="background: linear-gradient(181deg, rgba(255, 255, 255, 0.20) -27.39%, rgb(255 255 255 / 18%) 52.04%), rgba(255, 255, 255, 0.15);
-                "><?php echo pll__('News title', 'aksu'); ?></h2>
+                "><?php echo pll__('Conferences title', 'aksu'); ?></h2>
         </div>
     </section>
 
