@@ -139,7 +139,7 @@
                                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-phone"></use>
                                 </svg>
                             </div>
-                            <span><?php the_field("phone_number_6", 'option'); ?></span></a>
+                            <span><?php echo pll__('Номер телефону завідувача кафедри', 'aksu'); ?></span></a>
                         <a href="<?php echo pll__('Адреса(link)', 'aksu'); ?>" class="footer-contacts-link">
                             <div>
                                 <svg width="24px" height="24px">
