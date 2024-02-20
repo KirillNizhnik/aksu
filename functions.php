@@ -169,6 +169,8 @@ if (function_exists('acf_add_options_page')) {
         'capability' => 'edit_posts',
         'redirect' => false
     ));
+    pll_register_string('lab_settings_option', 'Опції', 'Сторінка лабораторій');
+
 }
 
 
