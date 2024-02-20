@@ -3,7 +3,7 @@ function my_custom_strings() {
     $strings = array(
 //        'welcome_message' => 'Welcome to our site!',
 //        'about_us'        => 'About Us',
-        '404' => '404'
+        'page_error' => 'Page error'
     );
 
     foreach ($strings as $name => $original_text) {

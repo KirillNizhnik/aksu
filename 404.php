@@ -13,7 +13,7 @@ get_header();
 
     <section class="home-hero" style="background-image: url(<?php echo the_field('hero_images'); ?>);">
         <div class="container">
-            <h2 class="home-hero__title error-title"><?php echo pll__('404', 'aksu'); ?></h2>
+            <h2 class="home-hero__title error-title"><?php echo pll__('Page error', 'aksu'); ?></h2>
             <h2 class="home-its-box__title error-descr">Вибачте, але сторінка, яку ви шукаєте, тимчасово недоступна</h2>
             <a href="<?php echo get_home_url(); ?>" class="btn-section error-btn">
                 <span>Повернутись на головну</span>
