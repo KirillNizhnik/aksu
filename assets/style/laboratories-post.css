@@ -141,6 +141,9 @@
 .lab-single-arrow-link:hover {
     color: var(--orange);
 }
+.lab-single-arrow-link {
+    color: var(--dark-blue);
+}
 
 @media screen and (min-width: 768px) {
     .lab-single-title {
@@ -304,5 +307,8 @@
         height: 560px;
         object-fit: contain;
         border-radius: 10px;
+    }
+    .labs-single-inner__swiper.swiper.swiper-initialized.swiper-horizontal {
+        width: 800px;
     }
 }
