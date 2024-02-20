@@ -9,7 +9,7 @@ get_header();
                     <svg width="32px" height="32px" class="lab-single-arrow-svg">
                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-oval-left"></use>
                     </svg>
-                    <span>Повернутися</span>
+                    <span> <?php echo pll__('Return button', 'aksu'); ?></span>
                 </a>
             </div>
             <h2 class="lab-single-title"><?php the_title(); ?></h2>

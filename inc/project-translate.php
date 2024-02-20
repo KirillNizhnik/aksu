@@ -16,6 +16,7 @@ function my_custom_strings() {
         'other_news_title' => 'Other news title',
         'read_more' => 'Читати більше',
         'conferences_title' => 'Conferences title',
+        'return_btn' => 'Return button',
     );
 
     foreach ($strings as $name => $original_text) {
