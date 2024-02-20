@@ -1,9 +1,9 @@
 <?php
 function my_custom_strings() {
     $strings = array(
-//        'welcome_message' => 'Welcome to our site!',
-//        'about_us'        => 'About Us',
-        'page_error' => 'Page error'
+        'page_error' => 'Page error',
+        'page_error_text' => 'Page error text',
+        'page_error_btn' => 'Page error button'
     );
 
     foreach ($strings as $name => $original_text) {
