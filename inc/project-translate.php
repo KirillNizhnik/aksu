@@ -16,6 +16,7 @@ function my_custom_strings() {
         'other_news_title' => 'Other news title',
         'read_more' => 'Читати більше',
         'conferences_title' => 'Conferences title',
+        'teacher_title' => 'Teacher title',
         'return_btn' => 'Return button',
     );
 

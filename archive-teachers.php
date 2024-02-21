@@ -7,7 +7,7 @@ get_header();
 <main>
     <section class="teacher">
         <div class="container">
-            <h1 class="teacher-title">Склад кафедри</h1>
+            <h1 class="teacher-title"><?php echo pll__('Teacher title', 'aksu'); ?></h1>
 
             <div class="teacher-container">
                 <?php
