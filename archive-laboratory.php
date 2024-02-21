@@ -68,7 +68,7 @@ get_header();
                             echo '<li class="labs-list__inner-list-item">';
                             the_title('<h4 class="labs-list__inner-list-item-title">', '</h4>');
                             echo '<a href="' . get_the_permalink() . '" class="home-history__link btn-section labs-list-link">';
-                            echo '<span>Дізнатися більше</span>';
+                            echo '<span>' . pll__('Дізнатись більше', 'aksu')  .'</span>';
                             echo '<svg width="24px" height="24px" class="home-news__btn-svg">';
                             echo '<use href="' . get_template_directory_uri() . '/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>';
                             echo '</svg>';
