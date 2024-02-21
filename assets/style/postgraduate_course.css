@@ -17,7 +17,7 @@
     height: 206px;
     border-radius: 0 0 10px 10px;
     object-fit: cover;
-    padding: 40px 0 68px 0;
+    padding: 40px 0;
     background: no-repeat center 90%/cover;
 }
 
@@ -36,15 +36,17 @@
     backdrop-filter: blur(3px);
 }
 
-.postgraduate-course-doctorates, .candidate-theses {
+.postgraduate-course-doctorates, .candidate-theses,
+.grad-defense, .dissertation-defense {
     margin-bottom: 80px;
 }
 
-.postgraduate-course-doctorates__wrap, .candidate-theses__inner {
+.postgraduate-course-doctorates__wrap, .candidate-theses__inner,
+.phd-defense__inner, .grad-doctoral-department__inner {
     padding: 16px;
     border-radius: 10px;
     background-color: var(--white);
-    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.20), 0px 0px 32px -8px rgba(0, 0, 0, 0.12), 0px 32px 32px -8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.20), 0 0 32px -8px rgba(0, 0, 0, 0.12), 0 32px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
 .postgraduate-course-doctorates__wrap {
@@ -55,7 +57,233 @@
     margin-top: 40px;
 }
 
-.postgraduate-course-doctorates__text {
+.postgraduate-course-doctorates__text, .phd-defense__text,
+.grad-doctoral-department__text, .dissertation-defense__text,
+.candidate-theses__text, .grad-defense__text {
     font-size: 14px;
     line-height: 150%;
 }
+
+.btn-section:active svg use {
+    fill: var(--gray);
+}
+
+.phd-defense, .grad-doctoral-department {
+    margin-bottom: 96px;
+}
+
+.phd-defense__title, .dissertation-defense__title {
+    margin-bottom: 48px;
+}
+
+.phd-defense__link {
+    margin-top: 40px;
+}
+
+.grad-defense__content, .grad-defense__text,
+.grad-doctoral-department__title, .candidate-theses__title {
+    margin-bottom: 40px;
+}
+
+.grad-defense__title {
+    margin-bottom: 40px;
+    text-align: start;
+}
+
+.grad-defense-subtitle {
+    margin: 0;
+}
+
+.grad-defense__wrapper {
+    height: auto !important;
+}
+
+.grad-defense__slide-photo, .dissertation-defense__photo {
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.grad-defense__slide-photo {
+    height: 185px;
+}
+
+.grad-defense__swiper-pagination.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: relative;
+    margin: 40px auto 0 auto;
+}
+
+.grad-defense__buttons {
+    display: none;
+}
+
+.dissertation-defense__photo {
+    height: 298px;
+    margin-bottom: 48px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .postgraduate-course-hero {
+        height: 422px;
+        padding: 48px 0;
+    }
+
+    .postgraduate-course-hero__title {
+        font-size: 26px;
+        line-height: 150%;
+    }
+
+    .postgraduate-course-doctorates, .candidate-theses,
+    .grad-defense, .grad-doctoral-department,
+    .dissertation-defense {
+        margin-bottom: 96px;
+    }
+
+    .postgraduate-course-doctorates__wrap {
+        margin: -100px 0 0;
+    }
+
+    .postgraduate-course-sample-title, .postgraduate-course-sample-subtitle {
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    .postgraduate-course-doctorates__inner {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        gap: 52px;
+        margin-top: 48px;
+    }
+
+    .postgraduate-course-doctorates__content {
+        width: 310px;
+    }
+
+    .postgraduate-course-doctorates__text, .candidate-theses__text,
+    .candidate-theses__link, .phd-defense__text,
+    .grad-defense__text, .grad-doctoral-department__text {
+        font-size: 16px;
+    }
+
+    .candidate-theses__title, .phd-defense__title,
+    .grad-defense__title, .grad-defense__text,
+    .grad-defense__content, .grad-doctoral-department__title {
+        margin-bottom: 48px;
+    }
+
+    .grad-defense__slide-photo {
+        height: 361px;
+    }
+
+    .grad-defense__buttons {
+        display: flex;
+        justify-content: space-between;
+        margin: 48px 0 0 0;
+        fill: var(--dark-blue);
+    }
+
+    .grad-defense__swiper-button-prev:hover,
+    .grad-defense__swiper-button-next:hover {
+        fill: var(--orange);
+    }
+
+    .grad-defense__swiper-button-prev:active,
+    .grad-defense__swiper-button-next:active {
+        fill: var(--gray);
+    }
+
+    .dissertation-defense__photo {
+        height: auto;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    .postgraduate-course-hero {
+        height: 1055px;
+        padding: 262px 0 64px 0;
+    }
+
+    .postgraduate-course-hero__title {
+        font-size: 36px;
+        line-height: 126.2%;
+    }
+
+    .postgraduate-course-doctorates {
+        margin-bottom: 180px;
+    }
+
+    .postgraduate-course-doctorates__wrap {
+        padding: 24px;
+        margin: -548px 0 0;
+    }
+
+    .postgraduate-course-doctorates__inner {
+        margin-top: 64px;
+        gap: 221px;
+    }
+
+    .postgraduate-course-doctorates__content {
+        width: 400px;
+    }
+
+    .candidate-theses {
+        margin: -45px 0 180px;
+    }
+
+    .candidate-theses__inner, .phd-defense__inner,
+    .grad-doctoral-department__inner {
+        padding: 24px 222px;
+    }
+
+    .candidate-theses__title, .phd-defense__title,
+    .grad-defense__title, .grad-doctoral-department__title,
+    .dissertation-defense__title{
+        margin-bottom: 64px;
+    }
+
+    .phd-defense, .grad-defense, .grad-doctoral-department,
+    .dissertation-defense {
+        margin-bottom: 180px;
+    }
+
+    .grad-defense__inner {
+        display: flex;
+        align-items: center;
+        gap: 125px;
+    }
+
+    .grad-defense__content {
+        width: 461px;
+    }
+
+    .grad-defense__text {
+        margin-bottom: 64px;
+    }
+
+    .grad-defense-subtitle {
+        font-size: 16px;
+    }
+
+    .grad-defense__swiper {
+        width: 854px;
+    }
+
+    .grad-defense__slide-photo {
+        height: auto;
+    }
+
+    .grad-defense__buttons {
+        margin-top: 83px;
+    }
+
+    .dissertation-defense__photo {
+        height: auto;
+        margin-bottom: 64px;
+    }
+
+}
+

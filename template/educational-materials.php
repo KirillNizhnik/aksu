@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: educational-materials
+ * Template Name: Educational-materials
 */
 get_header();
 ?>
