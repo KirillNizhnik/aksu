@@ -168,7 +168,8 @@
 
     .postgraduate-course-doctorates__text, .candidate-theses__text,
     .candidate-theses__link, .phd-defense__text,
-    .grad-defense__text, .grad-doctoral-department__text {
+    .grad-defense__text, .grad-doctoral-department__text,
+    .dissertation-defense__text {
         font-size: 16px;
     }
 
