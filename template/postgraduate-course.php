@@ -6,13 +6,13 @@ get_header();
 ?>
 
 <section
-    style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.00) 100%),
-            url('<?php
-    $image = get_field("postgraduate_course_hero");
-    if (!empty($image)) {
-        echo $image["url"];
-    } ?>');"
-    class="postgraduate-course-hero">
+        style="background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.00) 100%),
+                url('<?php
+        $image = get_field("postgraduate_course_hero");
+        if (!empty($image)) {
+            echo $image["url"];
+        } ?>');"
+        class="postgraduate-course-hero">
     <div class="container">
         <h2 class="postgraduate-course-hero__title title-section"><?php the_field("postgraduate_course_hero_title"); ?></h2>
     </div>
@@ -108,14 +108,28 @@ get_header();
 
 <section class="dissertation-defense">
     <div class="container">
-        <div class="dissertation-defense__title postgraduate-course-sample-title title-section"><?php the_field("dissertation_defense_title"); ?></div>
-        <img src="<?php
-        $dissertation_defense_photo = get_field("dissertation_defense_photo");
-        if (!empty($dissertation_defense_photo)) {
-            echo $dissertation_defense_photo["url"];
-        } ?>');"
-             alt="" class="dissertation-defense__photo">
-        <div class="dissertation-defense__text"><?php the_field("dissertation_defense_text"); ?></div>
+        <div class="dissertation-defense__inner">
+            <div class="dissertation-defense__title postgraduate-course-sample-title title-section"><?php the_field("dissertation_defense_title"); ?></div>
+            <img src="<?php
+            $dissertation_defense_photo = get_field("dissertation_defense_photo");
+            if (!empty($dissertation_defense_photo)) {
+                echo $dissertation_defense_photo["url"];
+            } ?>');"
+                 alt="" class="dissertation-defense__photo">
+            <div class="dissertation-defense__text"><?php the_field("dissertation_defense_text"); ?></div>
+        </div>
+        <div class="dissertation-defense__inner-pc">
+            <img src="<?php
+            $dissertation_defense_photo = get_field("dissertation_defense_photo");
+            if (!empty($dissertation_defense_photo)) {
+                echo $dissertation_defense_photo["url"];
+            } ?>');"
+                 alt="" class="dissertation-defense__photo">
+            <div class="dissertation-defense__inner-pc-content">
+                <div class="dissertation-defense__title-pc dissertation-defense__title postgraduate-course-sample-title title-section"><?php the_field("dissertation_defense_title"); ?></div>
+                <div class="dissertation-defense__text"><?php the_field("dissertation_defense_text"); ?></div>
+            </div>
+        </div>
     </div>
 </section>
 
