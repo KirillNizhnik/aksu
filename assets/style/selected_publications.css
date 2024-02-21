@@ -53,6 +53,10 @@
 .publications-list__item {
     margin: 0 0 16px 0;
 }
+.publications-list__item__file:focus > svg{
+    fill: var(--gray);
+
+}
 
 @media screen and (min-width: 768px) {
     .publications-inner__title {

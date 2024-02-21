@@ -132,6 +132,39 @@
     justify-content: center;
 }
 
+.applicant-graduates__link {
+    display: flex;
+    color: var(--dark-blue);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background-color: var(--white);
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.applicant-graduates__link > svg {
+    fill: var(--dark-blue);
+}
+
+.applicant-graduates__link:hover {
+    background: var(--blue);
+}
+
+.applicant-graduates__link:focus {
+    background: var(--light-gray);
+    color: var(--gray);
+}
+
+.applicant-graduates__link:focus > svg {
+    fill: var(--gray);
+}
+
 @media screen and (min-width: 768px) {
     .applicant_descr {
         padding: 24px;
@@ -246,10 +279,6 @@
     .applicant-graduates-inner {
         padding: 24px;
         width: 715px;
-    }
-
-    .applicant-graduates__link {
-        margin: auto;
     }
 
     .applicant-information-inner__img {

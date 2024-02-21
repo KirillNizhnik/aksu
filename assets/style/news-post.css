@@ -7,9 +7,11 @@
     position: relative;
     margin-bottom: 40px;
 }
+
 div#swiper-wrapper-13dac9e74a339591 {
     height: 590px;
 }
+
 .news-page__title {
     position: absolute;
     top: 50%;
@@ -39,6 +41,7 @@ div#swiper-wrapper-13dac9e74a339591 {
     font-size: 14px;
     line-height: 150%;
 }
+
 .news-sidebar__swiper-text {
     text-overflow: ellipsis;
     font-size: 16px;
@@ -50,6 +53,7 @@ div#swiper-wrapper-13dac9e74a339591 {
     overflow: hidden;
     height: 145px;
 }
+
 .news-page__img {
     width: 100%;
     border-radius: 10px;
@@ -97,8 +101,14 @@ div#swiper-wrapper-13dac9e74a339591 {
     line-height: 140%;
 }
 
+.news-sidebar__link:hover > svg {
+    rotate: 45deg;
+}
+.news-sidebar__swiper-link:hover > svg{
+    rotate: 45deg;
+}
 .news-sidebar__swiper-slide {
-    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.20), 0px 0px 32px -8px rgba(0, 0, 0, 0.12), 0px 32px 32px -8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.20), 0 0 32px -8px rgba(0, 0, 0, 0.12), 0 32px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
 .news-sidebar__swiper-photo, .news-sidebar__swiper-slide {
@@ -156,8 +166,7 @@ div#swiper-wrapper-13dac9e74a339591 {
 
 
 .news-sidebar__link:active,
-.news-sidebar__swiper-link:active
-{
+.news-sidebar__swiper-link:active {
     color: var(--gray);
     background-color: var(--white-light);
 }
@@ -169,7 +178,7 @@ div#swiper-wrapper-13dac9e74a339591 {
 }
 
 .news-page__button-prev,
-.news-page__button-next{
+.news-page__button-next {
     fill: var(--dark-blue);
     cursor: pointer;
 }
@@ -181,13 +190,14 @@ div#swiper-wrapper-13dac9e74a339591 {
 
 .news-page__button-prev:active svg use,
 .news-page__button-next:active svg use {
-    fill: var(--gray);
+    fill: var(--light-gray);
 }
 
 .news-sidebar__swiper-title.title-section {
     overflow: hidden;
     height: 48px;
 }
+
 @media screen and (min-width: 768px) {
 
     .news-page {
@@ -339,10 +349,12 @@ div#swiper-wrapper-13dac9e74a339591 {
     .news-sidebar__swiper-text, .news-sidebar__swiper-pagination {
         display: none;
     }
+
     .news-sidebar__swiper {
         width: 100%;
-        overflow: visible !important ;
+        overflow: visible !important;
     }
+
     .news-sidebar__swiper-slide {
         margin: 0 !important;
     }

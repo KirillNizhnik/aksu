@@ -2,6 +2,7 @@
 @import "global.css";
 @import "media.css";
 @import "header.css";
+@import "footer.css";
 @import "index.css";
 @import "news.css";
 @import "news-post.css";
@@ -23,5 +24,6 @@
 @import "laboratories-post.css";
 @import "master_degree.css";
 @import "404.css";
+@import "basic.css";
 @import "postgraduate_course.css";
 @import "graduates.css";

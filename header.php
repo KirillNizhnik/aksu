@@ -65,7 +65,7 @@
                    class="header-contacts-link"><?php the_field("mail", 'option'); ?></a>
                 <div class="header-contacts-line"></div>
                 <a href="tel:<?php the_field("phone_number_6_link", 'option'); ?>"
-                   class="header-contacts-link"><?php the_field("phone_number_5", 'option'); ?></a>
+                   class="header-contacts-link"><?php echo pll__('Номер телефону завідувача кафедри', 'aksu'); ?></a>
             </div>
             <div class="header-contacts__list-icons">
                 <?php
@@ -301,70 +301,74 @@
 
             </div>
         </div>
-
         <div class="header-contacts-search header-contacts-search-mob header-mob-dropdown__list-item-page-parent">
-            <input class="header-dropdown-contacts-search-input" type="text" placeholder="Search">
+            <input class="header-contacts-search-input header-dropdown-contacts-search-input" type="text" placeholder="Search">
+            <button class="header-contacts-search-btn header-dropdown-contacts-search-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18.75 18.75L15.4404 15.4464M15.4404 15.4464C16.5227 14.3656 17.1923 12.8716 17.1923 11.2212C17.1923 7.92338 14.5189 5.25 11.2212 5.25C7.92338 5.25 5.25 7.92338 5.25 11.2212C5.25 14.5189 7.92338 17.1923 11.2212 17.1923C12.8685 17.1923 14.36 16.5252 15.4404 15.4464Z" stroke="#595D62" stroke-width="0.75" stroke-linecap="round"></path>
+                </svg>
+            </button>
         </div>
         <ul class="header-mob-dropdown__list">
             <li class="header-mob-dropdown__list-item header-mob-dropdown__list-item-page-parent">
-                Про нас
+                <a href="">Про нас</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Новини
+                <a href=""> Новини</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Історія кафедри
+                <a href="">Історія кафедри</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Склад кафедри
+                <a href="">Склад кафедри</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Наші випускники
+                <a href="">Наші випускники</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Контакти
+                <a href="">Контакти</a>
             </li>
             <li class="header-mob-dropdown__list-item header-mob-dropdown__list-item-page-parent">
-                Студенту
+                <a href="">Студенту</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Дисципліни та силабуси
+                <a href="">Дисципліни та силабуси</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Навчальні матеріали
+                <a href=""> Навчальні матеріали</a>
             </li>
             <li class="header-mob-dropdown__list-item header-mob-dropdown__list-item-page-parent">
-                Абітурієнту
+                <a href="">Абітурієнту</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Сторінка абітурієнта
+                <a href=""> Сторінка абітурієнта</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Спеціальності
+                <a href="">Спеціальності</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Правила прийому
+                <a href="">Правила прийому</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Магістратура
+                <a href="">Магістратура</a>
             </li>
             <li class="header-mob-dropdown__list-item header-mob-dropdown__list-item-page-parent">
-                Наука
+                <a href="">Наука</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Наукові школи та напрямки
+                <a href="">Наукові школи та напрямки</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Обрані публікації
+                <a href="">Обрані публікації</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Правила прийому
+                <a href="">Правила прийому</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Конференції
+                <a href="">Конференції</a>
             </li>
             <li class="header-mob-dropdown__list-item ">
-                Лабораторії
+                <a href="">Лабораторії</a>
             </li>
         </ul>
         <div class="header-mob-dropdown__list-item header-mob-dropdown__list-item-page-parent header-mob-dropdown__bottom">

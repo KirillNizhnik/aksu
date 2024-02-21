@@ -16,7 +16,7 @@ get_header();
         <div class="container">
             <div class="home-its-box ">
                 <?php the_field("master_mini_descr"); ?>
-                <a href="#" class="home-its-box__link master-its-box__link">
+                <a href="#docs" class="home-its-box__link master-its-box__link">
                     <svg width="48px" height="48px" class="home-its-box__link-icon">
                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-down"></use>
                     </svg>
@@ -54,7 +54,7 @@ get_header();
         </div>
     </section>
 
-    <section class="master-docs">
+    <section class="master-docs" id="docs">
         <div class="container">
             <h2 class="master-docs__title"><?php the_field("master_title_docs"); ?></h2>
             <ul class="master-docs__list">

@@ -18,20 +18,84 @@
                 <?php the_custom_logo(); ?>
                 <div class="footer-inner-logo-title"><?php bloginfo('description'); ?></div>
             </div>
-            <div>
-                <!--                --><?php
-                //
-                //                $args = array(
-                //                    'theme_location' => 'head_menu',
-                //                    'walker' => new Custom_Walker_Nav_Menu()
-                //
-                //                );
-                //                wp_nav_menu($args);
-                //                ?>
+            <div class="footer-list__page-menu">
+                <ul class="footer-list__page">
+                    <li class="footer-list__page-item-parent">
+                        <a href="">Про нас</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">Головна</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">Новини</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">Історія кафедри</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">Склад кафедри</a>
+                    </li>
+                </ul>
+                <ul class="footer-list__page">
+                    <li class="footer-list__page-item-parent">
+                        <a href="">Студенту</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">Дисципліни та силабуси</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">Навчальні матеріали</a>
+                    </li>
+                </ul>
+                <ul class="footer-list__page">
+                    <li class="footer-list__page-item-parent">
+                        <a href="">Абітурієнту</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">абітурієнта</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">Спеціальності</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">Правила прийому</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">Магістратура</a>
+                    </li>
+                </ul>
+                <ul class="footer-list__page">
+                    <li class="footer-list__page-item-parent">
+                        <a href="">Наука</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">Наукові школи
+                            та напряки</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">Обрані публікації</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">Аспірантура</a>
+                    </li>
+                    <li class="footer-list__page-item">
+                        <a href="">Конференції</a>
+                    </li>
+                </ul>
+                <ul class="footer-list__page">
+                    <li class="footer-list__page-item-parent">
+                        <a href="">Лабораторії</a>
+                    </li>
+                </ul>
+                <ul class="footer-list__page">
+                    <li class="footer-list__page-item-parent">
+                        <a href="">Контакти</a>
+                    </li>
+                </ul>
             </div>
             <div class="footer-contacts">
                 <div class="footer-maps">
-                    <?php the_field("maps_link", 'option'); ?>
+                    <?php echo pll__('Карта(link)', 'aksu'); ?>
                 </div>
                 <div class="footer-contacts footer-contacts-wrap">
                     <div class="footer-contacts__list-tel">
@@ -75,14 +139,14 @@
                                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-phone"></use>
                                 </svg>
                             </div>
-                            <span><?php the_field("phone_number_6", 'option'); ?></span></a>
-                        <a href="<?php the_field("address_link", 'option'); ?>" class="footer-contacts-link">
+                            <span><?php echo pll__('Номер телефону завідувача кафедри', 'aksu'); ?></span></a>
+                        <a href="<?php echo pll__('Адреса(link)', 'aksu'); ?>" class="footer-contacts-link">
                             <div>
                                 <svg width="24px" height="24px">
                                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-geo"></use>
                                 </svg>
                             </div>
-                            <span><?php the_field("address", 'option'); ?></span></a>
+                            <span><?php echo pll__('Адреса', 'aksu'); ?></span></a>
                         <div class="footer-contacts__list-icons">
                             <?php
                             if (have_rows('social_link_list', 'option')):
@@ -114,7 +178,7 @@
 
         let yearElement = document.getElementById('year');
 
-        yearElement.textContent = '© ' + currentYear + ' Кафедра АКСУ НАУ. All Rights Reserved.';
+        yearElement.textContent = '© ' + currentYear + ' <?php echo pll__('Copyright', 'aksu'); ?>. All Rights Reserved.';
     </script>
 </footer>
 

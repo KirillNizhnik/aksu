@@ -10,7 +10,7 @@ get_header();
             <h2 class="labs-title"><?php echo get_field("labs_title", "option"); ?></h2>
             <div class="labs-content">
                 <div class="labs-content__text"><?php echo get_field("labs_text", "option"); ?></div>
-                <a href="#" class="home-its-box__link labs-link">
+                <a href="#laboratory" class="home-its-box__link labs-link">
                     <svg width="32px" height="32px" class="home-its-box__link-icon labs__link-icon">
                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-down"></use>
                     </svg>
@@ -38,7 +38,7 @@ get_header();
         </div>
     </section>
 
-    <section class="labs-list">
+    <section class="labs-list" id="laboratory">
         <div class="container">
             <h3 class="labs-list__title labs-task__title"><?php echo get_field("labs_title_storage", 'option'); ?></h3>
             <div class="labs-list__inner">

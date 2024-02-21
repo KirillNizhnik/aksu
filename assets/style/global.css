@@ -3,6 +3,7 @@
 *::after {
     box-sizing: border-box;
 }
+
 :root {
     --orange: #EFAB44;
     --dark-blue: #084184;
@@ -17,7 +18,7 @@
 .body {
     font-family: 'Montserrat', sans-serif;
     color: var(--black);
-    background-color:  var(--white);
+    background-color: var(--white);
     margin: 0;
     padding: 0;
 }
@@ -33,15 +34,18 @@ img {
     display: block;
     height: auto;
 }
+
 /*html {*/
 /*    margin: 0 !important;*/
 /*}*/
 html {
     scroll-behavior: smooth;
 }
+
 svg {
     display: block;
 }
+
 .list {
     list-style: none;
     margin: 0;
@@ -52,7 +56,7 @@ svg {
     margin: 0;
 }
 
-ul,ol {
+ul, ol {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -76,7 +80,7 @@ a {
 }
 
 
-button{
+button {
     cursor: pointer;
     border: none;
     display: block;
@@ -92,13 +96,13 @@ button{
 }
 
 
-.title-section{
+.title-section {
     color: var(--dark-blue);
     font-size: 20px;
     font-weight: 700;
 }
 
-.btn-section{
+.btn-section {
     display: flex;
     padding: 12px 20px;
     flex-direction: row;
@@ -111,15 +115,23 @@ button{
     color: var(--dark-blue);
 }
 
-.btn-section:hover{
+.btn-section:hover {
     background-color: var(--blue);
 }
-.btn-section:focus{
+
+.btn-section:focus {
     background-color: var(--light-gray);
     color: #595D62;
 }
 
-
-.btn-section > svg{
+.btn-section > svg {
     fill: var(--dark-blue);
+}
+
+.pagination-svg:hover {
+    fill: var(--orange);
+}
+
+.pagination-svg:focus {
+    fill: var(--light-gray);
 }

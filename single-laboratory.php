@@ -5,11 +5,11 @@ get_header();
     <section class="lab-single">
         <div class="container">
             <div class="lab-single-arrow">
-                <a href="<?php echo get_post_type_archive_link('laboratory'); ?>">
-                    <svg width="32px" height="32px">
+                <a href="<?php echo get_post_type_archive_link('laboratory'); ?>" class="lab-single-arrow-link">
+                    <svg width="32px" height="32px" class="lab-single-arrow-svg">
                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-oval-left"></use>
                     </svg>
-                    <span>Повернутися</span>
+                    <span> <?php echo pll__('Return button', 'aksu'); ?></span>
                 </a>
             </div>
             <h2 class="lab-single-title"><?php the_title(); ?></h2>

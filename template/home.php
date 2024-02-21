@@ -17,7 +17,7 @@ get_header();
             <div class="home-its-box">
                 <h2 class="home-its-box__title"><?php the_field("home_its_title"); ?></h2>
                 <p class="home-its-box__descr"><?php the_field("home_its_descr"); ?></p>
-                <a href="#" class="home-its-box__link">
+                <a href="#history" class="home-its-box__link">
                     <svg width="48px" height="48px" class="home-its-box__link-icon">
                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-down"></use>
                     </svg>
@@ -50,12 +50,11 @@ get_header();
                             <div class="home-why-list__item-text"><?php echo $privilege_text ?></div>
                         </li>
                     <?php endwhile; else : endif; ?>
-
             </ul>
         </div>
     </section>
 
-    <section class="home-history">
+    <section class="home-history" id="history">
         <div class="container">
             <div class="home-history__title"><?php the_field("home-history_title"); ?></div>
 

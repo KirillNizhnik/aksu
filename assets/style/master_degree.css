@@ -62,7 +62,9 @@
 .master-statements__list-item {
     margin: 0 0 40px 0;
 }
-
+.master-statements-item__files-doc:hover{
+    text-decoration: underline;
+}
 @media screen and (min-width: 768px) {
     .master-docs__title {
         font-size: 20px;

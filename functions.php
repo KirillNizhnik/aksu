@@ -196,8 +196,6 @@ function aksu_scripts()
     }
 
     wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
-//    wp_enqueue_script('swiper-1', 'https://unpkg.com/swiper@6.5.4/swiper-bundle.min.js', array(), null, true);
-
 
     wp_enqueue_script('mobile-menu', get_template_directory_uri() . '/assets/scripts/header-menu.js', array('jquery'), null, true);
 
@@ -231,7 +229,6 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_archive_page');
 
 add_action('wp_enqueue_scripts', 'aksu_scripts');
 
-
 add_theme_support('custom-logo');
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
@@ -262,7 +259,6 @@ if (defined('JETPACK__VERSION')) {
     require get_template_directory() . '/inc/jetpack.php';
 }
 
-// news-post-type.php
 require_once(get_template_directory() . '/news-post-type.php');
 
 require_once(get_template_directory() . '/conferences-post-type.php');
@@ -271,45 +267,5 @@ require_once(get_template_directory() . '/teachers-post-type.php');
 
 require_once(get_template_directory() . '/laboratory-post-type.php');
 
-
-//class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
-//
-//    public function start_lvl(&$output, $depth = 0, $args = null) {
-//        $output .= '<ul class="header__nav">';
-//    }
-//
-//    // Override start_el to add custom classes to menu items
-//    public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
-////        dd($item);
-//        $classes = empty($item->classes) ? array() : (array) $item->classes;
-//        $classes[] = 'custom-menu-item';
-//
-//        $output .= '<li id="menu-item-' . $item->ID . '" class="menu-item-type-post_type' . implode(' ', $classes) . '">';
-//        $output .= '<a href="' . $item->url . '">' . $item->title . '</a>';
-//    }
-//}
-//
-//
-//
-//
-
-
-//class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
-//
-//    public function start_lvl(&$output, $depth = 0, $args = null) {
-//        $output .= '<ul class="header__nav">';
-//    }
-//
-//    // Override start_el to add custom classes to menu items
-//    public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
-////        dd($item);
-//        $classes = empty($item->classes) ? array() : (array) $item->classes;
-//        $classes[] = 'custom-menu-item';
-//
-//        $output .= '<li id="menu-item-' . $item->ID . '" class="menu-item-type-post_type' . implode(' ', $classes) . '">';
-//        $output .= '<a href="' . $item->url . '">' . $item->title . '</a>';
-//    }
-//}
-
-
+require get_template_directory() . '/inc/project-translate.php';
 
