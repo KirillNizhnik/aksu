@@ -176,7 +176,7 @@
 
     .speciality-publication-content__subtitle,
     .speciality-publication-content__title,
-    .speciality-stud-prep__title{
+    .speciality-stud-prep__title {
         text-align: start;
     }
 
@@ -269,8 +269,7 @@
 
     .speciality-slide, .speciality-fund-spec,
     .speciality-stud-prep, .speciality-publication,
-    .speciality-educational-degrees
-     {
+    .speciality-educational-degrees {
         margin-bottom: 180px;
     }
 

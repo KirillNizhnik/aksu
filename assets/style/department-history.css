@@ -1,0 +1,355 @@
+.department-history-hero {
+    border-radius: 0 0 25px 25px;
+    height: 206px;
+    background: center/cover no-repeat;
+}
+
+.department-history-brief {
+    margin-bottom: 194px;
+}
+
+.department-history-brief__wrap {
+    padding: 24px;
+    border-radius: 10px;
+    margin-top: -12px;
+    background-color: var(--white);
+    text-align: center;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.20), 0 0 32px -8px rgba(0, 0, 0, 0.12), 0 32px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.department-history-sample-text {
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.department-history-brief__title strong,
+.department-leadership__title strong {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.department-history-brief__title, .department-history-brief__text,
+.department-history__title-one, .department-history__title-two,
+.department-leadership__item-title {
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 16px;
+}
+
+.department-history-brief__text {
+    line-height: 150%;
+}
+
+.department-history-brief__link {
+    fill: var(--dark-blue);
+}
+
+.department-history-brief__link:hover {
+    fill: var(--orange);
+}
+
+.department-history-brief__link:active {
+    fill: var(--light-gray);
+}
+
+.aero-control-info, .comp-specialists,
+.department-history, .department-leadership {
+    margin-bottom: 80px;
+}
+
+.aero-control-info__title, .department-history__title-one,
+.department-history__title-two, .department-leadership__item-title,
+.department-leadership__item-subtitle {
+    text-align: center;
+}
+
+.aero-control-info__title {
+    margin-bottom: 24px;
+}
+
+.aero-control-info__photo, .department-history__photo,
+.department-leadership__photo {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.aero-control-info__photo {
+    height: 236px;
+    margin-bottom: 24px;
+}
+
+.comp-specialists__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comp-specialists__item {
+    padding: 24px;
+    text-align: center;
+}
+
+.comp-specialists__photo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    margin: 0 auto 16px
+}
+
+.comp-specialists__title {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--orange);
+}
+
+.comp-specialists__text {
+    text-align: left;
+}
+
+.department-history__title-one, .department-leadership__title {
+    margin-bottom: 40px;
+}
+
+.department-history__photo {
+    height: 475px;
+    margin-bottom: 24px;
+}
+
+.department-history__title-two {
+    margin: 40px 0 0;
+}
+
+.department-leadership__title {
+    text-align: center;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.department-leadership__item {
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    background-color: var(--white-light);
+}
+
+.department-leadership__photo {
+    height: 369px;
+    margin-bottom: 16px;
+}
+
+.department-leadership__item-title {
+    color: var(--orange);
+    font-weight: 600;
+}
+
+.department-leadership__item-subtitle {
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+}
+
+@media screen and (min-width: 768px) {
+
+    .department-history-hero {
+        height: 422px;
+    }
+
+    .department-history-brief, .comp-specialists,
+    .department-history, .department-leadership {
+        margin-bottom: 96px;
+    }
+
+    .department-history-brief__wrap {
+        width: 614px;
+        margin: -139px auto 0;
+    }
+
+    .aero-control-info {
+        margin-bottom: 72px;
+    }
+
+    .aero-control-info__inner {
+        padding: 0 32px 24px;
+        border-radius: 10px;
+        background-color: var(--white-light);
+    }
+
+    .aero-control-info__photo {
+        height: 485px;
+    }
+
+    .department-history-sample-text, .department-leadership__item-subtitle {
+        font-size: 16px;
+    }
+
+    .comp-specialists__photo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .department-history__title-one, .department-history__title-two,
+    .department-leadership__item-title, .aero-control-info__title,
+    .department-history-brief__title {
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    .department-history__title-one {
+        margin-bottom: 48px;
+    }
+
+    .department-history__photo {
+        height: 984px;
+    }
+
+    .department-history__title-two {
+        margin-top: 48px;
+    }
+
+    .department-leadership__title {
+        font-size: 26px;
+        margin-bottom: 48px;
+    }
+
+    .department-leadership__item {
+        margin-bottom: 48px;
+    }
+
+    .department-leadership__content {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .department-leadership__photo {
+        width: 303px;
+        height: 369px;
+        margin: 0;
+    }
+
+    .department-leadership__item-position {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .department-leadership__item-subtitle {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .department-history-hero {
+        height: 1055px;
+    }
+
+    .department-history-brief, .aero-control-info,
+    .department-leadership {
+        margin-bottom: 180px;
+    }
+
+    .department-history-brief__wrap {
+        width: 866px;
+    }
+
+    .department-history-brief__title, .department-leadership__title {
+        font-size: 36px;
+        line-height: 126.2%;
+    }
+
+    .department-history-brief__text {
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    .aero-control-info__inner {
+        display: none;
+    }
+
+    .aero-control-info__inner-pc {
+        display: flex;
+        align-items: center;
+    }
+
+    .aero-control-info__content-pc {
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        border-radius: 10px;
+        background-color: var(--white-light);
+    }
+
+    .aero-control-info__title {
+        text-align: left;
+        margin-bottom: 16px;
+    }
+
+    .aero-control-info__photo {
+        width: 703px;
+        height: 699px;
+    }
+
+    .comp-specialists, .department-history {
+        margin-bottom: 204px;
+    }
+
+    .comp-specialists__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .comp-specialists__item {
+        width: 685px;
+        text-align: left
+    }
+
+    .comp-specialists__photo {
+        width: 64px;
+        height: 64px;
+        margin: 0 0 16px;
+    }
+
+    .comp-specialists__title {
+        font-size: 16px;
+        line-height: 140%;
+    }
+
+    .department-history__content {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .department-history__title-one {
+        margin-bottom: 64px;
+    }
+
+    .department-history__photo {
+        width: 708px;
+        height: 984px;
+    }
+
+    .department-history__title-two {
+        margin-top: 64px;
+    }
+
+    .department-leadership__title {
+        margin-bottom: 64px;
+    }
+
+    .department-leadership__item {
+        padding: 54px 122px;
+        margin-bottom: 64px;
+    }
+
+    .department-leadership__content {
+        gap: 32px;
+    }
+}

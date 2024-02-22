@@ -13,8 +13,6 @@ get_header();
             echo $speciality_hero_photo["url"];
         } ?>');"
         class="speciality-hero">
-
-
     <div class="container">
         <h2 class="speciality-hero__title title-section"><?php the_field('speciality_title'); ?></h2>
     </div>
@@ -85,7 +83,8 @@ get_header();
                         }
                         ?>
                         <li class="speciality-educational-degrees__item">
-                            <img class="speciality-educational-degrees__icon" src="<?php echo $image_url ?>" alt="<?php echo $image_alt ?>">
+                            <img class="speciality-educational-degrees__icon" src="<?php echo $image_url ?>"
+                                 alt="<?php echo $image_alt ?>">
                             <p class="speciality-educational-degrees__item-text"><?php echo $speciality_text ?></p>
                         </li>
                     <?php endwhile; else : endif; ?>
@@ -121,7 +120,7 @@ get_header();
             <div class="speciality-stud-prep__content">
                 <div class="speciality-stud-prep__title speciality-sample-title title-section">
                     <?php the_field('speciality_stud_prep_title'); ?></p></div>
-                <p class="speciality-stud-prep__text"><?php the_field('speciality_stud_prep_text');?></p>
+                <p class="speciality-stud-prep__text"><?php the_field('speciality_stud_prep_text'); ?></p>
             </div>
         </div>
     </div>
