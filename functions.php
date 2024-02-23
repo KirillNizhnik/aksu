@@ -225,7 +225,7 @@ function enqueue_custom_script_for_archive_page() {
         wp_enqueue_script('img-slide', get_template_directory_uri() . '/assets/scripts/archive-teacher.js', array('jquery'), null, true);
     }
 }
-add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_archive_page');
+//add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_archive_page');
 
 add_action('wp_enqueue_scripts', 'aksu_scripts');
 
