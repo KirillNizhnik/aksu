@@ -158,7 +158,7 @@ get_header();
                                     <div class="home-news-slider__list-item-date"><?php echo get_the_date('d.m.Y'); ?></div>
                                     <div class="home-news-slider__list-item-text"><?php echo get_the_excerpt() ?></div>
                                     <a href="<?php the_permalink(); ?>" class="home-news-slider__list-item-link">
-                                        <span>Читати більше</span>
+                                        <span><?php echo pll__('Дізнатись більше', 'aksu'); ?></span>
                                         <svg width="24px" height="24px" class="home-news-slider__list-item-link-svg">
                                             <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
                                         </svg>
