@@ -1,0 +1,100 @@
+.admission-rules {
+    margin-bottom: 80px;
+}
+
+.application-order-item {
+    margin-bottom: 40px;
+}
+
+.admission-rules__title {
+    margin: 50px 0 66px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.admission-rules-item-title, .admission-rules-item-subtitle,
+.admission-rules-item-text {
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.admission-rules-item-title, .admission-rules-item-subtitle {
+    color: var(--orange);
+    text-align: center;
+    line-height: 140%;
+    font-weight: 700;
+}
+
+.admission-rules-item-subtitle, .admission-rules-link-text {
+    color: var(--dark-blue);
+}
+
+.admission-rules-item-text, .admission-rules-link-text {
+    line-height: 150%;
+}
+
+.admission-rules-item-text {
+    font-size: 14px;
+}
+
+.admission-rules-link-text {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.admission-rules-link-text svg {
+    fill: var(--dark-blue);
+    flex-shrink: 0;
+}
+
+.admission-rules-link-text:hover{
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+
+    .admission-rules__title {
+        margin: 58px 0;
+    }
+
+    .application-order-list {
+        padding: 16px 32px;
+        border-radius: 10px;
+        background-color: var(--white-light);
+    }
+
+    .application-order-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .admission-rules-item-title, .admission-rules-item-subtitle {
+        text-align: left;
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    .admission-rules-item-text {
+        font-size: 16px;
+    }
+
+    .admission-rules-link {
+        width: fit-content;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .admission-rules {
+        margin-bottom: 180px;
+    }
+
+    .admission-rules__title {
+        margin: 272px 0 74px;
+        font-size: 36px;
+        line-height: 126.2%;
+    }
+}
