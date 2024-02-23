@@ -212,7 +212,7 @@ function aksu_scripts()
 
     }
     if (is_singular('conferences')) {
-        wp_enqueue_script('img-slider', get_template_directory_uri() . '/assets/scripts/conferences-img-slider.js', array('jquery'), null, true);
+        wp_enqueue_script('conferences-img-slider', get_template_directory_uri() . '/assets/scripts/conferences-img-slider.js', array('jquery'), null, true);
     }
 
 
