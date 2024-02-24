@@ -48,12 +48,15 @@
     line-height: 150%;
 }
 
+.admission-rules-link:hover {
+    background-color: var(--blue)}
+
 .admission-rules-link:hover svg {
     transform: rotate(45deg); /* Поворачиваем иконку на 45 градусов при ховере */
 }
 
 .admission-rules-link:focus {
-    color: var(--gray)
+    background-color: var(--blue)
 }
 
 .admission-rules-link:focus > svg {
