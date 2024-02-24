@@ -32,7 +32,7 @@ get_header();
                             <h2 class="educational-materials__content-title"><?php echo $educational_materials_title_text ?></h2>
                             <p class="educational-materials__content-text"><?php echo $educational_materials_text ?></p>
                             <a href="<?php echo $educational_materials_link ?>"
-                               class="educational-materials__content-link btn-section"><?php echo $educational_materials_link_text ?>
+                               class="educational-materials__content-link btn-section home-history__link"><?php echo $educational_materials_link_text ?>
                                 <svg width="32px" height="32px">
                                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
                                 </svg>
