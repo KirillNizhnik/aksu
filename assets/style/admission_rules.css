@@ -48,11 +48,23 @@
     line-height: 150%;
 }
 
+.admission-rules-link:hover > svg {
+    transform: rotate(45deg );
+}
+
+.admission-rules-link:focus {
+    background-color: var(--blue);
+}
+
+.admission-rules-link:focus > svg {
+    fill: var(--gray);
+}
+
 .admission-rules-link-text {
     display: flex;
     align-items: center;
     gap: 14px;
-
+    width: fit-content;
 }
 
 .admission-rules-link-text svg {
