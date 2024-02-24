@@ -57,7 +57,7 @@
 
 .educational-materials__content-link:focus {
     color: var(--gray);
-    background-color: var(--white-light);
+    background-color: var(--blue);
 }
 
 .educational-materials__content-link:focus svg use {
