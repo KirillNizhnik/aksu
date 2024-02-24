@@ -13,10 +13,22 @@
     line-height: 150%;
 }
 
-.admission-rules-item-title, .admission-rules-item-subtitle,
-.admission-rules-item-text {
+.admission-rules-item-text, .admission-rules-link-text {
     margin-bottom: 16px;
     font-size: 16px;
+}
+
+.admission-rules-item-title {
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.admission-rules-item-subtitle {
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
 }
 
 .admission-rules-item-title, .admission-rules-item-subtitle {
@@ -30,20 +42,17 @@
     color: var(--dark-blue);
 }
 
-.admission-rules-item-text, .admission-rules-link-text {
+.admission-rules-item-text, .admission-rules-link-text,
+.admission-rules-item-title, .admission-rules-item-subtitle,
+.admission-rules-link {
     line-height: 150%;
-}
-
-.admission-rules-item-text {
-    font-size: 14px;
 }
 
 .admission-rules-link-text {
     display: flex;
     align-items: center;
     gap: 14px;
-    font-size: 16px;
-    margin-bottom: 16px;
+
 }
 
 .admission-rules-link-text svg {
@@ -51,7 +60,7 @@
     flex-shrink: 0;
 }
 
-.admission-rules-link-text:hover{
+.admission-rules-link-text:hover {
     text-decoration: underline;
 }
 
@@ -59,6 +68,8 @@
 
     .admission-rules__title {
         margin: 58px 0;
+        font-size: 36px;
+        line-height: 126.2%;
     }
 
     .application-order-list {
@@ -73,8 +84,12 @@
 
     .admission-rules-item-title, .admission-rules-item-subtitle {
         text-align: left;
-        font-size: 20px;
+        font-size: 25px;
         line-height: 150%;
+    }
+
+    .admission-rules-item-subtitle {
+        font-size: 20px;
     }
 
     .admission-rules-item-text {
@@ -83,6 +98,7 @@
 
     .admission-rules-link {
         width: fit-content;
+        line-height: 140%;
     }
 }
 
@@ -94,7 +110,5 @@
 
     .admission-rules__title {
         margin: 272px 0 74px;
-        font-size: 36px;
-        line-height: 126.2%;
     }
 }
