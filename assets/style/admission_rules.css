@@ -52,6 +52,14 @@
     transform: rotate(45deg); /* Поворачиваем иконку на 45 градусов при ховере */
 }
 
+.admission-rules-link:focus {
+    color: var(--gray)
+}
+
+.admission-rules-link:focus > svg {
+    fill: var(--gray)
+}
+
 .admission-rules-link-text {
     display: flex;
     align-items: center;
