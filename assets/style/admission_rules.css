@@ -48,11 +48,15 @@
     line-height: 150%;
 }
 
+.admission-rules-link:hover svg {
+    transform: rotate(45deg); /* Поворачиваем иконку на 45 градусов при ховере */
+}
+
 .admission-rules-link-text {
     display: flex;
     align-items: center;
     gap: 14px;
-
+    width: fit-content;
 }
 
 .admission-rules-link-text svg {
