@@ -225,6 +225,12 @@ function enqueue_custom_script_for_archive_page() {
         wp_enqueue_script('img-slide', get_template_directory_uri() . '/assets/scripts/archive-teacher.js', array('jquery'), null, true);
     }
 }
+
+function enqueue_custom_script_for_archive_page_graduates() {
+    if (is_archive('graduates')) {
+        wp_enqueue_script('pop-up', get_template_directory_uri() . '/assets/scripts/our-graduates-single.js', array('jquery'), null, true);
+    }
+}
 //add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_archive_page');
 
 add_action('wp_enqueue_scripts', 'aksu_scripts');
@@ -266,6 +272,9 @@ require_once(get_template_directory() . '/conferences-post-type.php');
 require_once(get_template_directory() . '/teachers-post-type.php');
 
 require_once(get_template_directory() . '/laboratory-post-type.php');
+
+require_once(get_template_directory() . '/graduates-post-type.php');
+
 
 require get_template_directory() . '/inc/project-translate.php';
 
