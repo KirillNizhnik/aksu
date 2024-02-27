@@ -299,7 +299,7 @@ li#menu-item-31 {
         position: absolute;
         width: max-content;
         top: -13px;
-        right: -73px;
+        right: auto;
         z-index: 999;
     }
 
