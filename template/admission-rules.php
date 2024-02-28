@@ -39,7 +39,7 @@ get_header();
                                     <li>
                                         <?php if ($admission_rules_file_href): ?>
                                             <a href="<?php echo $admission_rules_file_url ?>"
-                                               class="admission-rules-link-text"><?php echo $admission_rules_file ?>
+                                               class="admission-rules-link-text"><span><?php echo $admission_rules_file ?></span>
                                                 <svg width="24px" height="24px" class="home-history__btn-svg">
                                                     <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send-2"></use>
                                                 </svg>
