@@ -312,6 +312,6 @@ li#menu-item-31 {
         display: flex;
     }
     .menu-item__dropdown-item-parent {
-        cursor: not-allowed;
+        cursor: default;
     }
 }
