@@ -10,8 +10,8 @@ function handle_ajax_request() {
             'graduateImgSrc' => get_the_post_thumbnail_url($graduate_id, 'thumbnail'),
             'graduateTitle' => $graduate_post->post_title,
             'graduateSubtitle' => $graduate_post->post_excerpt,
-            'graduateTextPc' => $graduate_post->post_content,
-            'graduateText' => $graduate_post->post_content
+            'graduateText' => get_field('our_graduates_single_text_pc', $graduate_id),
+
         );
 
         wp_send_json($response);

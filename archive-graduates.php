@@ -49,7 +49,8 @@ if ($graduates_query->have_posts()) :
                                 <?php endif; ?>
                                 <h3 class="our-graduates-list__item-name"><?php the_title(); ?></h3>
                                 <p class="our-graduates-list__item-descr"><?php echo get_the_excerpt(); ?></p>
-                                <button class="our-graduates-list__item-link btn-section" data-graduate-id="<?php echo get_the_ID(); ?>">
+                                <button class="our-graduates-list__item-link btn-section"
+                                        data-graduate-id="<?php echo get_the_ID(); ?>">
                                     <span><?php echo pll__('Дізнатись більше', 'aksu'); ?></span>
                                     <svg width="24px" height="24px">
                                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
@@ -59,6 +60,15 @@ if ($graduates_query->have_posts()) :
                         <?php endwhile; ?>
                         <?php wp_reset_postdata(); ?>
                     </ul>
+                    <?php if ($graduates_query->max_num_pages > 1) : ?>
+                        <div class="pagination">
+                            <?php echo paginate_links(array(
+                                'total' => $graduates_query->max_num_pages,
+                                'prev_text' => '<div ><svg class="pagination-svg" width="80px" height="80px"><use href="' . get_bloginfo('template_url') . '/assets/images/icons/icons.svg#icon-arrow-left"></use></svg></div>',
+                                'next_text' => '<div ><svg class="pagination-svg" width="80px" height="80px"><use href="' . get_bloginfo('template_url') . '/assets/images/icons/icons.svg#icon-arrow-right"></use></svg></div>',
+                            )); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>
