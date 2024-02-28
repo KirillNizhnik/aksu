@@ -239,7 +239,11 @@ function enqueue_custom_script_for_archive_page() {
 function enqueue_custom_script_for_archive_page_graduates() {
     if (is_archive('graduates')) {
         wp_enqueue_script('pop-up', get_template_directory_uri() . '/assets/scripts/our-graduates-single.js', array('jquery'), null, true);
-        wp_localize_script('pop-up', 'ajax_object', array('ajaxurl' => admin_url('admin-ajax.php')));
+        $icon_close_url = get_template_directory_uri() . '/assets/images/icons/icons.svg#icon-close';
+        wp_localize_script('pop-up', 'ajax_object', array(
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'iconCloseURL' => $icon_close_url
+        ));
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_archive_page_graduates');

@@ -1,56 +1,56 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const graduateLinks = document.querySelectorAll('.our-graduates-list__item-link');
+    const buttons = document.querySelectorAll('.our-graduates-list__item-link');
 
-    graduateLinks.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const graduateId = this.getAttribute('data-graduate-id');
 
-            // Disable scrolling
-            document.body.style.overflow = 'hidden';
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', ajax_object.ajaxurl, true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const data = JSON.parse(xhr.responseText);
+                    const iconCloseURL = ajax_object.iconCloseURL;
 
-            const graduateItem = event.target.closest('.our-graduates-list__item');
-            const graduateName = graduateItem.querySelector('.our-graduates-list__item-name').textContent.trim();
-            const graduateDescr = graduateItem.querySelector('.our-graduates-list__item-descr').textContent.trim();
-            const graduateImgSrc = graduateItem.querySelector('.our-graduates-list__item-img').getAttribute('src');
-
-            const modalHTML = `
-                <section class="our-graduates-single">
-                    <div class="container">
-                        <div class="our-graduates-single__wrap">
-                            <button href="#" class="our-graduates-single__icon">
-                                <svg width="32px" height="32px">
-                                    <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-close"></use>
-                                </svg>
-                            </button>
-                            <div class="our-graduates-single__content">
-                                <img src="${graduateImgSrc}" alt="" class="our-graduates-single__photo">
-                                <div class="our-graduates-single__heading">
-                                    <h1 class="our-graduates-single__title title-section">${graduateName}</h1>
-                                    <div class="our-graduates-single__subtitle">${graduateDescr}</div>
-                                </div>
-                                <div class="our-graduates-single__heading_pc">
-                                    <h1 class="our-graduates-single__title title-section">${graduateName}</h1>
-                                    <div class="our-graduates-single__subtitle"></div>
-                                    <div class="our-graduates-single__text-pc">${graduateDescr}</div>
+                    const modalHTML = `
+                        <section class="our-graduates-single">
+                            <div class="container">
+                                <div class="our-graduates-single__wrap">
+                                    <button class="our-graduates-single__icon">
+                                        <svg width="32px" height="32px">
+                                            <use href=" ${iconCloseURL} "></use>
+                                        </svg>
+                                    </button>
+                                    <div class="our-graduates-single__content">
+                                        <img src="${data.graduateImgSrc}" alt="" class="our-graduates-single__photo">
+                                        <div class="our-graduates-single__heading">
+                                            <h1 class="our-graduates-single__title title-section">${data.graduateTitle}</h1>
+                                            <div class="our-graduates-single__subtitle">${data.graduateSubtitle}</div>
+                                        </div>
+                                        <div class="our-graduates-single__heading_pc">
+                                            <h1 class="our-graduates-single__title title-section">${data.graduateTitle}</h1>
+                                            <div class="our-graduates-single__subtitle">${data.graduateSubtitle}</div>
+                                            <div class="our-graduates-single__text-pc">${data.graduateTextPc}</div>
+                                        </div>
+                                    </div>
+                                    <div class="our-graduates-single__text">${data.graduateText}</div>
                                 </div>
                             </div>
-                            <div class="our-graduates-single__text"></div>
-                        </div>
-                    </div>
-                </section>
-            `;
+                        </section>`;
 
-            document.body.insertAdjacentHTML('beforeend', modalHTML);
+                    document.body.insertAdjacentHTML('beforeend', modalHTML);
 
-            const modalCloseBtn = document.querySelector('.our-graduates-single__icon');
+                    const closeButton = document.querySelector('.our-graduates-single__icon');
 
-            modalCloseBtn.addEventListener('click', function() {
-                // Enable scrolling
-                document.body.style.overflow = 'auto';
-
-                const modal = document.querySelector('.our-graduates-single');
-                modal.parentNode.removeChild(modal);
-            });
+                    closeButton.addEventListener('click', function() {
+                        // Remove the modal from the DOM
+                        const modal = document.querySelector('.our-graduates-single');
+                        modal.parentNode.removeChild(modal);
+                    });
+                }
+            };
+            xhr.send('action=fetch_graduate_data&graduate_id=' + encodeURIComponent(graduateId));
         });
     });
 });

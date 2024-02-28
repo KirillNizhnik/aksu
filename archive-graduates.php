@@ -49,7 +49,7 @@ if ($graduates_query->have_posts()) :
                                 <?php endif; ?>
                                 <h3 class="our-graduates-list__item-name"><?php the_title(); ?></h3>
                                 <p class="our-graduates-list__item-descr"><?php echo get_the_excerpt(); ?></p>
-                                <button class="our-graduates-list__item-link btn-section">
+                                <button class="our-graduates-list__item-link btn-section" data-graduate-id="<?php echo get_the_ID(); ?>">
                                     <span><?php echo pll__('Дізнатись більше', 'aksu'); ?></span>
                                     <svg width="24px" height="24px">
                                         <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>
@@ -64,34 +64,6 @@ if ($graduates_query->have_posts()) :
         </section>
     </main>
 <?php endif; ?>
-
-<!--    <section class="our-graduates-single is-hidden">-->
-<!--        <div class="container">-->
-<!--            <div class="our-graduates-single__wrap">-->
-<!--                <button href="#" class="our-graduates-single__icon">-->
-<!--                    <svg width="32px" height="32px">-->
-<!--                        <use href="--><?php //echo bloginfo('template_url'); ?><!--/assets/images/icons/icons.svg#icon-close"></use>-->
-<!--                    </svg>-->
-<!--                </button>-->
-<!--                <div class="our-graduates-single__content">-->
-<!--                        <img src=""-->
-<!--                             alt="" class="our-graduates-single__photo">-->
-<!--                    <div class="our-graduates-single__heading">-->
-<!--                        <h1 class="our-graduates-single__title title-section"></h1>-->
-<!--                        <div class="our-graduates-single__subtitle"></div>-->
-<!--                    </div>-->
-<!--                    <div class="our-graduates-single__heading_pc">-->
-<!--                        <h1 class="our-graduates-single__title title-section"></h1>-->
-<!--                        <div class="our-graduates-single__subtitle">></div>-->
-<!--                        <div class="our-graduates-single__text-pc"></div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="our-graduates-single__text"></d>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-
-
 
 <?php
 get_footer();
