@@ -22,7 +22,7 @@ const newsSidebarSwiper = new Swiper('.news-sidebar__swiper', {
             },
         },
         1440: {
-            slidesPerView: 'auto',
+            enabled: false,
             pagination: false,
         },
     },
