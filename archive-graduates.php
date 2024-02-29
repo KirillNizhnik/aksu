@@ -44,7 +44,7 @@ if ($graduates_query->have_posts()) :
                         <?php while ($graduates_query->have_posts()) : $graduates_query->the_post(); ?>
                             <li class="our-graduates-list__item">
                                 <?php if (has_post_thumbnail()) : ?>
-                                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); ?>"
+                                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>"
                                          alt="<?php the_title(); ?>" class="our-graduates-list__item-img">
                                 <?php endif; ?>
                                 <h3 class="our-graduates-list__item-name"><?php the_title(); ?></h3>
