@@ -55,12 +55,6 @@ function aksu_setup()
         */
     add_theme_support('post-thumbnails');
 
-    // This theme uses wp_nav_menu() in one location.
-    register_nav_menus(
-        array(
-            'head_menu' => 'Header menu',
-        )
-    );
 
     /*
         * Switch default core markup for search form, comment form, and comments
@@ -288,10 +282,16 @@ require_once(get_template_directory() . '/teachers-post-type.php');
 
 require_once(get_template_directory() . '/laboratory-post-type.php');
 
+
 require_once(get_template_directory() . '/graduates-post-type.php');
 
 require get_template_directory() . '/inc/project-translate.php';
 
 require_once(get_template_directory() . '/ajax-pop-up.php');
 
+
+
+require (get_template_directory() . '/inc/project-translate.php');
+
+require (get_template_directory() . '/inc/menu.php');
 

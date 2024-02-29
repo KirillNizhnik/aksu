@@ -46,7 +46,7 @@ get_header();
                                 echo '<h3 class="teacher-list__item-name">' . get_the_title() . '</h3>';
                                 echo '<p class="teacher-list__item-descr">' . get_field("teacher_position") . '</p>';
                                 echo '<a href="' . get_the_permalink() . '" class="teacher-list__item-link btn-section">';
-                                echo '<span>Дізнатися більше</span>';
+                                echo '<span>' . pll__('Дізнатись більше', 'aksu')  .'</span>';
                                 echo '<svg width="24px" height="24px" class="home-news__btn-svg">';
                                 echo '<use href="' . get_template_directory_uri() . '/assets/images/icons/icons.svg#icon-arrow-mini-top"></use>';
                                 echo '</svg>';

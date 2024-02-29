@@ -18,81 +18,15 @@
                 <?php the_custom_logo(); ?>
                 <div class="footer-inner-logo-title"><?php bloginfo('description'); ?></div>
             </div>
-            <div class="footer-list__page-menu">
-                <ul class="footer-list__page">
-                    <li class="footer-list__page-item-parent">
-                        <a href="">Про нас</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">Головна</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">Новини</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">Історія кафедри</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">Склад кафедри</a>
-                    </li>
-                </ul>
-                <ul class="footer-list__page">
-                    <li class="footer-list__page-item-parent">
-                        <a href="">Студенту</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">Дисципліни та силабуси</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">Навчальні матеріали</a>
-                    </li>
-                </ul>
-                <ul class="footer-list__page">
-                    <li class="footer-list__page-item-parent">
-                        <a href="">Абітурієнту</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">абітурієнта</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">Спеціальності</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">Правила прийому</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">Магістратура</a>
-                    </li>
-                </ul>
-                <ul class="footer-list__page">
-                    <li class="footer-list__page-item-parent">
-                        <a href="">Наука</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">Наукові школи
-                            та напряки</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">Обрані публікації</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">Аспірантура</a>
-                    </li>
-                    <li class="footer-list__page-item">
-                        <a href="">Конференції</a>
-                    </li>
-                </ul>
-                <ul class="footer-list__page">
-                    <li class="footer-list__page-item-parent">
-                        <a href="">Лабораторії</a>
-                    </li>
-                </ul>
-                <ul class="footer-list__page">
-                    <li class="footer-list__page-item-parent">
-                        <a href="">Контакти</a>
-                    </li>
-                </ul>
-            </div>
+            <?php
+            wp_nav_menu(array(
+	            'theme_location' => 'footer_menu',
+	            'walker' => new Footer_Walker_Nav_Menu(),
+	            'container' => 'div',
+	            'container_class' => 'footer-list__page-menu',
+	            'menu_class' => 'footer-list__page',
+	            'items_wrap' => '%3$s',
+                ));?>
             <div class="footer-contacts">
                 <div class="footer-maps">
                     <?php echo pll__('Карта(link)', 'aksu'); ?>
