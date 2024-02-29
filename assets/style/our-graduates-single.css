@@ -19,6 +19,7 @@
     position: absolute;
     top: 16px;
     right: 16px;
+    padding: 7.20px;
     background-color: var(--white);
 }
 
@@ -57,7 +58,7 @@
     font-size: 14px;
     line-height: 150%;
     max-height: 503px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .our-graduates-single__heading_pc {
@@ -72,6 +73,29 @@
     display: block;
     z-index: 1000;
     overflow-y: auto;
+}
+
+.our-graduates-single__text::-webkit-scrollbar,
+.our-graduates-single__text-pc::-webkit-scrollbar {
+    width: 20px;
+}
+
+.our-graduates-single__text::-webkit-scrollbar-track,
+.our-graduates-single__text-pc::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--blue);
+}
+
+.our-graduates-single__text::-webkit-scrollbar-track,
+.our-graduates-single__text-pc::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--blue);
+}
+
+.our-graduates-single__text::-webkit-scrollbar-thumb,
+.our-graduates-single__text-pc::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--dark-blue);
 }
 
 @media screen and (min-width: 768px) {
