@@ -148,10 +148,19 @@ function aksu_widgets_init()
 //}
 
 if (function_exists('acf_add_options_page')) {
+
     acf_add_options_page(array(
         'page_title' => 'Сторінка лабораторій',
         'menu_title' => 'Налаштування сторінки лабораторії',
         'menu_slug' => 'settings-1',
+        'capability' => 'edit_posts',
+        'redirect' => false
+    ));
+
+    acf_add_options_page(array(
+        'page_title' => 'Сторінка випускників',
+        'menu_title' => 'Налаштування сторінки випускники',
+        'menu_slug' => 'settings-3',
         'capability' => 'edit_posts',
         'redirect' => false
     ));
@@ -163,6 +172,7 @@ if (function_exists('acf_add_options_page')) {
         'capability' => 'edit_posts',
         'redirect' => false
     ));
+
 }
 
 
@@ -219,7 +229,18 @@ function enqueue_custom_script_for_archive_page() {
         wp_enqueue_script('img-slide', get_template_directory_uri() . '/assets/scripts/archive-teacher.js', array('jquery'), null, true);
     }
 }
-//add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_archive_page');
+
+function enqueue_custom_script_for_archive_page_graduates() {
+    if (is_archive('graduates')) {
+        wp_enqueue_script('pop-up', get_template_directory_uri() . '/assets/scripts/our-graduates-single.js', array('jquery'), null, true);
+        $icon_close_url = get_template_directory_uri() . '/assets/images/icons/icons.svg#icon-close';
+        wp_localize_script('pop-up', 'ajax_object', array(
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'iconCloseURL' => $icon_close_url
+        ));
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_archive_page_graduates');
 
 add_action('wp_enqueue_scripts', 'aksu_scripts');
 
@@ -261,6 +282,16 @@ require_once(get_template_directory() . '/teachers-post-type.php');
 
 require_once(get_template_directory() . '/laboratory-post-type.php');
 
+
+require_once(get_template_directory() . '/graduates-post-type.php');
+
+require get_template_directory() . '/inc/project-translate.php';
+
+require_once(get_template_directory() . '/ajax-pop-up.php');
+
+
+
 require (get_template_directory() . '/inc/project-translate.php');
 
 require (get_template_directory() . '/inc/menu.php');
+

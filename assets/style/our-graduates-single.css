@@ -1,0 +1,167 @@
+.our-graduates-single {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 14, 17, 0.7);
+}
+
+.our-graduates-single__wrap {
+    position: relative;
+    padding: 89px 16px 40px;
+    border-radius: 10px;
+    margin: 162px 0 56px;
+    background-color: var(--white);
+}
+
+.our-graduates-single__icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: var(--white);
+}
+
+.our-graduates-single__icon:hover {
+    border-radius: 10px;
+    background-color: var(--blue);
+}
+
+.our-graduates-single__photo {
+    width: 100%;
+    height: 342px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    object-fit: cover;
+}
+
+.our-graduates-single__title, .our-graduates-single__subtitle {
+    text-align: center;
+}
+
+.our-graduates-single__title {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.our-graduates-single__subtitle {
+    margin-bottom: 16px;
+    color: var(--orange);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.our-graduates-single__text, .our-graduates-single__text {
+    font-size: 14px;
+    line-height: 150%;
+    max-height: 503px;
+    overflow: auto;
+}
+
+.our-graduates-single__heading_pc {
+    display: none;
+}
+
+.our-graduates-single.is-hidden {
+    display: none;
+}
+
+.our-graduates-single.is-active {
+    display: block;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+@media screen and (min-width: 768px) {
+
+    .our-graduates-single__wrap {
+        padding: 32px 32px 58px 32px;
+        margin: 207px 0 184px;
+    }
+
+    .our-graduates-single__content {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        margin-bottom: 64px;
+    }
+
+    .our-graduates-single__photo {
+        width: 240px;
+        height: 273px;
+        margin: 0;
+    }
+
+    .our-graduates-single__heading {
+        display: flex;
+        flex-direction: column;
+        width: 261px;
+    }
+
+    .our-graduates-single__title {
+        text-align: left;
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    .our-graduates-single__subtitle {
+        margin: 0;
+        text-align: left;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .our-graduates-single__text, .our-graduates-single__text-pc {
+        max-height: 359px;
+        border-radius: 10px;
+        padding: 16px 32px;
+        margin: -32px -32px;
+        background-color: var(--white-light);
+        font-size: 16px;
+        line-height: 150%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .our-graduates-single__wrap {
+        padding: 64px 94px 290px 94px;
+        margin: 240px 0 90px;
+    }
+
+    .our-graduates-single__content {
+        align-items: start;
+        gap: 24px;
+        margin: 0;
+    }
+
+    .our-graduates-single__photo {
+        width: 366px;
+        height: 416px;
+    }
+
+    .our-graduates-single__heading, .our-graduates-single__text {
+        display: none;
+    }
+
+    .our-graduates-single__text-pc {
+        max-height: 307px;
+        padding: 16px 24px;
+        margin: 0 0 0 -24px;
+    }
+
+    .our-graduates-single__heading_pc {
+        display: block;
+    }
+
+    .our-graduates-single__heading, .our-graduates-single__heading_pc {
+        width: 830px;
+    }
+
+    .our-graduates-single__subtitle {
+        margin-bottom: 48px;
+    }
+
+}

@@ -66,8 +66,6 @@ get_header();
                         'next_text' => '<div ><svg class="pagination-svg" width="80px" height="80px"><use href="' . get_bloginfo('template_url') . '/assets/images/icons/icons.svg#icon-arrow-right"></use></svg></div>',
                     ));
                     ?>
-
-
                 </div>
             <?php
             else :
