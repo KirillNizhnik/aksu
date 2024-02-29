@@ -233,6 +233,33 @@
                 </svg>
             </button>
         </div>
+        <div class="header-mob-dropdown__list-item header-mob-dropdown__list-item-page-parent header-mob-dropdown__bottom">
+	        <?php
+	        $current_locale = get_locale();
+	        $language_code = substr($current_locale, 0, 2);
+	        $languages = pll_languages_list();
+	        $key = array_search($language_code, $languages);
+	        if ($key !== false) {
+		        unset($languages[$key]);
+	        }
+	        ?>
+	        <?php foreach ($languages as $language):
+		        $current_post_id = get_the_ID();
+		        $translated_post_id = pll_get_post($current_post_id, $language);
+		        if (is_post_type_archive()){
+			        $translated_post_url = '/';
+		        }
+                elseif($translated_post_id){
+			        $translated_post_url = get_permalink($translated_post_id);}
+		        else{
+			        $translated_post_url = get_home_url();
+		        }
+		        ?>
+            <a class="header-contacts__lang" href="<?= $translated_post_url ?>">
+		        <?= strtoupper($language) ?>
+            </a>
+            <?php endforeach; ?>
+        </div>
 		<?php
 		echo '<ul class="header-mob-dropdown__list">';
 		wp_nav_menu( array(
