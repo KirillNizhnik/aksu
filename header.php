@@ -85,7 +85,28 @@
 
 					<?php endwhile; else : endif; ?>
             </div>
-            <a href="" class="header-contacts__lang">Eng</a>
+            <?php
+                $current_locale = get_locale();
+                $language_code = substr($current_locale, 0, 2);
+                $languages = pll_languages_list();
+                $key = array_search($language_code, $languages);
+                if ($key !== false) {
+                    unset($languages[$key]);
+                }
+                ?>
+	        <?php foreach ($languages as $language):
+	        $current_post_id = get_the_ID();
+	        $translated_post_id = pll_get_post($current_post_id, $language);
+	        if($translated_post_id){
+		        $translated_post_url = get_permalink($translated_post_id);}
+	        else{
+		        $translated_post_url = get_home_url();
+	        }
+	        ?>
+                <a class="header-contacts__lang" href="<?= $translated_post_url ?>">
+		        <?= strtoupper($language) ?>
+            </a>
+	        <?php endforeach; ?>
             <div class="header-contacts-search">
                 <input class="header-contacts-search-input" type="text" placeholder="Search">
                 <button class="header-contacts-search-btn">
