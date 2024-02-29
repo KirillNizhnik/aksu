@@ -19,6 +19,7 @@ if (!function_exists('my_strings')) {
 			'conferences_title'            => 'Conferences title',
 			'teacher_title'                => 'Teacher title',
 			'return_btn'                   => 'Return button',
+            'search_title'                 => 'Search title',
 		);
 
 		foreach ( $strings as $name => $original_text ) {
