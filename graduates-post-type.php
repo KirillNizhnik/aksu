@@ -29,7 +29,7 @@ function graduates_post_type() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports' => array( 'title', 'author', 'thumbnail', 'excerpt', 'custom-fields'),
+        'supports' => array( 'title', 'author', 'thumbnail', 'excerpt'),
     );
 
     register_post_type( 'graduates', $args );

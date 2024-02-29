@@ -53,11 +53,11 @@
     line-height: 140%;
 }
 
-.our-graduates-single__text, .our-graduates-single__text {
+.our-graduates-single__text, .our-graduates-single__text-pc {
     font-size: 14px;
     line-height: 150%;
     max-height: 503px;
-    overflow: auto;
+    overflow: scroll;
 }
 
 .our-graduates-single__heading_pc {
