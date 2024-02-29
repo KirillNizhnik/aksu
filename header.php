@@ -97,7 +97,10 @@
 	        <?php foreach ($languages as $language):
 	        $current_post_id = get_the_ID();
 	        $translated_post_id = pll_get_post($current_post_id, $language);
-	        if($translated_post_id){
+	        if (is_post_type_archive()){
+                $translated_post_url = '/';
+            }
+            elseif($translated_post_id){
 		        $translated_post_url = get_permalink($translated_post_id);}
 	        else{
 		        $translated_post_url = get_home_url();
@@ -161,8 +164,8 @@
 					'menu-item-object-page',
 					'custom-menu-item'
 				);
-				$item_url     = 'http://localhost/aksu-test/contacts/';
-				$item_title   = 'Контакти';
+				$item_url     = '';
+				$item_title   = get_field('contact_label', 'options');
 
 				$output = '<li id="menu-item-' . $item_id . '" class="' . implode( ' ', $item_classes ) . '">';
 				$output .= '<a href="' . $item_url . '">' . $item_title . '</a>';

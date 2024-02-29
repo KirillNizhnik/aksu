@@ -1,7 +1,6 @@
 <?php
-function handle_ajax_request() {
+function handle_ajax_request(){
     if (isset($_POST['action']) && $_POST['action'] === 'fetch_graduate_data') {
-        // Get the graduate ID from the AJAX request
         $graduate_id = isset($_POST['graduate_id']) ? intval($_POST['graduate_id']) : 0;
 
         $graduate_post = get_post($graduate_id);
@@ -16,10 +15,11 @@ function handle_ajax_request() {
 
         wp_send_json($response);
     }
+	wp_die();
 }
 
-// Hook the function to handle AJAX requests
+
 add_action('wp_ajax_fetch_graduate_data', 'handle_ajax_request');
-add_action('wp_ajax_nopriv_fetch_graduate_data', 'handle_ajax_request'); // For non-logged-in users
+add_action('wp_ajax_nopriv_fetch_graduate_data', 'handle_ajax_request');
 
 
