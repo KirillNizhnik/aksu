@@ -164,7 +164,7 @@
 					'menu-item-object-page',
 					'custom-menu-item'
 				);
-				$item_url     = get_field('contact_link','options');
+				$item_url     = get_field('contact_links','options');
 				$item_title   = get_field('contact_label', 'options');
 
 				$output = '<li id="menu-item-' . $item_id . '" class="' . implode( ' ', $item_classes ) . '">';
