@@ -15,12 +15,8 @@ const teacherSwiper = new Swiper('.swiper-teacher', {
             slidesPerView: 2,
         },
         1440: {
-            // slidesPerView: 'auto',
+            enabled: false,
             pagination: false,
         },
     },
 });
-
-if (teacherSwiper instanceof Swiper && window.innerWidth >= 1440) {
-    teacherSwiper.destroy();
-}

@@ -223,12 +223,15 @@ function aksu_scripts()
     if (is_singular('laboratory')) {
         wp_enqueue_script('img-slider-labs', get_template_directory_uri() . '/assets/scripts/labs-post-slider-img.js', array('jquery'), null, true);
     }
-}
-function enqueue_custom_script_for_archive_page() {
     if (is_archive('teachers')) {
-        wp_enqueue_script('img-slide', get_template_directory_uri() . '/assets/scripts/archive-teacher.js', array('jquery'), null, true);
+        wp_enqueue_script('teachers-slide', get_template_directory_uri() . '/assets/scripts/archive-teacher.js', array('jquery'), null, true);
     }
 }
+//function enqueue_custom_script_for_archive_page() {
+//    if (is_archive('teachers')) {
+//        wp_enqueue_script('teachers-slide', get_template_directory_uri() . '/assets/scripts/archive-teacher.js', array('jquery'), null, true);
+//    }
+//}
 
 function enqueue_custom_script_for_archive_page_graduates() {
     if (is_archive('graduates')) {
@@ -241,7 +244,7 @@ function enqueue_custom_script_for_archive_page_graduates() {
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_archive_page_graduates');
-add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_archive_page');
+//add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_archive_page');
 add_action('wp_enqueue_scripts', 'aksu_scripts');
 
 add_theme_support('custom-logo');
