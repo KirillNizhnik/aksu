@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.our-graduates-list__item-link');
-
     buttons.forEach(button => {
         button.addEventListener('click', function() {
             document.body.style.overflow = 'hidden';
@@ -12,6 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     const data = JSON.parse(xhr.responseText);
                     const iconCloseURL = ajax_object.iconCloseURL;
+                    let graduateText='';
+                    let graduateTextMob ='';
+                    if (data.graduateText && data.graduateText.trim() !== ''){
+                        graduateText = `<div class="our-graduates-single__text-pc">${data.graduateText}</div>`;
+                        graduateTextMob = `<div class="our-graduates-single__text">${data.graduateText}</div> `;
+                    }
                     const modalHTML = `
                         <section class="our-graduates-single">
                             <div class="container">
@@ -30,21 +35,17 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <div class="our-graduates-single__heading_pc">
                                             <h1 class="our-graduates-single__title title-section">${data.graduateTitle}</h1>
                                             <div class="our-graduates-single__subtitle">${data.graduateSubtitle}</div>
-                                            <div class="our-graduates-single__text-pc">${data.graduateText}</div>
+                                            ${graduateText}
                                         </div>
                                     </div>
-                                     <div class="our-graduates-single__text">${data.graduateText}</div>
+                                    ${graduateTextMob}
                                 </div>
                             </div>
                         </section>`;
-
                     document.body.insertAdjacentHTML('beforeend', modalHTML);
-
                     const modal = document.querySelector('.our-graduates-single');
                     modal.style.overflow = 'auto';
-
                     const closeButton = document.querySelector('.our-graduates-single__icon');
-
                     closeButton.addEventListener('click', function() {
                         modal.parentNode.removeChild(modal);
                         document.body.style.overflow = 'auto';
