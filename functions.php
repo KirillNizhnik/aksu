@@ -241,7 +241,7 @@ function enqueue_custom_script_for_archive_page_graduates() {
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_archive_page_graduates');
-
+add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_archive_page');
 add_action('wp_enqueue_scripts', 'aksu_scripts');
 
 add_theme_support('custom-logo');

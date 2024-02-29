@@ -35,9 +35,6 @@ img {
     height: auto;
 }
 
-/*html {*/
-/*    margin: 0 !important;*/
-/*}*/
 html {
     scroll-behavior: smooth;
 }
@@ -135,3 +132,4 @@ button {
 .pagination-svg:focus {
     fill: var(--light-gray);
 }
+
