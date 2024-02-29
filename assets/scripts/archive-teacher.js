@@ -13,6 +13,10 @@ const teacherSwiper = new Swiper('.swiper-teacher', {
         },
         768: {
             slidesPerView: 2,
+            pagination: {
+                el: '.swiper-pagination-teacher',
+                clickable: true,
+            },
         },
         1440: {
             enabled: false,
