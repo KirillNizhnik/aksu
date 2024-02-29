@@ -201,8 +201,8 @@
 						'menu-item-object-page',
 						'custom-menu-item'
 					);
-					$item_url     = 'http://localhost/aksu-test/contacts/';
-					$item_title   = 'Контакти';
+					$item_url     = get_field('contact_links','options');
+					$item_title   = get_field('contact_label', 'options');
 
 					$output = '<li id="menu-item-' . $item_id . '" class="' . implode( ' ', $item_classes ) . '">';
 					$output .= '<a href="' . $item_url . '">' . $item_title . '</a>';
