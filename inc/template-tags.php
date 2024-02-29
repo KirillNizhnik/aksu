@@ -129,7 +129,7 @@ if ( ! function_exists( 'aksu_post_thumbnail' ) ) :
 
 			<div class="post-thumbnail">
 				<?php the_post_thumbnail(); ?>
-			</div><!-- .post-thumbnail -->
+			</div>
 
 		<?php else : ?>
 
@@ -149,7 +149,7 @@ if ( ! function_exists( 'aksu_post_thumbnail' ) ) :
 			</a>
 
 			<?php
-		endif; // End is_singular().
+		endif;
 	}
 endif;
 
