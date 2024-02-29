@@ -7,7 +7,7 @@ function handle_ajax_request() {
         $graduate_post = get_post($graduate_id);
 
         $response = array(
-            'graduateImgSrc' => get_the_post_thumbnail_url($graduate_id, 'thumbnail'),
+            'graduateImgSrc' => get_the_post_thumbnail_url($graduate_id, 'full'),
             'graduateTitle' => $graduate_post->post_title,
             'graduateSubtitle' => $graduate_post->post_excerpt,
             'graduateText' => get_field('our_graduates_single_text_pc', $graduate_id),
