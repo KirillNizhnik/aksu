@@ -10,7 +10,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="entry-header">
+    <div class="entry-header ">
+        <div class="result-text-page ">
         <?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
 
         <?php if ('post' === get_post_type()) : ?>
@@ -21,7 +22,8 @@
                 ?>
             </div><!-- .entry-meta -->
         <?php endif; ?>
-    </header><!-- .entry-header -->
+        </div>
+    </div><!-- .entry-header -->
     <div class="container">
         <div class="entry-post_thumbnail-fix">
             <?php aksu_post_thumbnail(); ?>

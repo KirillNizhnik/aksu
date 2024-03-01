@@ -143,6 +143,9 @@ img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
         gap: 50px;
         flex-direction: row;
     }
+    .result-text-page{
+        margin: 250px 0 0 0;
+    }
 }
 
 
