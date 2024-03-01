@@ -91,6 +91,14 @@ form.search-form {
     margin: 0 auto 40px auto;
 }
 
+p.searchwp-live-search-no-results {
+    background-color: var(--white);
+}
+
+.searchwp-live-search-results {
+    background-color: var(--white);
+}
+
 @media screen and (min-width: 768px) {
     .search-page-input {
         width: 500px;
