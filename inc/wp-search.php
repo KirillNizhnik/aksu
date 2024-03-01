@@ -19,8 +19,8 @@ function my_searchwp_live_search_configs( $configs ) {
         'spinner' => array( // Powered by http://spin.js.org/
             'lines'     => 13,                                 // The number of lines to draw
             'length'    => 38,                                 // The length of each line
-            'width'     => 17,                                 // The line thickness
-            'radius'    => 45,                                 // The radius of the inner circle
+            'width'     => 16,                                 // The line thickness
+            'radius'    => 10,                                 // The radius of the inner circle
             'scale'     => 1,                                  // Scales overall size of the spinner
             'corners'   => 1,                                  // Corner roundness (0..1)
             'color'     => '#ffffff',                          // CSS color or array of colors
@@ -56,8 +56,8 @@ function my_searchwp_live_search_configs( $configs ) {
         'spinner' => array( // Powered by http://spin.js.org/
             'lines'     => 13,                                 // The number of lines to draw
             'length'    => 38,                                 // The length of each line
-            'width'     => 17,                                 // The line thickness
-            'radius'    => 45,                                 // The radius of the inner circle
+            'width'     => 16,                                 // The line thickness
+            'radius'    => 10,                                 // The radius of the inner circle
             'scale'     => 1,                                  // Scales overall size of the spinner
             'corners'   => 1,                                  // Corner roundness (0..1)
             'color'     => '#000000',                          // CSS color or array of colors
