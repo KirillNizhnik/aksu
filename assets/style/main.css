@@ -6,12 +6,10 @@
 @import "index.css";
 @import "news.css";
 @import "news-post.css";
-@import "history.css";
 @import "our_team.css";
 @import "our_team-post.css";
 @import "disciplines_silbuses.css";
 @import "educational_materials.css";
-@import "scientific_titles.css";
 @import "applicant_page.css";
 @import "speciality.css";
 @import "admission_rules.css";
@@ -26,7 +24,6 @@
 @import "404.css";
 @import "basic.css";
 @import "postgraduate_course.css";
-@import "graduates.css";
 @import "department-history.css";
 @import "our-graduates.css";
 @import "our-graduates-single.css";
