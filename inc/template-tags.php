@@ -127,7 +127,7 @@ if ( ! function_exists( 'aksu_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<div class="post-thumbnail our-graduates-single-page-photo">
+			<div class="post-thumbnail">
 				<?php the_post_thumbnail(); ?>
 			</div>
 
