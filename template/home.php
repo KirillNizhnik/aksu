@@ -30,10 +30,10 @@ get_header();
 
 
 
-    <form action="" method="get">
+    <form class="go" action="" method="get">
         <p>
 <!--            <label for="s">--><?php //_e( '' , 'mytextdomain' ); ?><!--</label>-->
-            <input type="text" name="s" id="s" value="" data-swplive="true" /> <!-- data-swplive="true" enables SearchWP Live Search -->
+            <input placeholder="Search" class="goo" type="text" name="s" id="s" value="" data-swplive="true" /> <!-- data-swplive="true" enables SearchWP Live Search -->
         </p>
         <p>
             <button type="submit"><?php _e( '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
