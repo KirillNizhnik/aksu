@@ -23,11 +23,13 @@
         <?php endif; ?>
     </header><!-- .entry-header -->
     <div class="container">
-        <?php aksu_post_thumbnail(); ?>
+        <div class="entry-post_thumbnail-fix">
+            <?php aksu_post_thumbnail(); ?>
 
-        <div class="entry-summary">
-            <?php the_excerpt(); ?>
-        </div><!-- .entry-summary -->
+            <div class="entry-summary">
+                <?php the_excerpt(); ?>
+            </div>
+        </div>
     </div>
     <footer class="entry-footer">
         <?php aksu_entry_footer(); ?>
