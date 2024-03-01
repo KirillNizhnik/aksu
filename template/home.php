@@ -27,7 +27,9 @@ get_header();
             <div class="home-its__text"><?php the_field("home_its_text"); ?></div>
         </div>
     </section>
-
+    <section class="section-form">
+        <?php the_widget( 'custom_sidebar' ); ?>
+    </section>
     <section class="home-why">
         <div class="container">
             <div class="home-why-title"><?php the_field("privilege_title"); ?></div>
