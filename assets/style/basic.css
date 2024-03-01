@@ -12,6 +12,13 @@
     color: #fff;
     text-decoration: none;
 }
+
+.entry-title > a {
+    color: var(--dark-blue);
+}
+.page-title{
+    color: var(--dark-blue);
+}
 @media screen and (min-width: 768px) {
 }
 
