@@ -109,6 +109,7 @@ img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
     display: flex;
     align-items: center;
     gap: 50px;
+    flex-direction: column;
 }
 
 .entry-summary {
@@ -135,6 +136,12 @@ img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
 
     input.search-field {
         width: 670px;
+    }
+    .entry-post_thumbnail-fix {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        flex-direction: row;
     }
 }
 
