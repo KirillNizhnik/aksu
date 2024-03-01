@@ -28,7 +28,9 @@ get_header();
         </div>
     </section>
     <section class="section-form">
-        <?php the_widget( 'custom_sidebar' ); ?>
+        <div id="sidebar">
+            <?php dynamic_sidebar('custom_sidebar'); ?>
+        </div>
     </section>
     <section class="home-why">
         <div class="container">
