@@ -141,7 +141,7 @@ li#menu-item-31 {
 .header-mob-btn {
     cursor: pointer;
 }
-input.search-field{
+.search-field-plugin{
     border-radius: 10px;
     border: 1px solid var(--light-gray);
     background: var(--white);
@@ -152,7 +152,7 @@ input.search-field{
     align-items: center;
     gap: 8px;
 }
-button.search-submit{
+.search-submit-plugin{
     background-color: transparent;
     position: absolute;
     padding: 0;
