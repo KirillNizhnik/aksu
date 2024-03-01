@@ -98,7 +98,9 @@ p.searchwp-live-search-no-results {
 .searchwp-live-search-results {
     background-color: var(--white);
 }
-
+img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+    width: 100%;
+}
 @media screen and (min-width: 768px) {
     .search-page-input {
         width: 500px;
