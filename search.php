@@ -15,7 +15,7 @@ get_header();
             <?php if (have_posts()) : ?>
 
                 <header class="page-header">
-                    <h1 class="page-title">
+                    <h1 class="page-title result-text-page">
                         <?php
                         /* translators: %s: search query. */
                         printf(esc_html__('Search Results for: %s', 'aksu'), '<span>' . get_search_query() . '</span>');
