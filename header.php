@@ -271,68 +271,6 @@
 			'items_wrap'      => '%3$s',
 		) );
 		echo '</ul>'; ?>
-        <!--        <ul class="header-mob-dropdown__list">-->
-        <!--            <li class="header-mob-dropdown__list-item header-mob-dropdown__list-item-page-parent">-->
-        <!--                <a href="">Про нас</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href=""> Новини</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href="">Історія кафедри</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href="">Склад кафедри</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href="">Наші випускники</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href="">Контакти</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item header-mob-dropdown__list-item-page-parent">-->
-        <!--                <a href="">Студенту</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href="">Дисципліни та силабуси</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href=""> Навчальні матеріали</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item header-mob-dropdown__list-item-page-parent">-->
-        <!--                <a href="">Абітурієнту</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href=""> Сторінка абітурієнта</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href="">Спеціальності</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href="">Правила прийому</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href="">Магістратура</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item header-mob-dropdown__list-item-page-parent">-->
-        <!--                <a href="">Наука</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href="">Наукові школи та напрямки</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href="">Обрані публікації</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href="">Правила прийому</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href="">Конференції</a>-->
-        <!--            </li>-->
-        <!--            <li class="header-mob-dropdown__list-item ">-->
-        <!--                <a href="">Лабораторії</a>-->
-        <!--            </li>-->
-        <!--        </ul>-->
         <div class="header-mob-dropdown__list-item header-mob-dropdown__list-item-page-parent header-mob-dropdown__bottom">
             <div class="header-contacts__list-icons header-mob-dropdown__list-list-icons">
 				<?php

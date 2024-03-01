@@ -157,6 +157,11 @@ class Header_Walker_Nav_Menu extends Walker_Nav_Menu {
 	}
 }
 
+
+
+
+
+
 class Count_Walker_Nav_Menu extends Walker_Nav_Menu {
 	private bool $mainLevelStarted = false;
 	private int $count = 0;
