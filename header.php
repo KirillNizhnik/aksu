@@ -120,7 +120,7 @@
 <!--                </button>-->
 
                     <div id="sidebar">
-                        <?php dynamic_sidebar('custom_sidebar'); ?>
+                        <?php dynamic_sidebar('search_sidebar'); ?>
                     </div>
 
             </div>

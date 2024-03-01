@@ -80,9 +80,9 @@ function my_searchwp_live_search_configs( $configs ) {
 
 function register_custom_sidebar() {
     register_sidebar(array(
-        'name'          => 'Custom Sidebar', // Название вашего сайдбара
-        'id'            => 'custom_sidebar', // Уникальный ID
-        'description'   => 'Описание сайдбара',
+        'name'          => 'Search', // Название вашего сайдбара
+        'id'            => 'search_sidebar', // Уникальный ID
+        'description'   => 'Search',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="widget-title">',
