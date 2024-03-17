@@ -24,6 +24,7 @@ get_header();
                         echo '<h2 class="teacher-positions-title">' . $term->name . '</h2>';
 
                         $posts_in_category = new WP_Query(array(
+                            'posts_per_page' => -1,
                             'post_type' => $post_type,
                             'tax_query' => array(
                                 array(

@@ -33,10 +33,14 @@
 }
 
 .home-its-box__title {
-    color: var(--dark-blue);
+    /*color: var(--dark-blue);*/
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     margin: 0 0 16px 0
+}
+
+.home-its-box__title > p > strong {
+    font-weight: 800
 }
 
 .home-its__text {
@@ -448,7 +452,7 @@ strong {
 
     .home-its-box__title {
         font-size: 20px;
-        font-weight: 700
+        font-weight: 400
     }
 
     .home-its-box__descr {
@@ -574,7 +578,7 @@ strong {
 
     .home-why-list__item {
         width: 462px;
-        height: 484px
+        height: 555px
     }
 
     .home-why-list__item-title {
