@@ -20,7 +20,8 @@ if (!function_exists('my_strings')) {
 			'teacher_title'                => 'Teacher title',
 			'return_btn'                   => 'Return button',
             'search_title'                 => 'Search title',
-		);
+            'syllabuses_button_file'       => 'Silabus до дисципліни',
+        );
 
 		foreach ( $strings as $name => $original_text ) {
 			pll_register_string( $name, $original_text, 'aksu' );

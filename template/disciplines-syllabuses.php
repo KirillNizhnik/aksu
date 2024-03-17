@@ -44,7 +44,7 @@ get_header();
                                         </div>
                                         <a class="disciplines-name-inner-send"
                                            href="<?php echo $disciplines_syllabuses_file_url; ?>" target="_blank">
-                                            <span><?php echo $disciplines_syllabuses_file_name; ?></span>
+                                            <span><?php echo pll__('Завантажити', 'aksu'); ?></span>
                                             <svg width="24px" height="24px" class="disciplines-name-inner-send-svg">
                                                 <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
                                             </svg>
@@ -92,7 +92,7 @@ get_header();
                                                         <a class="disciplines-list-item-send disciplines-name-inner-send"
                                                            href="<?php echo $doc_file_url; ?>"
                                                            target="_blank">
-                                                            <span><?php echo $doc_file_name; ?></span>
+                                                            <span><?php echo pll__('Silabus до дисципліни', 'aksu'); ?></span>
                                                             <svg width="24px" height="24px"
                                                                  class="disciplines-name-inner-send-svg">
                                                                 <use href="<?php echo bloginfo('template_url'); ?>/assets/images/icons/icons.svg#icon-send"></use>
@@ -101,10 +101,7 @@ get_header();
                                                     </li>
                                                 <?php endwhile; else : endif; ?>
                                         </ul>
-
-
                                     <?php endwhile; else : endif; ?>
-
                             </div>
                         </div>
                     <?php endwhile;
