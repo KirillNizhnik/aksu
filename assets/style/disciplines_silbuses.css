@@ -324,7 +324,7 @@
     .disciplines-list {
         display: flex;
         flex-direction: row;
-        gap: 64px 25px;
+        gap: 25px;
         flex-wrap: wrap;
     }
 
