@@ -14,8 +14,6 @@
         <?php the_title('<h1 class="entry-title result-text-page">', '</h1>'); ?>
     </header><!-- .entry-header -->
     <div class="container">
-        <?php aksu_post_thumbnail(); ?>
-
         <div class="entry-content">
             <?php
             the_content();
